@@ -475,7 +475,12 @@ def patch_static_chunks(games: list[dict[str, Any]], standings: list[dict[str, A
     changed: list[Path] = []
     if games:
         display_games = trim_schedule_games(games)
-        replacement = f"let S={serialize_js(display_games)}"
+        # v is the static array of section-tab descriptors used by function x().
+        # It must be included here because patch_between replaces everything
+        # between the start marker and ;function x(), which originally contained
+        # both the S games array and the v tabs array.
+        V_TABS = 'v=[{division:"10U",section:1},{division:"10U",section:2},{division:"10U",section:3},{division:"12U",section:1},{division:"12U",section:2},{division:"12U",section:3},{division:"14U",section:1},{division:"14U",section:2},{division:"14U",section:3}]'
+        replacement = f"let S={serialize_js(display_games)},{V_TABS}"
         # The original build uses `let p="6:00 PM",S=`; after the first patch
         # `p` is gone and the marker becomes `let S=`.
         schedule_start = 'let p="6:00 PM",S=' if 'let p="6:00 PM",S=' in read_text(SCHEDULE_CHUNK) else "let S="
