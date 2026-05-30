@@ -479,8 +479,12 @@ def patch_static_chunks(games: list[dict[str, Any]], standings: list[dict[str, A
         # It must be included here because patch_between replaces everything
         # between the start marker and ;function x(), which originally contained
         # both the S games array and the v tabs array.
+        # v and k must be included here because patch_between replaces everything
+        # between the start marker and ;function x(), which originally contained
+        # the S games array, the v section-tab descriptors, and the var k=l(6933)
+        # module require — all of which are needed by function x().
         V_TABS = 'v=[{division:"10U",section:1},{division:"10U",section:2},{division:"10U",section:3},{division:"12U",section:1},{division:"12U",section:2},{division:"12U",section:3},{division:"14U",section:1},{division:"14U",section:2},{division:"14U",section:3}]'
-        replacement = f"let S={serialize_js(display_games)},{V_TABS}"
+        replacement = f"let S={serialize_js(display_games)},{V_TABS};var k=l(6933)"
         # The original build uses `let p="6:00 PM",S=`; after the first patch
         # `p` is gone and the marker becomes `let S=`.
         schedule_start = 'let p="6:00 PM",S=' if 'let p="6:00 PM",S=' in read_text(SCHEDULE_CHUNK) else "let S="
