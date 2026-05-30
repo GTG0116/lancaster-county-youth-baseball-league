@@ -301,9 +301,24 @@ def parse_schedule_text(text: str, doc: OfficialDocument) -> list[dict[str, Any]
     return unique
 
 
+_CLEAN_TEAM_RE = re.compile(r"^D\d*\s+|\d+\s+")
+_STATS_HEADER_RE = re.compile(r"\bwins?\b.*\blosses?\b.*\bties?\b", re.IGNORECASE)
+# Seeding/playoff headers begin with "Seed" or "Team" before the column names.
+# Regular division headers begin with the bracket/division name (e.g. "American").
+_SEEDING_HEADER_RE = re.compile(r"^(?:seed|team)\b", re.IGNORECASE)
+
+
+def _clean_team_name(raw: str) -> str:
+    """Strip seeding prefix (D, D1, 2, 3, …) and LCYBL org suffix."""
+    name = re.sub(r"\s+", " ", raw).strip(" -|")
+    name = _CLEAN_TEAM_RE.sub("", name).strip()
+    name = re.sub(r"\s+LCYBL\s*$", "", name, flags=re.IGNORECASE).strip()
+    return name
+
+
 def make_standing_row(match: re.Match[str], rank: int) -> dict[str, Any]:
     row = {
-        "team": re.sub(r"\s+", " ", match.group("team")).strip(" -|"),
+        "team": _clean_team_name(match.group("team")),
         "wins": int(match.group("wins")),
         "losses": int(match.group("losses")),
         "ties": int(match.group("ties")),
@@ -325,20 +340,51 @@ def parse_standings_text(text: str, doc: OfficialDocument, headers: dict[str, st
     )
     groups: list[dict[str, Any]] = []
     current: dict[str, Any] = {"rows": []}
+    in_seeding_section = False
 
     for line in normalized_lines(text):
         lower = line.lower()
         if not line or lower.startswith("--- page"):
             continue
+
+        # ── column-header lines (Wins/Losses/Ties without being a data row) ──
+        if _STATS_HEADER_RE.search(line) and not row_re.match(line):
+            if _SEEDING_HEADER_RE.match(line):
+                # "Team Wins…" or "Seed Team Wins…" → playoff-seeding repeat table.
+                in_seeding_section = True
+            else:
+                # Per-division header like "American Wins…", "National Wins…", or
+                # just "Wins…" (no bracket name).  Extract the text before "Wins".
+                name = re.split(r"\bWins?\b", line, flags=re.IGNORECASE)[0].strip(" -|")
+                if name:
+                    if current["rows"]:
+                        groups.append(current)
+                    current = {"name": name, "rows": []}
+            continue
+
+        if in_seeding_section:
+            continue
+
         if "division" in lower and not row_re.match(line):
-            name = re.sub(r"\s+", " ", line).strip(" -|")
+            # Strip trailing column headers that pypdf sometimes concatenates.
+            name = re.split(r"\bWins?\b", line, flags=re.IGNORECASE)[0]
+            name = re.sub(r"\s+", " ", name).strip(" -|")
             if current["rows"]:
                 groups.append(current)
             current = {"name": name, "rows": []}
             continue
+
         match = row_re.match(line)
         if match:
             current["rows"].append(make_standing_row(match, len(current["rows"])))
+            continue
+
+        # ── standalone bracket-name line (e.g. "Brown") with no stats ──
+        # Short all-letter lines that don't contain digits are likely bracket labels.
+        if re.match(r"^[A-Za-z][A-Za-z\s\-']{2,24}$", line) and not any(c.isdigit() for c in line):
+            if current["rows"]:
+                groups.append(current)
+            current = {"name": line.strip(" -|"), "rows": []}
 
     if current["rows"]:
         groups.append(current)
@@ -351,10 +397,21 @@ def parse_standings_text(text: str, doc: OfficialDocument, headers: dict[str, st
     else:
         updated = dt.date.today().strftime("%-m/%-d/%Y") if sys.platform != "win32" else dt.date.today().strftime("%#m/%#d/%Y")
 
-    # If there is only one unnamed group, keep the previous UI style.
+    # Drop placeholder group names that are just column-header noise.
     for group in groups:
-        if group.get("name", "").lower().startswith(("standings", "team")):
+        if group.get("name", "").lower().startswith(("standings", "team", "seed")):
             group.pop("name", None)
+
+    # Deduplicate rows within each group by team name (seeding table may slip
+    # through if a section's PDF omits the second header line).
+    for group in groups:
+        seen_teams: set[str] = set()
+        unique_rows: list[dict[str, Any]] = []
+        for row in group["rows"]:
+            if row["team"] not in seen_teams:
+                seen_teams.add(row["team"])
+                unique_rows.append(row)
+        group["rows"] = unique_rows
 
     return {
         "division": doc.division,
@@ -386,11 +443,49 @@ def patch_between(path: Path, start_marker: str, end_marker: str, replacement: s
     return write_if_changed(path, patched)
 
 
+# Maximum number of completed games to embed per section. Older games are
+# dropped so the JS bundle stays small and the schedule page renders quickly.
+MAX_RESULTS_PER_SECTION = 40
+
+
+def trim_schedule_games(games: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Keep all scheduled games and the most recent MAX_RESULTS_PER_SECTION
+    completed games per section, then re-sort chronologically."""
+    from collections import defaultdict
+
+    by_section: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
+    for game in games:
+        by_section[(game["division"], game["section"])].append(game)
+
+    trimmed: list[dict[str, Any]] = []
+    for section_games in by_section.values():
+        final = sorted(
+            (g for g in section_games if g["status"] == "final"),
+            key=lambda g: (g["date"], g["time"]),
+            reverse=True,
+        )[:MAX_RESULTS_PER_SECTION]
+        scheduled = [g for g in section_games if g["status"] != "final"]
+        trimmed.extend(final)
+        trimmed.extend(scheduled)
+
+    return sorted(trimmed, key=lambda g: (g["date"], g["time"], g["division"], g["section"], g["home"]))
+
+
 def patch_static_chunks(games: list[dict[str, Any]], standings: list[dict[str, Any]]) -> list[Path]:
     changed: list[Path] = []
     if games:
-        replacement = f"let S={serialize_js(games)}"
-        if patch_between(SCHEDULE_CHUNK, 'let p="6:00 PM",S=', ';function x()', replacement):
+        display_games = trim_schedule_games(games)
+        replacement = f"let S={serialize_js(display_games)}"
+        # The original build uses `let p="6:00 PM",S=`; after the first patch
+        # `p` is gone and the marker becomes `let S=`.
+        schedule_start = 'let p="6:00 PM",S=' if 'let p="6:00 PM",S=' in read_text(SCHEDULE_CHUNK) else "let S="
+        if patch_between(SCHEDULE_CHUNK, schedule_start, ';function x()', replacement):
+            changed.append(SCHEDULE_CHUNK)
+        # Default the section tabs to the first section (index 0) instead of
+        # whatever hard-coded index was baked into the original build.
+        text = read_text(SCHEDULE_CHUNK)
+        patched = re.sub(r"useState\)\(\d+\),l=v\[e\]", "useState)(0),l=v[e]", text, count=1)
+        if write_if_changed(SCHEDULE_CHUNK, patched) and SCHEDULE_CHUNK not in changed:
             changed.append(SCHEDULE_CHUNK)
     if standings:
         replacement = f"let c={serialize_js(standings)}"
