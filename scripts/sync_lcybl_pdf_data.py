@@ -23,10 +23,11 @@ import io
 import json
 import re
 import sys
+import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -36,8 +37,6 @@ STANDINGS_CHUNK = ROOT / "_next/static/chunks/app/standings/page-c30f85e5d0d57d3
 GENERATED_DIR = ROOT / "data/generated"
 GENERATED_JSON = GENERATED_DIR / "lcybl-official-data.json"
 USER_AGENT = "LCYBL-static-data-sync/1.0 (+https://github.com/)"
-DATE_RE = re.compile(r"\b\d{1,2}/\d{1,2}/(?:\d{2}|\d{4})\b|\b\d{4}-\d{2}-\d{2}\b")
-TIME_RE = re.compile(r"\b\d{1,2}:\d{2}\s*(?:AM|PM)\b", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -50,12 +49,6 @@ class OfficialDocument:
     @property
     def key(self) -> str:
         return f"{self.division}-section-{self.section}"
-
-
-@dataclass
-class PdfExtraction:
-    text: str
-    tables: list[list[list[str]]]
 
 
 def read_text(path: Path) -> str:
@@ -72,7 +65,12 @@ def write_if_changed(path: Path, text: str) -> bool:
 
 
 def extract_official_documents() -> list[OfficialDocument]:
-    """Read the official PDF URLs from the bundled static chunks."""
+    """Read the official PDF URLs from the bundled static chunks.
+
+    The same module is duplicated in schedule and standings chunks. We parse the
+    first available copy so URL updates in the built site become the source of
+    truth for this automation.
+    """
     for chunk in (SCHEDULE_CHUNK, STANDINGS_CHUNK):
         if not chunk.exists():
             continue
@@ -110,58 +108,18 @@ def download(url: str) -> tuple[bytes, dict[str, str]]:
         return response.read(), dict(response.headers.items())
 
 
-def clean_cell(value: Any) -> str:
-    return re.sub(r"[ \t]+", " ", str(value or "").replace("\u00a0", " ").strip())
-
-
-def extract_pdf(data: bytes) -> PdfExtraction:
-    """Extract both text and table rows from a PDF.
-
-    The LCYBL files are Excel sheets printed to PDF. Plain text extraction often
-    returns the sheet in column order, which is why the original parser found no
-    games. pdfplumber's line-based table extraction keeps each spreadsheet row
-    together, and the text fallback is retained only for unusual PDFs.
-    """
+def extract_pdf_text(data: bytes) -> str:
     try:
-        import pdfplumber
+        from pypdf import PdfReader
     except ImportError as exc:  # pragma: no cover - exercised in CI if deps missing
         raise RuntimeError("Install parser dependencies with `python -m pip install -r requirements-lcybl-sync.txt`.") from exc
 
-    text_pages: list[str] = []
-    tables: list[list[list[str]]] = []
-    line_table_settings = {
-        "vertical_strategy": "lines",
-        "horizontal_strategy": "lines",
-        "snap_tolerance": 4,
-        "join_tolerance": 4,
-        "intersection_tolerance": 6,
-        "text_x_tolerance": 2,
-        "text_y_tolerance": 3,
-    }
-    text_table_settings = {
-        "vertical_strategy": "text",
-        "horizontal_strategy": "text",
-        "snap_tolerance": 4,
-        "join_tolerance": 4,
-        "intersection_tolerance": 6,
-        "min_words_vertical": 2,
-        "min_words_horizontal": 1,
-        "text_x_tolerance": 2,
-        "text_y_tolerance": 3,
-    }
-    with pdfplumber.open(io.BytesIO(data)) as pdf:
-        for page_number, page in enumerate(pdf.pages, start=1):
-            page_text = page.extract_text(layout=True, x_tolerance=2, y_tolerance=3) or ""
-            text_pages.append(f"\n--- page {page_number} ---\n{page_text}")
-            page_tables = page.extract_tables(line_table_settings) or []
-            if not page_tables:
-                page_tables = page.extract_tables(text_table_settings) or []
-            for table in page_tables:
-                cleaned = [[clean_cell(cell) for cell in row] for row in table]
-                cleaned = [row for row in cleaned if any(row)]
-                if cleaned:
-                    tables.append(cleaned)
-    return PdfExtraction(text="\n".join(text_pages), tables=tables)
+    reader = PdfReader(io.BytesIO(data))
+    pages: list[str] = []
+    for index, page in enumerate(reader.pages, start=1):
+        extracted = page.extract_text() or ""
+        pages.append(f"\n--- page {index} ---\n{extracted}")
+    return "\n".join(pages)
 
 
 def normalized_lines(text: str) -> list[str]:
@@ -184,7 +142,7 @@ def parse_date(value: str) -> str | None:
 
 
 def parse_number(value: str) -> int | float | None:
-    value = value.strip().replace(",", "").replace("%", "")
+    value = value.strip().replace(",", "")
     if re.fullmatch(r"\d+", value):
         return int(value)
     if re.fullmatch(r"\d+\.\d+", value):
@@ -192,170 +150,101 @@ def parse_number(value: str) -> int | float | None:
     return None
 
 
-def first_match(pattern: re.Pattern[str], values: Iterable[str]) -> str | None:
-    for value in values:
-        match = pattern.search(value)
-        if match:
-            return match.group(0)
-    return None
+def split_columns(line: str) -> list[str]:
+    # pypdf often collapses whitespace, so prefer large gaps when present and
+    # otherwise fall back to a conservative single-space split later.
+    columns = [col.strip() for col in re.split(r"\s{2,}|\t+", line) if col.strip()]
+    return columns if len(columns) > 1 else [line.strip()]
 
 
-def date_from_values(values: Iterable[str]) -> str | None:
-    raw = first_match(DATE_RE, values)
-    return parse_date(raw) if raw else None
+def schedule_status(home_score: int | None, away_score: int | None, date: str) -> str:
+    if home_score is not None and away_score is not None:
+        return "final"
+    return "scheduled"
 
 
-def time_from_values(values: Iterable[str]) -> str | None:
-    raw = first_match(TIME_RE, values)
-    return re.sub(r"\s+", " ", raw.upper()) if raw else None
+def parse_schedule_text(text: str, doc: OfficialDocument) -> list[dict[str, Any]]:
+    """Best-effort parser for the league score/schedule PDF tables.
 
+    Expected row forms are variants of:
+      5/26/2026 6:00 PM Home Team 7 Away Team 6 Field Name
+      5/30/2026 10:00 AM Home Team Away Team Field Name
 
-def is_header_row(row: list[str]) -> bool:
-    lowered = " ".join(row).lower()
-    return any(word in lowered for word in ("date", "time", "field", "location", "home", "visitor", "visiting", "away"))
-
-
-def header_index(headers: list[str], *needles: str, exclude: tuple[str, ...] = ()) -> int | None:
-    for index, header in enumerate(headers):
-        lower = header.lower()
-        if all(needle in lower for needle in needles) and not any(item in lower for item in exclude):
-            return index
-    return None
-
-
-def first_index(*indexes: int | None) -> int | None:
-    return next((index for index in indexes if index is not None), None)
-
-
-def value_at(row: list[str], index: int | None) -> str:
-    return row[index].strip() if index is not None and index < len(row) else ""
-
-
-def row_has_schedule_data(row: list[str]) -> bool:
-    return bool(date_from_values(row) and time_from_values(row))
-
-
-def parse_schedule_table_row(row: list[str], headers: list[str] | None, doc: OfficialDocument, row_number: int) -> dict[str, Any] | None:
-    row = [clean_cell(cell) for cell in row]
-    if not row_has_schedule_data(row):
-        return None
-
-    date = date_from_values(row)
-    time = time_from_values(row)
-    if not date or not time:
-        return None
-
-    date_idx = next((index for index, cell in enumerate(row) if DATE_RE.search(cell)), None)
-    time_idx = next((index for index, cell in enumerate(row) if TIME_RE.search(cell)), None)
-    home = away = field = ""
-    home_score: int | None = None
-    away_score: int | None = None
-
-    if headers:
-        normalized_headers = [header.lower() for header in headers]
-        field_idx = first_index(header_index(normalized_headers, "field"), header_index(normalized_headers, "location"))
-        home_idx = header_index(normalized_headers, "home", exclude=("score",))
-        away_idx = first_index(
-            header_index(normalized_headers, "visitor", exclude=("score",)),
-            header_index(normalized_headers, "visiting", exclude=("score",)),
-            header_index(normalized_headers, "away", exclude=("score",)),
-        )
-        home_score_idx = first_index(header_index(normalized_headers, "home", "score"), header_index(normalized_headers, "h", "score"))
-        away_score_idx = first_index(
-            header_index(normalized_headers, "visitor", "score"),
-            header_index(normalized_headers, "visiting", "score"),
-            header_index(normalized_headers, "away", "score"),
-            header_index(normalized_headers, "v", "score"),
-        )
-        home = value_at(row, home_idx)
-        away = value_at(row, away_idx)
-        field = value_at(row, field_idx)
-        maybe_home_score = parse_number(value_at(row, home_score_idx))
-        maybe_away_score = parse_number(value_at(row, away_score_idx))
-        home_score = maybe_home_score if isinstance(maybe_home_score, int) else None
-        away_score = maybe_away_score if isinstance(maybe_away_score, int) else None
-
-    if not home or not away:
-        remaining = [cell for index, cell in enumerate(row) if index not in {date_idx, time_idx} and cell]
-        if len(remaining) == 1:
-            collapsed = remaining[0]
-            score_matches = list(re.finditer(r"(?<!\S)\d{1,2}(?!\S)", collapsed))
-            if len(score_matches) >= 2:
-                first, second = score_matches[0], score_matches[1]
-                home = collapsed[: first.start()].strip(" -|")
-                home_score = int(first.group())
-                away = collapsed[first.end() : second.start()].strip(" -|")
-                away_score = int(second.group())
-                field = field or collapsed[second.end() :].strip(" -|")
-        if not home or not away:
-            numeric_positions = [index for index, cell in enumerate(remaining) if isinstance(parse_number(cell), int)]
-            if len(numeric_positions) >= 2:
-                first, second = numeric_positions[0], numeric_positions[1]
-                home = " ".join(remaining[:first]).strip()
-                home_score = int(parse_number(remaining[first]) or 0)
-                away = " ".join(remaining[first + 1 : second]).strip()
-                away_score = int(parse_number(remaining[second]) or 0)
-                field = field or " ".join(remaining[second + 1 :]).strip()
-            elif len(remaining) >= 3:
-                # Scheduled rows often do not have scores yet.
-                home, away = remaining[0], remaining[1]
-                field = field or " ".join(remaining[2:]).strip()
-
-    if not home or not away:
-        return None
-
-    game: dict[str, Any] = {
-        "id": f"{doc.division}-{doc.section}-{row_number}",
-        "date": date,
-        "time": time,
-        "division": doc.division,
-        "section": f"Section {doc.section}",
-        "home": home,
-        "away": away,
-        "field": field,
-        "status": "final" if home_score is not None and away_score is not None else "scheduled",
-    }
-    if home_score is not None:
-        game["homeScore"] = home_score
-    if away_score is not None:
-        game["awayScore"] = away_score
-    return game
-
-
-def parse_schedule_text_fallback(text: str, doc: OfficialDocument, start_index: int) -> list[dict[str, Any]]:
+    The parser uses the last numeric columns as scores when they are present.
+    If the PDF layout changes, --require-complete prevents bad partial output
+    from being published.
+    """
     games: list[dict[str, Any]] = []
+    date_re = re.compile(r"(?P<date>\b\d{1,2}/\d{1,2}/(?:\d{2}|\d{4})\b|\b\d{4}-\d{2}-\d{2}\b)")
+    time_re = re.compile(r"(?P<time>\b\d{1,2}:\d{2}\s*(?:AM|PM)\b)", re.IGNORECASE)
+
     for line in normalized_lines(text):
         if any(skip in line.lower() for skip in ("date time", "lancaster county", "section", "scores")):
             continue
-        if not DATE_RE.search(line) or not TIME_RE.search(line):
+        date_match = date_re.search(line)
+        time_match = time_re.search(line)
+        if not date_match or not time_match:
             continue
-        # Convert a text line into fake cells by splitting around large gaps when
-        # available; otherwise the fallback row parser can still use numeric
-        # score positions in the collapsed line.
-        cells = [cell.strip() for cell in re.split(r"\s{2,}|\t+", line) if cell.strip()]
-        if len(cells) == 1:
-            cells = [DATE_RE.search(line).group(0), TIME_RE.search(line).group(0), line[TIME_RE.search(line).end() :].strip()]
-        game = parse_schedule_table_row(cells, None, doc, start_index + len(games))
-        if game:
-            games.append(game)
-    return games
+        date = parse_date(date_match.group("date"))
+        if not date:
+            continue
+        time = re.sub(r"\s+", " ", time_match.group("time").upper())
+        remainder = line[time_match.end() :].strip(" -|")
+        if not remainder:
+            continue
 
+        columns = split_columns(remainder)
+        if len(columns) >= 5:
+            home, maybe_home_score, away, maybe_away_score = columns[:4]
+            home_score = parse_number(maybe_home_score)
+            away_score = parse_number(maybe_away_score)
+            if isinstance(home_score, int) and isinstance(away_score, int):
+                field = " ".join(columns[4:])
+            else:
+                home, away = columns[0], columns[1]
+                home_score = away_score = None
+                field = " ".join(columns[2:])
+        else:
+            # Fallback for collapsed rows: locate numeric scores, if any, and
+            # split around them. This is intentionally conservative.
+            score_matches = list(re.finditer(r"(?<!\S)\d{1,2}(?!\S)", remainder))
+            if len(score_matches) >= 2:
+                first, second = score_matches[0], score_matches[1]
+                home = remainder[: first.start()].strip(" -|")
+                home_score = int(first.group())
+                away = remainder[first.end() : second.start()].strip(" -|")
+                away_score = int(second.group())
+                field = remainder[second.end() :].strip(" -|")
+            else:
+                parts = remainder.split(" at ", 1)
+                if len(parts) != 2:
+                    continue
+                away, rest = parts
+                rest_parts = rest.rsplit(" ", 1)
+                home = rest_parts[0].strip()
+                field = rest_parts[1].strip() if len(rest_parts) > 1 else ""
+                home_score = away_score = None
 
-def parse_schedule(extraction: PdfExtraction, doc: OfficialDocument) -> list[dict[str, Any]]:
-    games: list[dict[str, Any]] = []
-    for table in extraction.tables:
-        headers: list[str] | None = None
-        for row in table:
-            if is_header_row(row):
-                headers = [clean_cell(cell) for cell in row]
-                continue
-            game = parse_schedule_table_row(row, headers, doc, len(games))
-            if game:
-                games.append(game)
+        if not home or not away:
+            continue
+        game = {
+            "id": f"{doc.division}-{doc.section}-{len(games)}",
+            "date": date,
+            "time": time,
+            "division": doc.division,
+            "section": f"Section {doc.section}",
+            "home": home,
+            "away": away,
+            "field": field,
+            "status": schedule_status(home_score if isinstance(home_score, int) else None, away_score if isinstance(away_score, int) else None, date),
+        }
+        if isinstance(home_score, int):
+            game["homeScore"] = home_score
+        if isinstance(away_score, int):
+            game["awayScore"] = away_score
+        games.append(game)
 
-    if not games:
-        games.extend(parse_schedule_text_fallback(extraction.text, doc, 0))
-
+    # De-duplicate rows that may appear in page headers/continued tables.
     seen: set[tuple[Any, ...]] = set()
     unique: list[dict[str, Any]] = []
     for game in games:
@@ -367,78 +256,57 @@ def parse_schedule(extraction: PdfExtraction, doc: OfficialDocument) -> list[dic
     return unique
 
 
-def make_standing_row(cells: list[str], rank: int) -> dict[str, Any] | None:
-    if len(cells) < 8:
-        return None
-    metrics = [parse_number(cell) for cell in cells[-7:]]
-    if any(metric is None for metric in metrics):
-        return None
-    team = " ".join(cells[:-7]).strip(" -|")
-    if not team:
-        return None
-    return {
-        "team": re.sub(r"\s+", " ", team),
-        "wins": int(metrics[0]),
-        "losses": int(metrics[1]),
-        "ties": int(metrics[2]),
-        "pct": float(metrics[3]),
-        "points": int(metrics[4]),
-        "runsAllowed": int(metrics[5]),
-        "gamesRemaining": int(metrics[6]),
+def make_standing_row(match: re.Match[str], rank: int) -> dict[str, Any]:
+    row = {
+        "team": re.sub(r"\s+", " ", match.group("team")).strip(" -|"),
+        "wins": int(match.group("wins")),
+        "losses": int(match.group("losses")),
+        "ties": int(match.group("ties")),
+        "pct": float(match.group("pct")),
+        "points": int(match.group("points")),
+        "runsAllowed": int(match.group("ra")),
+        "gamesRemaining": int(match.group("gr")),
         "champion": rank == 0,
     }
+    return row
 
 
-def parse_standings(extraction: PdfExtraction, doc: OfficialDocument, headers: dict[str, str]) -> dict[str, Any] | None:
+def parse_standings_text(text: str, doc: OfficialDocument, headers: dict[str, str]) -> dict[str, Any] | None:
+    row_re = re.compile(
+        r"^(?P<team>.+?)\s+"
+        r"(?P<wins>\d+)\s+(?P<losses>\d+)\s+(?P<ties>\d+)\s+"
+        r"(?P<pct>\d+(?:\.\d+)?)%?\s+"
+        r"(?P<points>\d+)\s+(?P<ra>\d+)\s+(?P<gr>\d+)\s*$"
+    )
     groups: list[dict[str, Any]] = []
     current: dict[str, Any] = {"rows": []}
 
-    def add_group_if_needed() -> None:
-        nonlocal current
-        if current["rows"]:
-            groups.append(current)
-            current = {"rows": []}
+    for line in normalized_lines(text):
+        lower = line.lower()
+        if not line or lower.startswith("--- page"):
+            continue
+        if "division" in lower and not row_re.match(line):
+            name = re.sub(r"\s+", " ", line).strip(" -|")
+            if current["rows"]:
+                groups.append(current)
+            current = {"name": name, "rows": []}
+            continue
+        match = row_re.match(line)
+        if match:
+            current["rows"].append(make_standing_row(match, len(current["rows"])))
 
-    for table in extraction.tables:
-        for row in table:
-            cells = [clean_cell(cell) for cell in row if clean_cell(cell)]
-            if not cells:
-                continue
-            line = " ".join(cells)
-            lower = line.lower()
-            if "division" in lower and not any(parse_number(cell) is not None for cell in cells[-4:]):
-                add_group_if_needed()
-                current = {"name": line.strip(" -|"), "rows": []}
-                continue
-            if is_header_row(cells) or lower.startswith(("team ", "w ", "wins ")):
-                continue
-            standing = make_standing_row(cells, len(current["rows"]))
-            if standing:
-                current["rows"].append(standing)
-
-    add_group_if_needed()
-
-    if not groups:
-        # Text fallback for PDFs where table lines are already row-oriented.
-        current = {"rows": []}
-        for line in normalized_lines(extraction.text):
-            cells = line.split()
-            if "division" in line.lower():
-                add_group_if_needed()
-                current = {"name": line.strip(" -|"), "rows": []}
-                continue
-            standing = make_standing_row(cells, len(current["rows"]))
-            if standing:
-                current["rows"].append(standing)
-        add_group_if_needed()
-
+    if current["rows"]:
+        groups.append(current)
     if not groups:
         return None
 
-    updated = headers.get("Last-Modified") or headers.get("last-modified")
-    if not updated:
+    last_modified = headers.get("Last-Modified") or headers.get("last-modified")
+    if last_modified:
+        updated = last_modified
+    else:
         updated = dt.date.today().strftime("%-m/%-d/%Y") if sys.platform != "win32" else dt.date.today().strftime("%#m/%#d/%Y")
 
+    # If there is only one unnamed group, keep the previous UI style.
     for group in groups:
         if group.get("name", "").lower().startswith(("standings", "team")):
             group.pop("name", None)
@@ -490,62 +358,54 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def debug_dump(debug_dump_dir: Path | None, doc: OfficialDocument, kind: str, extraction: PdfExtraction) -> None:
-    if not debug_dump_dir:
-        return
-    debug_dump_dir.mkdir(parents=True, exist_ok=True)
-    prefix = f"{doc.key}-{kind}"
-    (debug_dump_dir / f"{prefix}.txt").write_text(extraction.text, encoding="utf-8")
-    (debug_dump_dir / f"{prefix}.tables.json").write_text(serialize_json(extraction.tables), encoding="utf-8")
-
-
 def sync(args: argparse.Namespace) -> int:
     docs = extract_official_documents()
     all_games: list[dict[str, Any]] = []
     all_standings: list[dict[str, Any]] = []
     snapshots: list[dict[str, Any]] = []
     failures: list[str] = []
-    debug_dump_dir = Path(args.debug_dump_dir) if args.debug_dump_dir else None
 
-    for doc in docs:
-        for kind, url in (("scores", doc.scores_url), ("standings", doc.standings_url)):
-            if not url:
-                continue
-            try:
-                pdf_bytes, headers = download(url)
-                extraction = extract_pdf(pdf_bytes)
-            except (urllib.error.URLError, TimeoutError, RuntimeError) as exc:
-                failures.append(f"{doc.key} {kind}: download/extract failed: {exc}")
-                continue
+    with tempfile.TemporaryDirectory(prefix="lcybl-pdf-") as temp_dir:
+        temp = Path(temp_dir)
+        for doc in docs:
+            for kind, url in (("scores", doc.scores_url), ("standings", doc.standings_url)):
+                if not url:
+                    continue
+                try:
+                    pdf_bytes, headers = download(url)
+                    text = extract_pdf_text(pdf_bytes)
+                except (urllib.error.URLError, TimeoutError, RuntimeError) as exc:
+                    failures.append(f"{doc.key} {kind}: download/extract failed: {exc}")
+                    continue
 
-            debug_dump(debug_dump_dir, doc, kind, extraction)
-            parsed: Any
-            if kind == "scores":
-                parsed = parse_schedule(extraction, doc)
-                if not parsed:
-                    failures.append(f"{doc.key} scores: no games parsed")
-                all_games.extend(parsed)
-            else:
-                parsed = parse_standings(extraction, doc, headers)
-                if not parsed:
-                    failures.append(f"{doc.key} standings: no rows parsed")
+                text_path = temp / f"{doc.key}-{kind}.txt"
+                text_path.write_text(text, encoding="utf-8")
+                parsed: Any
+                if kind == "scores":
+                    parsed = parse_schedule_text(text, doc)
+                    if not parsed:
+                        failures.append(f"{doc.key} scores: no games parsed")
+                    all_games.extend(parsed)
                 else:
-                    all_standings.append(parsed)
+                    parsed = parse_standings_text(text, doc, headers)
+                    if not parsed:
+                        failures.append(f"{doc.key} standings: no rows parsed")
+                    else:
+                        all_standings.append(parsed)
 
-            snapshots.append(
-                {
-                    "division": doc.division,
-                    "section": doc.section,
-                    "kind": kind,
-                    "url": url,
-                    "sha256": sha256(pdf_bytes),
-                    "bytes": len(pdf_bytes),
-                    "headers": headers,
-                    "tableCount": len(extraction.tables),
-                    "textCharacterCount": len(extraction.text),
-                    "parsedCount": len(parsed) if isinstance(parsed, list) else sum(len(g["rows"]) for g in parsed.get("groups", [])) if parsed else 0,
-                }
-            )
+                snapshots.append(
+                    {
+                        "division": doc.division,
+                        "section": doc.section,
+                        "kind": kind,
+                        "url": url,
+                        "sha256": sha256(pdf_bytes),
+                        "bytes": len(pdf_bytes),
+                        "headers": headers,
+                        "extractedText": text,
+                        "parsedCount": len(parsed) if isinstance(parsed, list) else sum(len(g["rows"]) for g in parsed.get("groups", [])) if parsed else 0,
+                    }
+                )
 
     generated = {
         "generatedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -583,7 +443,6 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--patch-static", action="store_true", help="Rewrite the bundled schedule/standings JS chunks.")
     parser.add_argument("--require-complete", action="store_true", help="Fail if any linked PDF cannot be parsed.")
-    parser.add_argument("--debug-dump-dir", help="Optional directory for extracted text/tables when debugging parser failures.")
     return parser.parse_args(list(argv))
 
 

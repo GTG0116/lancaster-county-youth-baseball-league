@@ -32,15 +32,7 @@ jobs:
         run: python -m pip install -r requirements-lcybl-sync.txt
 
       - name: Download, parse, and patch static site data
-        run: python scripts/sync_lcybl_pdf_data.py --patch-static --require-complete --debug-dump-dir /tmp/lcybl-pdf-debug
-
-      - name: Upload parser debug output on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: lcybl-pdf-parser-debug
-          path: /tmp/lcybl-pdf-debug
-          if-no-files-found: ignore
+        run: python scripts/sync_lcybl_pdf_data.py --patch-static --require-complete
 
       - name: Commit updated data
         run: |
