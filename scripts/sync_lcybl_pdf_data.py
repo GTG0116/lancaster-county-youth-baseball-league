@@ -133,7 +133,7 @@ def normalized_lines(text: str) -> list[str]:
 
 def parse_date(value: str) -> str | None:
     value = value.strip()
-    for fmt in ("%m/%d/%Y", "%m/%d/%y", "%Y-%m-%d"):
+    for fmt in ("%m/%d/%Y", "%m/%d/%y", "%Y-%m-%d", "%d-%b-%y", "%d-%b-%Y"):
         try:
             return dt.datetime.strptime(value, fmt).date().isoformat()
         except ValueError:
@@ -166,20 +166,36 @@ def schedule_status(home_score: int | None, away_score: int | None, date: str) -
 def parse_schedule_text(text: str, doc: OfficialDocument) -> list[dict[str, Any]]:
     """Best-effort parser for the league score/schedule PDF tables.
 
-    Expected row forms are variants of:
-      5/26/2026 6:00 PM Home Team 7 Away Team 6 Field Name
-      5/30/2026 10:00 AM Home Team Away Team Field Name
+    Handles two formats depending on the PDF layout pypdf produces:
 
-    The parser uses the last numeric columns as scores when they are present.
+    Legacy (m/d/yyyy, single-space):
+      5/26/2026 6:00 PM Home Team 7 Away Team 6 Field Name
+
+    Current (d-Mon-yy, multi-space column separators):
+      13-Apr-26 Mon 1225 6:00PM   Wenger Field   E-Town Bruins   8 Donegal Indians   12 Z
+
+    In the current format the remainder after the time is separated by 2+ spaces
+    into: Location | Home | HomeScore+Visitor | VisitorScore+Status. A missing
+    status code (trailing space only) means the game has not yet been played.
+
     If the PDF layout changes, --require-complete prevents bad partial output
     from being published.
     """
     games: list[dict[str, Any]] = []
-    date_re = re.compile(r"(?P<date>\b\d{1,2}/\d{1,2}/(?:\d{2}|\d{4})\b|\b\d{4}-\d{2}-\d{2}\b)")
+    date_re = re.compile(
+        r"(?P<date>"
+        r"\b\d{1,2}/\d{1,2}/(?:\d{2}|\d{4})\b"
+        r"|\b\d{4}-\d{2}-\d{2}\b"
+        r"|\b\d{1,2}-[A-Za-z]{3}-\d{2,4}\b"
+        r")"
+    )
     time_re = re.compile(r"(?P<time>\b\d{1,2}:\d{2}\s*(?:AM|PM)\b)", re.IGNORECASE)
 
-    for line in normalized_lines(text):
-        if any(skip in line.lower() for skip in ("date time", "lancaster county", "section", "scores")):
+    for raw in text.replace(" ", " ").splitlines():
+        line = re.sub(r"[ \t]+", " ", raw).strip()
+        if not line:
+            continue
+        if any(skip in line.lower() for skip in ("date time", "date day", "lancaster county", "section", "scores")):
             continue
         date_match = date_re.search(line)
         time_match = time_re.search(line)
@@ -189,12 +205,41 @@ def parse_schedule_text(text: str, doc: OfficialDocument) -> list[dict[str, Any]
         if not date:
             continue
         time = re.sub(r"\s+", " ", time_match.group("time").upper())
-        remainder = line[time_match.end() :].strip(" -|")
+
+        # Use the raw (un-collapsed) line for column splitting so that multi-space
+        # separators produced by pypdf for tabular PDFs are preserved.
+        raw_time_match = time_re.search(raw)
+        raw_end = raw_time_match.end() if raw_time_match else time_match.end()
+        remainder = raw[raw_end:].strip(" -|")
         if not remainder:
             continue
 
         columns = split_columns(remainder)
-        if len(columns) >= 5:
+        home: str = ""
+        away: str = ""
+        field: str = ""
+        home_score: int | float | None = None
+        away_score: int | float | None = None
+
+        if len(columns) >= 4 and parse_number(columns[1]) is None:
+            # Current format: Location | Home | HomeScore+Visitor | VisitorScore+Status
+            field = columns[0].strip()
+            home = columns[1].strip()
+            sv_match = re.match(r"^(\S+)\s+(.+)$", columns[2].strip())
+            if sv_match:
+                home_score = parse_number(sv_match.group(1))
+                away = sv_match.group(2).strip()
+            else:
+                away = columns[2].strip()
+            vs_match = re.match(r"^(\S+)(?:\s+(\S+))?", columns[3].strip())
+            if vs_match:
+                away_score = parse_number(vs_match.group(1))
+                status_code = (vs_match.group(2) or "").strip()
+                # No status code → game not yet played; suppress the 0-placeholder scores
+                if not status_code:
+                    home_score = away_score = None
+        elif len(columns) >= 5:
+            # Legacy format: Home | HomeScore | Away | AwayScore | Field...
             home, maybe_home_score, away, maybe_away_score = columns[:4]
             home_score = parse_number(maybe_home_score)
             away_score = parse_number(maybe_away_score)
