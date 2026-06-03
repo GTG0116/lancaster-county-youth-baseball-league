@@ -19,6 +19,12 @@
 <priority>0.7</priority>
 </url>
 <url>
+<loc>https://lancoyouthbaseball.org/matchups</loc>
+<lastmod>2026-05-30T03:36:17.623Z</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
 <loc>https://lancoyouthbaseball.org/divisions</loc>
 <lastmod>2026-05-30T03:36:17.623Z</lastmod>
 <changefreq>weekly</changefreq>

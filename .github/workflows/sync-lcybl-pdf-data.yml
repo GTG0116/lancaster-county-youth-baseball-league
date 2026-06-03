@@ -46,6 +46,8 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/generated _next/static/chunks/app/schedule _next/static/chunks/app/standings schedule/index.html standings/index.html schedule/index.txt standings/index.txt
+          # -A so renamed (cache-busted) chunk files are staged along with the
+          # removal of their previous hashed filenames.
+          git add -A data/generated _next/static/chunks/app/schedule _next/static/chunks/app/standings schedule/index.html standings/index.html schedule/index.txt standings/index.txt
           git commit -m "Update LCYBL data from official PDFs"
           git push

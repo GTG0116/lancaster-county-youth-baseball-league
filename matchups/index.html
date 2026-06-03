@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Matchups & Explorer · Lancaster County Youth Baseball League</title>
+<meta name="description" content="Explore LCYBL games and standings across every age division, section, club and team. Build head-to-head matchups between any two teams." />
+<link rel="icon" href="../icon.svg" type="image/svg+xml" />
+<style>
+  :root{
+    --navy:#0b1f3a; --navy-600:#13335c; --navy-500:#1d4e89; --sky:#2f80ed;
+    --ink:#0f172a; --muted:#5b6b82; --line:#e2e8f0; --bg:#f5f7fb; --card:#ffffff;
+    --win:#16a34a; --loss:#dc2626; --gold:#eab308;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.45}
+  a{color:var(--navy-500);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  header.site{background:var(--navy);color:#fff}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700}
+  .brand .logo{width:30px;height:30px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--navy);font-size:18px}
+  .brand small{display:block;font-weight:500;opacity:.75;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+  header.site nav a{color:#dbe6f5;font-size:14px;margin-left:16px}
+  header.site nav a:hover{color:#fff}
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-600) 100%);color:#fff;padding:26px 0 22px}
+  .hero h1{margin:0 0 6px;font-size:26px}
+  .hero p{margin:0;color:#c6d4e8;max-width:640px;font-size:14px}
+  .freshness{margin-top:12px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 11px;border-radius:999px;font-size:12.5px;color:#e8f0fb}
+  .freshness .dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 3px rgba(52,211,153,.25)}
+  main{padding:20px 0 60px}
+  .tabs{display:flex;gap:6px;border-bottom:2px solid var(--line);margin:0 0 18px}
+  .tabs button{appearance:none;border:0;background:none;font:inherit;font-weight:600;color:var(--muted);padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+  .tabs button[aria-selected="true"]{color:var(--navy);border-bottom-color:var(--sky)}
+  .panel{display:none}
+  .panel.active{display:block}
+  .controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:16px}
+  .field label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .field select,.field input{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+  .field input:focus,.field select:focus{outline:2px solid rgba(47,128,237,.35);border-color:var(--sky)}
+  .vs-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:12px}
+  .vs-row .vs{font-weight:800;color:var(--muted);padding-bottom:9px}
+  .clearbtn{appearance:none;border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 12px;font:inherit;font-weight:600;color:var(--navy-500);cursor:pointer}
+  .clearbtn:hover{background:#f1f5fb}
+  .summary{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--sky);border-radius:12px;padding:16px;margin-bottom:18px}
+  .summary h3{margin:0 0 10px;font-size:16px}
+  .h2h-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;text-align:center}
+  .h2h-team{font-weight:700}
+  .h2h-score{font-size:30px;font-weight:800;color:var(--navy)}
+  .h2h-mid{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+  .meta{color:var(--muted);font-size:12.5px;margin-top:10px;text-align:center}
+  .section-title{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}
+  .daygroup{margin-bottom:14px}
+  .dayhead{font-weight:700;font-size:13px;color:var(--navy-600);margin:0 0 6px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+  .game{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:7px}
+  .game .badge{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-align:center;padding:3px 6px;border-radius:6px}
+  .badge.final{background:#eef2f7;color:#475569}
+  .badge.upcoming{background:#e6f0fe;color:#1d4ed8}
+  .matchup{min-width:0}
+  .teamline{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:14.5px}
+  .teamline .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .teamline .sc{font-weight:800;font-variant-numeric:tabular-nums}
+  .teamline.win .nm,.teamline.win .sc{color:var(--win)}
+  .game .ctx{color:var(--muted);font-size:11.5px;margin-top:3px}
+  .game .when{text-align:right;color:var(--muted);font-size:12px;white-space:nowrap}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;color:var(--navy-500);background:#eef4fc;border-radius:999px;padding:2px 7px;margin-left:6px}
+  table.standings{width:100%;border-collapse:collapse;background:var(--card);font-size:13.5px}
+  .stand-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:18px}
+  .stand-head{background:var(--navy);color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+  .stand-head h3{margin:0;font-size:15px}
+  .stand-head .upd{font-size:11.5px;color:#c6d4e8}
+  .stand-sub{padding:6px 14px;background:#f1f5fb;font-weight:700;font-size:12px;color:var(--navy-600)}
+  table.standings th,table.standings td{padding:8px 10px;text-align:center;border-bottom:1px solid var(--line)}
+  table.standings th{font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:#fafbfd}
+  table.standings td.team,table.standings th.team{text-align:left}
+  table.standings tr:last-child td{border-bottom:0}
+  table.standings tr.champ td{background:#fffbeb}
+  table.standings tr.hit td{background:#e9f3ff}
+  .crown{color:var(--gold);margin-right:5px}
+  .empty{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:30px;text-align:center;color:var(--muted)}
+  .loading{text-align:center;color:var(--muted);padding:50px}
+  footer{border-top:1px solid var(--line);padding:18px 0 40px;color:var(--muted);font-size:12.5px;text-align:center}
+  @media(max-width:560px){
+    .game{grid-template-columns:54px 1fr;}
+    .game .when{display:none}
+    .vs-row{grid-template-columns:1fr;}
+    .vs-row .vs{display:none}
+  }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <span class="logo">&#9918;</span>
+      <span>LCYBL<small>Lancaster County Youth Baseball</small></span>
+    </a>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../schedule/">Schedule</a>
+      <a href="../standings/">Standings</a>
+      <a href="../divisions/">Divisions</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Matchups &amp; Explorer</h1>
+    <p>Browse games and standings across every age division, section and club &mdash; or pick any two teams to see their head-to-head history. Updated automatically from the league's official PDFs.</p>
+    <div class="freshness" id="freshness"><span class="dot"></span><span id="freshness-text">Loading the latest data&hellip;</span></div>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="tabs" role="tablist">
+    <button id="tab-games" role="tab" aria-selected="true" aria-controls="panel-games">Games</button>
+    <button id="tab-standings" role="tab" aria-selected="false" aria-controls="panel-standings">Standings</button>
+  </div>
+
+  <!-- GAMES -->
+  <section id="panel-games" class="panel active" role="tabpanel" aria-labelledby="tab-games">
+    <div class="controls">
+      <div class="field">
+        <label for="g-div">Division</label>
+        <select id="g-div"></select>
+      </div>
+      <div class="field">
+        <label for="g-sec">Section</label>
+        <select id="g-sec"></select>
+      </div>
+      <div class="field">
+        <label for="g-club">Club / Association</label>
+        <select id="g-club"></select>
+      </div>
+      <div class="field">
+        <label for="g-status">Status</label>
+        <select id="g-status">
+          <option value="all">All games</option>
+          <option value="final">Final results</option>
+          <option value="scheduled">Upcoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="vs-row" style="grid-column:1/-1">
+        <div class="field">
+          <label for="g-teamA">Team</label>
+          <input id="g-teamA" list="team-list" placeholder="Any team&hellip;" autocomplete="off" />
+        </div>
+        <div class="vs">VS</div>
+        <div class="field">
+          <label for="g-teamB">Opponent (head-to-head)</label>
+          <input id="g-teamB" list="team-list" placeholder="Optional&hellip;" autocomplete="off" />
+        </div>
+      </div>
+      <div class="field" style="align-self:end">
+        <button class="clearbtn" id="g-clear" type="button">Clear filters</button>
+      </div>
+    </div>
+    <div id="h2h"></div>
+    <div id="games-out"></div>
+  </section>
+
+  <!-- STANDINGS -->
+  <section id="panel-standings" class="panel" role="tabpanel" aria-labelledby="tab-standings">
+    <div class="controls">
+      <div class="field">
+        <label for="s-div">Division</label>
+        <select id="s-div"></select>
+      </div>
+      <div class="field">
+        <label for="s-sec">Section</label>
+        <select id="s-sec"></select>
+      </div>
+      <div class="field">
+        <label for="s-club">Club / Association</label>
+        <select id="s-club"></select>
+      </div>
+      <div class="field">
+        <label for="s-team">Find a team</label>
+        <input id="s-team" placeholder="Highlight a team&hellip;" autocomplete="off" />
+      </div>
+    </div>
+    <div id="standings-out"></div>
+  </section>
+</main>
+
+<datalist id="team-list"></datalist>
+
+<footer class="wrap">
+  <p>Lancaster County Youth Baseball League &middot; Data parsed automatically from the league's official standings &amp; score PDFs.
+  This page always loads the most recently published data.</p>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var base = location.pathname.replace(/\/matchups\/?$/, "");
+  var DATA_URL = base + "/data/generated/lcybl-official-data.json?v=" + Date.now();
+
+  var state = {games:[], standings:[], generatedAt:null, teamSet:{}};
+  var el = function(id){return document.getElementById(id);};
+
+  // Match a game's team against a query. When the query is an exact team name
+  // (e.g. picked from the datalist) we match exactly so "Cedar Crest" does not
+  // also pull in "Cedar Crest Blue"; otherwise fall back to substring search so
+  // partial typing and club names ("E-Town") still work.
+  function matchTeam(teamName, query){
+    if(!query) return false;
+    var t = teamName.toLowerCase();
+    if(state.teamSet[query]) return t === query;
+    return t.indexOf(query) >= 0;
+  }
+
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+
+  // Club / association = the first word of a team name (E-Town Bruins -> E-Town).
+  function clubOf(team){
+    var m = String(team||"").trim().match(/^[^\s]+/);
+    return m ? m[0] : "";
+  }
+  function secNum(s){ // "Section 2" -> 2 ; numbers pass through
+    if(typeof s === "number") return s;
+    var m = String(s||"").match(/(\d+)/); return m ? parseInt(m[1],10) : null;
+  }
+  function fmtDate(iso){
+    var p = String(iso).split("-");
+    if(p.length!==3) return iso;
+    var d = new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));
+    return d.toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric",timeZone:"UTC"});
+  }
+  function uniqSorted(arr){
+    return Object.keys(arr.reduce(function(a,v){if(v)a[v]=1;return a;},{})).sort(function(a,b){
+      return a.localeCompare(b,undefined,{numeric:true,sensitivity:"base"});});
+  }
+  function fillSelect(sel, values, allLabel){
+    sel.innerHTML = "";
+    var o = document.createElement("option"); o.value=""; o.textContent=allLabel; sel.appendChild(o);
+    values.forEach(function(v){var x=document.createElement("option");x.value=v;x.textContent=v;sel.appendChild(x);});
+  }
+
+  function setFreshness(){
+    var t = el("freshness-text");
+    if(!state.generatedAt){ t.textContent = "Live data loaded."; return; }
+    var d = new Date(state.generatedAt);
+    var when = isNaN(d) ? state.generatedAt :
+      d.toLocaleString(undefined,{month:"short",day:"numeric",year:"numeric",hour:"numeric",minute:"2-digit"});
+    t.textContent = "Live data · last updated " + when;
+  }
+
+  /* ---------- GAMES ---------- */
+  function gamesFiltered(){
+    var div=el("g-div").value, sec=el("g-sec").value, club=el("g-club").value,
+        status=el("g-status").value,
+        A=el("g-teamA").value.trim().toLowerCase(),
+        B=el("g-teamB").value.trim().toLowerCase();
+    return state.games.filter(function(g){
+      if(div && g.division!==div) return false;
+      if(sec && String(secNum(g.section))!==sec) return false;
+      if(status!=="all" && g.status!==status) return false;
+      if(club && clubOf(g.home)!==club && clubOf(g.away)!==club) return false;
+      if(A && B){ // head-to-head: both teams must be in this game
+        var hit = (matchTeam(g.home,A)||matchTeam(g.away,A)) && (matchTeam(g.home,B)||matchTeam(g.away,B));
+        if(!hit) return false;
+      } else if(A){
+        if(!matchTeam(g.home,A) && !matchTeam(g.away,A)) return false;
+      }
+      return true;
+    });
+  }
+
+  function gameRow(g){
+    var hasScore = (typeof g.homeScore==="number" && typeof g.awayScore==="number");
+    var homeWin = hasScore && g.homeScore>g.awayScore;
+    var awayWin = hasScore && g.awayScore>g.homeScore;
+    var badge = g.status==="final" ? '<span class="badge final">Final</span>'
+                                   : '<span class="badge upcoming">'+esc(g.time||"TBD")+'</span>';
+    return ''+
+    '<div class="game">'+
+      '<div>'+badge+'</div>'+
+      '<div class="matchup">'+
+        '<div class="teamline '+(homeWin?"win":"")+'"><span class="nm">'+esc(g.home)+'</span><span class="sc">'+(hasScore?g.homeScore:"")+'</span></div>'+
+        '<div class="teamline '+(awayWin?"win":"")+'"><span class="nm">'+esc(g.away)+'</span><span class="sc">'+(hasScore?g.awayScore:"")+'</span></div>'+
+        '<div class="ctx">'+esc(g.division)+' &middot; '+esc(g.section)+(g.field?' &middot; '+esc(g.field):'')+'</div>'+
+      '</div>'+
+      '<div class="when">'+fmtDate(g.date)+'</div>'+
+    '</div>';
+  }
+
+  function renderGames(){
+    renderH2H();
+    var list = gamesFiltered();
+    var out = el("games-out");
+    if(!list.length){ out.innerHTML='<div class="empty">No games match these filters yet.</div>'; return; }
+    var finals = list.filter(function(g){return g.status==="final";}).sort(function(a,b){return (b.date+b.time).localeCompare(a.date+a.time);});
+    var upcoming = list.filter(function(g){return g.status!=="final";}).sort(function(a,b){return (a.date+a.time).localeCompare(b.date+b.time);});
+    var html = "";
+    if(upcoming.length) html += '<div class="section-title">Upcoming ('+upcoming.length+')</div>'+groupByDay(upcoming);
+    if(finals.length)   html += '<div class="section-title">Results ('+finals.length+')</div>'+groupByDay(finals);
+    out.innerHTML = html;
+  }
+
+  function groupByDay(games){
+    var order=[], map={};
+    games.forEach(function(g){ if(!map[g.date]){map[g.date]=[];order.push(g.date);} map[g.date].push(g); });
+    return order.map(function(d){
+      return '<div class="daygroup"><div class="dayhead">'+fmtDate(d)+'</div>'+map[d].map(gameRow).join("")+'</div>';
+    }).join("");
+  }
+
+  function renderH2H(){
+    var A=el("g-teamA").value.trim(), B=el("g-teamB").value.trim();
+    var box=el("h2h");
+    if(!A || !B){ box.innerHTML=""; return; }
+    var al=A.toLowerCase(), bl=B.toLowerCase();
+    var meetings = state.games.filter(function(g){
+      if(g.status!=="final") return false;
+      return (matchTeam(g.home,al)||matchTeam(g.away,al)) && (matchTeam(g.home,bl)||matchTeam(g.away,bl));
+    });
+    var aw=0,bw=0,ar=0,br=0;
+    meetings.forEach(function(g){
+      var aIsHome = matchTeam(g.home,al);
+      var aScore = aIsHome ? g.homeScore : g.awayScore;
+      var bScore = aIsHome ? g.awayScore : g.homeScore;
+      ar+=aScore; br+=bScore;
+      if(aScore>bScore) aw++; else if(bScore>aScore) bw++;
+    });
+    var played = meetings.length;
+    box.innerHTML =
+      '<div class="summary"><h3>Head-to-head</h3>'+
+      '<div class="h2h-grid">'+
+        '<div><div class="h2h-team">'+esc(A)+'</div><div class="h2h-score">'+aw+'</div></div>'+
+        '<div class="h2h-mid">'+(played?played+' meeting'+(played>1?'s':''):'no meetings')+'<br>wins</div>'+
+        '<div><div class="h2h-team">'+esc(B)+'</div><div class="h2h-score">'+bw+'</div></div>'+
+      '</div>'+
+      (played?'<div class="meta">Runs scored: '+esc(A)+' '+ar+' &ndash; '+br+' '+esc(B)+'</div>':
+              '<div class="meta">These teams have no completed games against each other yet.</div>')+
+      '</div>';
+  }
+
+  /* ---------- STANDINGS ---------- */
+  function renderStandings(){
+    var div=el("s-div").value, sec=el("s-sec").value, club=el("s-club").value,
+        q=el("s-team").value.trim().toLowerCase();
+    var out=el("standings-out");
+    var tables = state.standings.filter(function(t){
+      if(div && t.division!==div) return false;
+      if(sec && String(secNum(t.section))!==sec) return false;
+      return true;
+    });
+    var html="", shown=0;
+    tables.forEach(function(t){
+      var groupsHtml = (t.groups||[]).map(function(grp){
+        var rows = (grp.rows||[]).filter(function(r){
+          return !club || clubOf(r.team)===club;
+        });
+        if(!rows.length) return "";
+        rows = rows.slice().sort(function(a,b){
+          return (b.points||0)-(a.points||0) || (b.pct||0)-(a.pct||0) || (a.runsAllowed||0)-(b.runsAllowed||0);
+        });
+        var body = rows.map(function(r){
+          var hit = q && r.team.toLowerCase().indexOf(q)>=0;
+          shown += hit?1:0;
+          return '<tr class="'+(r.champion?"champ":"")+(hit?" hit":"")+'">'+
+            '<td class="team">'+(r.champion?'<span class="crown" title="Section leader">&#9733;</span>':'')+esc(r.team)+'</td>'+
+            '<td>'+r.wins+'</td><td>'+r.losses+'</td><td>'+r.ties+'</td>'+
+            '<td>'+(r.pct!=null?r.pct+"%":"")+'</td><td>'+(r.points!=null?r.points:"")+'</td>'+
+            '<td>'+(r.runsAllowed!=null?r.runsAllowed:"")+'</td><td>'+(r.gamesRemaining!=null?r.gamesRemaining:"")+'</td>'+
+          '</tr>';
+        }).join("");
+        var sub = grp.name ? '<div class="stand-sub">'+esc(grp.name)+'</div>' : '';
+        return sub+'<table class="standings"><thead><tr>'+
+          '<th class="team">Team</th><th>W</th><th>L</th><th>T</th><th>Pct</th><th>Pts</th><th>RA</th><th>GR</th>'+
+          '</tr></thead><tbody>'+body+'</tbody></table>';
+      }).join("");
+      if(!groupsHtml.replace(/\s/g,"")) return;
+      shown++;
+      html += '<div class="stand-card"><div class="stand-head"><h3>'+esc(t.label||(t.division+" · Section "+t.section))+'</h3>'+
+              (t.updated?'<span class="upd">Updated '+esc(t.updated)+'</span>':'')+'</div>'+groupsHtml+'</div>';
+    });
+    out.innerHTML = shown ? html : '<div class="empty">No standings match these filters.</div>';
+  }
+
+  /* ---------- wiring ---------- */
+  function setupTabs(){
+    function show(which){
+      var games = which==="games";
+      el("tab-games").setAttribute("aria-selected", games);
+      el("tab-standings").setAttribute("aria-selected", !games);
+      el("panel-games").classList.toggle("active", games);
+      el("panel-standings").classList.toggle("active", !games);
+    }
+    el("tab-games").addEventListener("click",function(){show("games");});
+    el("tab-standings").addEventListener("click",function(){show("standings");});
+  }
+
+  function populateFilters(){
+    var divisions = uniqSorted(state.games.map(function(g){return g.division;}));
+    var sections = uniqSorted(state.games.map(function(g){return String(secNum(g.section));}));
+    var teams = uniqSorted(state.games.reduce(function(a,g){a.push(g.home,g.away);return a;},[]));
+    var clubs = uniqSorted(teams.map(clubOf));
+    state.teamSet = teams.reduce(function(a,t){a[t.toLowerCase()]=true;return a;},{});
+
+    fillSelect(el("g-div"), divisions, "All divisions");
+    fillSelect(el("g-sec"), sections, "All sections");
+    fillSelect(el("g-club"), clubs, "All clubs");
+    fillSelect(el("s-div"), divisions, "All divisions");
+    fillSelect(el("s-sec"), sections, "All sections");
+    fillSelect(el("s-club"), clubs, "All clubs");
+
+    var dl = el("team-list");
+    dl.innerHTML = teams.map(function(t){return '<option value="'+esc(t)+'"></option>';}).join("");
+  }
+
+  function bind(){
+    ["g-div","g-sec","g-club","g-status","g-teamA","g-teamB"].forEach(function(id){
+      el(id).addEventListener("input", renderGames);
+      el(id).addEventListener("change", renderGames);
+    });
+    ["s-div","s-sec","s-club","s-team"].forEach(function(id){
+      el(id).addEventListener("input", renderStandings);
+      el(id).addEventListener("change", renderStandings);
+    });
+    el("g-clear").addEventListener("click", function(){
+      ["g-div","g-sec","g-club","g-teamA","g-teamB"].forEach(function(id){el(id).value="";});
+      el("g-status").value="all"; renderGames();
+    });
+  }
+
+  function applyDeepLink(){
+    try{
+      var p = new URLSearchParams(location.search);
+      if(p.get("division")) el("g-div").value = el("s-div").value = p.get("division");
+      if(p.get("team")){ el("g-teamA").value = p.get("team"); el("s-team").value = p.get("team"); }
+      if(p.get("vs")) el("g-teamB").value = p.get("vs");
+      if(p.get("tab")==="standings") el("tab-standings").click();
+    }catch(e){}
+  }
+
+  fetch(DATA_URL, {cache:"no-store"})
+    .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+    .then(function(d){
+      state.games = (d.scheduleGames||[]).slice();
+      state.standings = (d.standings||[]).slice();
+      state.generatedAt = d.generatedAt || null;
+      setFreshness();
+      setupTabs();
+      populateFilters();
+      bind();
+      applyDeepLink();
+      renderGames();
+      renderStandings();
+    })
+    .catch(function(err){
+      el("freshness-text").textContent = "Could not load data.";
+      el("games-out").innerHTML = '<div class="empty">Sorry &mdash; the league data could not be loaded right now.<br>('+esc(err.message)+')</div>';
+    });
+})();
+</script>
+</body>
+</html>
