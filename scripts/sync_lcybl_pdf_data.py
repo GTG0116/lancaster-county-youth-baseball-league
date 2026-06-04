@@ -59,6 +59,17 @@ GENERATED_DIR = ROOT / "data/generated"
 GENERATED_JSON = GENERATED_DIR / "lcybl-official-data.json"
 USER_AGENT = "LCYBL-static-data-sync/1.0 (+https://github.com/)"
 
+# The league publishes its standings/scores PDFs through a GoDaddy Website
+# Builder site. Crucially, when a sheet is re-uploaded the blobby URL gets a new
+# hash suffix (e.g. ``14uSec1Scores.XLS-1311b95.pdf`` becomes
+# ``...-59f9d20.pdf``). The URLs that were baked into this repo's static export
+# therefore freeze on the day of the build and the workflow keeps re-parsing
+# stale PDFs. To stay current we re-discover the live PDF URLs from the league
+# site on every run (see ``discover_official_documents``).
+LEAGUE_BASE = "https://lancoyouthbaseball.org"
+LEAGUE_SCORES_INDEX = "/schedule-%2F-scores"
+LEAGUE_STANDINGS_INDEX = "/standings-1"
+
 
 @dataclass(frozen=True)
 class OfficialDocument:
@@ -127,6 +138,105 @@ def download(url: str) -> tuple[bytes, dict[str, str]]:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=60) as response:  # noqa: S310 - trusted league URLs from bundled site
         return response.read(), dict(response.headers.items())
+
+
+def fetch_text(url: str) -> str:
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(request, timeout=60) as response:  # noqa: S310 - trusted league site
+        return response.read().decode("utf-8", "replace")
+
+
+_SECTION_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6}
+_SLUG_RE = re.compile(r"(\d+)u-section-(one|two|three|four|five|six|\d+)", re.IGNORECASE)
+
+
+def _section_from_slug(slug: str) -> tuple[str, int] | None:
+    match = _SLUG_RE.search(slug)
+    if not match:
+        return None
+    division = f"{int(match.group(1))}U"
+    token = match.group(2).lower()
+    section = _SECTION_WORDS.get(token) or (int(token) if token.isdigit() else None)
+    return (division, section) if section else None
+
+
+def _first_pdf_url(html: str, name_keyword: str) -> str | None:
+    """Return the first wsimg PDF URL on a page whose filename matches keyword.
+
+    Section pages can also link unrelated PDFs (e.g. tournament flyers in a
+    sidebar), so we require the league's naming convention ("Scores"/"Standing")
+    to avoid grabbing the wrong document.
+    """
+    for raw in re.findall(r"(?:https:)?//img1\.wsimg\.com/blobby/go/[^\"'\\ ]+?\.pdf", html, re.IGNORECASE):
+        if name_keyword.lower() in raw.lower():
+            return ("https:" + raw) if raw.startswith("//") else raw
+    return None
+
+
+def discover_official_documents() -> list[OfficialDocument]:
+    """Discover the *current* scores/standings PDF URLs from the live league site.
+
+    The league's pages link to per-section subpages (e.g. ``/14u-section-one-scores``)
+    that embed the latest blobby PDF URL. We crawl the two index pages, follow
+    each section subpage, and read the fresh URL — so re-uploaded sheets (which
+    change their URL hash) are always picked up.
+    """
+    scores: dict[tuple[str, int], str] = {}
+    standings: dict[tuple[str, int], str] = {}
+    for index_path, kind, keyword, bucket in (
+        (LEAGUE_SCORES_INDEX, "scores", "Scores", scores),
+        (LEAGUE_STANDINGS_INDEX, "standings", "Standing", standings),
+    ):
+        index_html = fetch_text(LEAGUE_BASE + index_path)
+        slugs = sorted(set(re.findall(r'href="(/[a-z0-9%-]*' + kind + r'[a-z0-9%-]*)"', index_html, re.IGNORECASE)))
+        for slug in slugs:
+            section = _section_from_slug(slug)
+            if not section:
+                continue
+            url = _first_pdf_url(fetch_text(LEAGUE_BASE + slug), keyword)
+            if url:
+                bucket[section] = url
+
+    docs: list[OfficialDocument] = []
+    for key in sorted(scores):
+        division, section = key
+        docs.append(
+            OfficialDocument(
+                division=division,
+                section=section,
+                standings_url=standings.get(key),
+                scores_url=scores[key],
+            )
+        )
+    return docs
+
+
+def resolve_official_documents() -> list[OfficialDocument]:
+    """Prefer freshly discovered URLs; fall back to baked URLs per missing section.
+
+    Live discovery is authoritative because it always reflects the league's
+    latest uploads. The baked-in URLs are only used to backfill a section that
+    discovery could not find (e.g. a transient site error), so a section is never
+    silently dropped from the published data.
+    """
+    try:
+        discovered = discover_official_documents()
+    except (urllib.error.URLError, TimeoutError, ValueError) as exc:
+        print(f"WARNING: live URL discovery failed ({exc}); using baked URLs.", file=sys.stderr)
+        discovered = []
+
+    try:
+        baked = extract_official_documents()
+    except RuntimeError:
+        baked = []
+
+    merged: dict[tuple[str, int], OfficialDocument] = {(d.division, d.section): d for d in baked}
+    for doc in discovered:
+        merged[(doc.division, doc.section)] = doc  # discovered wins
+
+    if not merged:
+        raise RuntimeError("Could not determine any official LCYBL document URLs.")
+    return [merged[key] for key in sorted(merged)]
 
 
 def extract_pdf_text(data: bytes) -> str:
@@ -564,7 +674,7 @@ def sha256(data: bytes) -> str:
 
 
 def sync(args: argparse.Namespace) -> int:
-    docs = extract_official_documents()
+    docs = resolve_official_documents()
     all_games: list[dict[str, Any]] = []
     all_standings: list[dict[str, Any]] = []
     snapshots: list[dict[str, Any]] = []
