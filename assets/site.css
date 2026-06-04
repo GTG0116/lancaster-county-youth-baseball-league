@@ -1,0 +1,217 @@
+/* ==========================================================================
+   LCYBL shared styles for the live, data-driven pages
+   (Teams, Matchups, Schedule, Calendar). These pages render entirely from
+   /data/generated/lcybl-official-data.json so they always show the latest
+   published data. The look reuses the league palette so they sit seamlessly
+   next to the built marketing pages.
+   ========================================================================== */
+
+:root {
+  --navy-950: #03101f;
+  --navy-900: #061a33;
+  --navy-800: #0a2342;
+  --navy-700: #0e2c49;
+  --navy-600: #143a5e;
+  --navy-500: #1f4d7a;
+  --navy-100: #d3deeb;
+  --navy-50:  #eef2f7;
+  --brick-500: #c8102e;
+  --brick-300: #ee7280;
+  --sand-200: #f4ede2;
+  --sand-100: #fbf8f3;
+  --ink: #0f172a;
+  --muted: #5b6b82;
+  --line: #e2e8f0;
+  --win: #16a34a;
+  --loss: #dc2626;
+
+  /* Per-team theme (overridden inline on themed pages). Defaults = league navy. */
+  --team-primary: var(--navy-900);
+  --team-secondary: var(--brick-500);
+  --team-on-primary: #ffffff;
+  --team-soft: var(--navy-50);
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--sand-100);
+  margin: 0;
+}
+
+/* Generic page scaffolding ------------------------------------------------- */
+.lc-main { min-height: 60vh; }
+.lc-wrap { max-width: 80rem; margin: 0 auto; padding: 0 1.25rem; }
+@media (min-width: 1024px) { .lc-wrap { padding: 0 2rem; } }
+
+.lc-hero {
+  background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-700) 100%);
+  color: #fff;
+  padding: 40px 0 34px;
+}
+.lc-hero h1 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 8px; font-weight: 800; letter-spacing: -0.01em; }
+.lc-hero p { margin: 0; color: #c6d4e8; max-width: 640px; font-size: 15px; }
+.lc-eyebrow {
+  display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--brick-300); margin-bottom: 10px;
+}
+
+.lc-section { padding: 28px 0; }
+.lc-section h2 { font-size: 22px; margin: 0 0 14px; color: var(--navy-900); font-weight: 800; }
+
+.lc-muted { color: var(--muted); }
+.lc-center { text-align: center; }
+.lc-loading { padding: 60px 0; text-align: center; color: var(--muted); font-size: 15px; }
+
+/* Cards ------------------------------------------------------------------- */
+.lc-card {
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  box-shadow: 0 10px 30px -18px rgba(10,35,66,.35);
+}
+.lc-card-pad { padding: 18px; }
+
+/* Selectors / pills ------------------------------------------------------- */
+.lc-pillrow { display: flex; flex-wrap: wrap; gap: 8px; }
+.lc-pill {
+  border: 1px solid var(--navy-100); background: #fff; color: var(--navy-700);
+  border-radius: 9999px; padding: 8px 16px; font-size: 14px; font-weight: 700;
+  cursor: pointer; transition: all .15s ease; line-height: 1;
+}
+.lc-pill:hover { border-color: var(--navy-500); }
+.lc-pill[aria-pressed="true"] {
+  background: var(--navy-900); color: #fff; border-color: var(--navy-900);
+}
+.lc-field {
+  width: 100%; border: 1px solid var(--navy-100); border-radius: 12px;
+  padding: 11px 14px; font-size: 15px; background: #fff; color: var(--ink);
+}
+.lc-label { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--muted); margin-bottom: 6px; }
+
+/* Chips ------------------------------------------------------------------- */
+.lc-chip {
+  display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px;
+  padding: 3px 10px; font-size: 12px; font-weight: 700; letter-spacing: .03em;
+  background: var(--navy-50); color: var(--navy-700); white-space: nowrap;
+}
+.lc-chip-final { background: #e8f5ee; color: #15803d; }
+.lc-chip-live  { background: #fdecec; color: var(--brick-500); }
+.lc-chip-sched { background: var(--sand-200); color: var(--navy-700); }
+
+/* Game cards (shared by schedule, teams, matchups) ------------------------ */
+.lc-games { display: grid; gap: 12px; }
+@media (min-width: 640px) { .lc-games.cols-2 { grid-template-columns: 1fr 1fr; } }
+
+.lc-game {
+  display: flex; align-items: stretch; overflow: hidden; border-radius: 14px;
+  border: 1px solid var(--line); background: #fff; transition: box-shadow .2s ease;
+}
+.lc-game:hover { box-shadow: 0 12px 28px -16px rgba(10,35,66,.4); }
+.lc-game-date {
+  flex: 0 0 64px; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; background: var(--navy-900); color: #fff; padding: 10px 6px;
+}
+.lc-game-date .mo { font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--brick-300); }
+.lc-game-date .dy { font-size: 24px; font-weight: 800; line-height: 1; }
+.lc-game-date .wd { font-size: 10px; color: #c6d4e8; margin-top: 2px; }
+.lc-game-body { flex: 1; padding: 12px 14px; min-width: 0; }
+.lc-game-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.lc-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.lc-row + .lc-row { margin-top: 5px; }
+.lc-team { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.lc-team .nm { font-size: 14px; font-weight: 700; color: var(--navy-900);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lc-row.win .nm { color: #15803d; }
+.lc-score { min-width: 30px; text-align: center; border-radius: 7px; padding: 2px 7px;
+  font-size: 14px; font-weight: 800; font-variant-numeric: tabular-nums; background: var(--navy-50); color: var(--navy-700); }
+.lc-row.win .lc-score { background: var(--navy-900); color: #fff; }
+.lc-meta { font-size: 11px; color: var(--muted); }
+.lc-time { font-size: 13px; font-weight: 700; color: var(--navy-700); }
+
+/* Team dot (theme color swatch) ------------------------------------------ */
+.lc-dot { width: 12px; height: 12px; border-radius: 50%; flex: 0 0 auto;
+  border: 1px solid rgba(0,0,0,.12); }
+
+/* Empty / note states ----------------------------------------------------- */
+.lc-empty { padding: 28px; text-align: center; color: var(--muted);
+  border: 1px dashed var(--navy-100); border-radius: 14px; background: #fff; }
+.lc-updated { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+/* ===== Teams (sports-app) ================================================ */
+.lc-team-hero {
+  background:
+    linear-gradient(160deg, var(--team-primary) 0%, color-mix(in srgb, var(--team-primary) 78%, #000) 100%);
+  color: var(--team-on-primary); position: relative; overflow: hidden;
+}
+.lc-team-hero::after {
+  content: ""; position: absolute; right: -40px; top: -40px; width: 220px; height: 220px;
+  border-radius: 50%; background: var(--team-secondary); opacity: .18;
+}
+.lc-team-hero .lc-wrap { position: relative; padding: 34px 1.25rem 30px; z-index: 1; }
+.lc-team-badge {
+  width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center;
+  background: var(--team-secondary); color: var(--team-primary);
+  font-weight: 900; font-size: 24px; box-shadow: 0 8px 24px -10px rgba(0,0,0,.5);
+}
+.lc-team-hero h1 { font-size: clamp(26px, 4vw, 38px); margin: 0; font-weight: 900; letter-spacing: -0.01em; }
+.lc-team-hero .sub { color: var(--team-on-primary); opacity: .85; font-size: 14px; margin-top: 2px; font-weight: 600; }
+.lc-headrow { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+.lc-statline { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 18px; }
+.lc-stat .v { font-size: 28px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
+.lc-stat .k { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; opacity: .8; margin-top: 4px; }
+
+.lc-tabs { display: flex; gap: 6px; border-bottom: 1px solid var(--line); margin: 0 0 18px; flex-wrap: wrap; }
+.lc-tab {
+  border: 0; background: none; padding: 12px 14px; font-size: 14px; font-weight: 700;
+  color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -1px;
+}
+.lc-tab[aria-selected="true"] { color: var(--team-primary); border-bottom-color: var(--team-primary); }
+
+.lc-next {
+  border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: #fff;
+}
+.lc-next-top { background: var(--team-soft); padding: 12px 16px; font-size: 12px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--team-primary); }
+.lc-next-body { padding: 18px 16px; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.lc-vs { font-weight: 900; color: var(--muted); font-size: 14px; }
+
+/* Standings mini table ---------------------------------------------------- */
+.lc-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.lc-table th, .lc-table td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--line); }
+.lc-table th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 700; }
+.lc-table td.num, .lc-table th.num { text-align: center; font-variant-numeric: tabular-nums; }
+.lc-table tr.me { background: var(--team-soft); }
+.lc-table tr.me td { font-weight: 800; color: var(--team-primary); }
+
+/* ===== Calendar ========================================================== */
+.lc-calbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+.lc-calgrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.lc-caldow { text-align: center; font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--muted); padding: 6px 0; }
+.lc-cell { min-height: 104px; border: 1px solid var(--line); border-radius: 10px; background: #fff;
+  padding: 6px; display: flex; flex-direction: column; gap: 4px; overflow: hidden; }
+.lc-cell.out { background: var(--sand-100); opacity: .55; }
+.lc-cell.today { border-color: var(--brick-500); box-shadow: 0 0 0 1px var(--brick-500) inset; }
+.lc-cell .dnum { font-size: 12px; font-weight: 800; color: var(--navy-700); }
+.lc-ev { font-size: 10.5px; line-height: 1.25; border-radius: 6px; padding: 3px 5px;
+  background: var(--navy-50); color: var(--navy-700); display: block; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; }
+.lc-ev .ag { font-weight: 800; }
+.lc-ev.final { background: #e8f5ee; color: #15803d; }
+.lc-more { font-size: 10px; color: var(--muted); font-weight: 700; }
+@media (max-width: 640px) {
+  .lc-cell { min-height: 72px; }
+  .lc-ev { font-size: 9.5px; }
+}
+
+/* Buttons (small) --------------------------------------------------------- */
+.lc-btn {
+  display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px;
+  border: 1px solid var(--navy-100); background: #fff; color: var(--navy-700);
+  padding: 7px 14px; font-size: 13px; font-weight: 700; cursor: pointer;
+}
+.lc-btn:hover { border-color: var(--navy-500); }
+.lc-link { color: var(--brick-500); font-weight: 700; text-decoration: none; }
+.lc-link:hover { text-decoration: underline; }

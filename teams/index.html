@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Teams · Lancaster County Youth Baseball League</title>
+<meta name="description" content="Pick an LCYBL team by age group and section to see its record, next game, recent results and section standings — styled in the town's high-school colors." />
+<link rel="icon" href="../icon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../_next/static/css/65f8654b9a88dcf2.css" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<div data-lc-header></div>
+<main class="lc-main" id="lc-app">
+  <section class="lc-hero" id="lc-pickhero">
+    <div class="lc-wrap">
+      <span class="lc-eyebrow">Team Center</span>
+      <h1>Follow your team</h1>
+      <p>Pick an age group and section, then choose a team to see its record, next game, recent results and standings — in the colors of the town's high school.</p>
+    </div>
+  </section>
+
+  <section class="lc-section" id="lc-picker">
+    <div class="lc-wrap">
+      <div class="lc-card lc-card-pad">
+        <div style="margin-bottom:16px">
+          <span class="lc-label">Age group</span>
+          <div class="lc-pillrow" id="lc-divs"></div>
+        </div>
+        <div style="margin-bottom:16px">
+          <span class="lc-label">Section</span>
+          <div class="lc-pillrow" id="lc-secs"></div>
+        </div>
+        <div>
+          <span class="lc-label">Team</span>
+          <div class="lc-pillrow" id="lc-teams"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="lc-team"></div>
+  <div class="lc-loading" id="lc-loading">Loading the latest league data…</div>
+</main>
+<div data-lc-footer></div>
+
+<script>window.LCYBL_PAGE="teams";</script>
+<script src="../assets/site.js"></script>
+<script src="../assets/teams.js"></script>
+</body>
+</html>
