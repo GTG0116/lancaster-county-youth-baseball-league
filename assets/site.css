@@ -108,22 +108,24 @@ body {
 }
 .lc-game:hover { box-shadow: 0 12px 28px -16px rgba(10,35,66,.4); }
 .lc-game-date {
-  flex: 0 0 64px; display: flex; flex-direction: column; align-items: center;
-  justify-content: center; background: var(--navy-900); color: #fff; padding: 10px 6px;
+  flex: 0 0 56px; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; background: var(--navy-900); color: #fff; padding: 10px 4px;
 }
+@media (min-width: 480px) { .lc-game-date { flex-basis: 64px; padding: 10px 6px; } }
 .lc-game-date .mo { font-size: 10px; font-weight: 700; letter-spacing: .08em;
   text-transform: uppercase; color: var(--brick-300); }
 .lc-game-date .dy { font-size: 24px; font-weight: 800; line-height: 1; }
 .lc-game-date .wd { font-size: 10px; color: #c6d4e8; margin-top: 2px; }
-.lc-game-body { flex: 1; padding: 12px 14px; min-width: 0; }
-.lc-game-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.lc-game-body { flex: 1 1 auto; padding: 12px 14px; min-width: 0; }
+.lc-game-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; }
+.lc-game-head .lc-chip { min-width: 0; max-width: 100%; }
 .lc-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .lc-row + .lc-row { margin-top: 5px; }
-.lc-team { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.lc-team { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1 1 auto; }
 .lc-team .nm { font-size: 14px; font-weight: 700; color: var(--navy-900);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .lc-row.win .nm { color: #15803d; }
-.lc-score { min-width: 30px; text-align: center; border-radius: 7px; padding: 2px 7px;
+.lc-score { flex: 0 0 auto; min-width: 30px; text-align: center; border-radius: 7px; padding: 2px 7px;
   font-size: 14px; font-weight: 800; font-variant-numeric: tabular-nums; background: var(--navy-50); color: var(--navy-700); }
 .lc-row.win .lc-score { background: var(--navy-900); color: #fff; }
 .lc-meta { font-size: 11px; color: var(--muted); }
