@@ -228,6 +228,58 @@
     return "rgba(" + r + "," + g + "," + b + ",0.08)";
   }
 
+  /* ---- search ----------------------------------------------------------- */
+  var INDEX = [], curMatches = [];
+  function buildIndex() {
+    var seen = {};
+    DATA.scheduleGames.forEach(function (g) {
+      [g.home, g.away].forEach(function (nm) {
+        var key = g.division + "|" + g.section + "|" + nm;
+        if (seen[key]) return; seen[key] = 1;
+        INDEX.push({ team: nm, div: g.division, sec: g.section });
+      });
+    });
+    INDEX.sort(function (a, b) { return a.team.localeCompare(b.team) || a.div.localeCompare(b.div); });
+  }
+  function runSearch(q) {
+    q = (q || "").trim().toLowerCase();
+    var box = $("lc-results");
+    if (!q) { box.hidden = true; box.innerHTML = ""; curMatches = []; return; }
+    curMatches = INDEX.filter(function (r) { return r.team.toLowerCase().indexOf(q) >= 0; }).slice(0, 12);
+    if (!curMatches.length) {
+      box.innerHTML = '<div class="lc-result"><span class="none">No teams match “' + esc(q) + '”.</span></div>';
+      box.hidden = false; return;
+    }
+    box.innerHTML = curMatches.map(function (r, i) {
+      var th = L.theme(r.team);
+      return '<button type="button" class="lc-result' + (i === 0 ? " active" : "") + '" data-i="' + i + '">' +
+        '<span class="lc-dot" style="background:' + th.primary + '"></span><span class="nm">' + esc(r.team) + '</span>' +
+        '<span class="meta">' + esc(L.ageSec({ division: r.div, section: r.sec })) + '</span></button>';
+    }).join("");
+    box.hidden = false;
+    Array.prototype.forEach.call(box.querySelectorAll(".lc-result"), function (btn) {
+      btn.onclick = function () { pickResult(curMatches[+btn.getAttribute("data-i")]); };
+    });
+  }
+  function pickResult(r) {
+    if (!r) return;
+    sel.div = r.div; sel.sec = r.sec; sel.team = r.team;
+    $("lc-results").hidden = true;
+    $("lc-q").value = r.team;
+    renderPickers(); renderTeam(); pushState(); scrollToTeam();
+  }
+  function wireSearch() {
+    var q = $("lc-q");
+    q.addEventListener("input", function () { runSearch(this.value); });
+    q.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && curMatches.length) { e.preventDefault(); pickResult(curMatches[0]); }
+      else if (e.key === "Escape") { $("lc-results").hidden = true; }
+    });
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".lc-search")) $("lc-results").hidden = true;
+    });
+  }
+
   /* ---- init ------------------------------------------------------------- */
   function readQuery() {
     var p = new URLSearchParams(location.search);
@@ -239,9 +291,11 @@
   L.load().then(function (d) {
     DATA = d;
     $("lc-loading").style.display = "none";
+    buildIndex();
+    wireSearch();
     readQuery();
     renderPickers();
-    if (sel.team) { renderTeam(); }
+    if (sel.team) { $("lc-q").value = sel.team; renderTeam(); }
   }).catch(function (e) {
     $("lc-loading").textContent = "Could not load league data. Please refresh.";
   });
