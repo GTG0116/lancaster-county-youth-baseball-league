@@ -403,6 +403,11 @@ def parse_schedule_text(text: str, doc: OfficialDocument) -> list[dict[str, Any]
 
         if not home or not away:
             continue
+        # A 0–0 "result" is the league's placeholder for a game that has not been
+        # played yet (real finals always have a run total; forfeits are marked
+        # "F"). Treat it as unplayed so it shows as an upcoming game, not a score.
+        if home_score == 0 and away_score == 0:
+            home_score = away_score = None
         game = {
             "id": f"{doc.division}-{doc.section}-{len(games)}",
             "date": date,
@@ -602,15 +607,24 @@ def patch_between(path: Path, start_marker: str, end_marker: str, replacement: s
     return write_if_changed(path, patched)
 
 
-# Maximum number of completed games to embed per section. Older games are
-# dropped so the JS bundle stays small and the schedule page renders quickly.
-MAX_RESULTS_PER_SECTION = 40
+# Embed every game (completed and scheduled) so no results are ever hidden.
+# Previously this kept only the 40 most recent finals per section, which silently
+# dropped earlier games (e.g. all of April) from the schedule. The live pages
+# read the full data set, so completeness matters here too. Set to a positive
+# integer only if the bundle size ever becomes a concern.
+MAX_RESULTS_PER_SECTION: int | None = None
 
 
 def trim_schedule_games(games: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Keep all scheduled games and the most recent MAX_RESULTS_PER_SECTION
-    completed games per section, then re-sort chronologically."""
+    """Return games in stable chronological order.
+
+    When ``MAX_RESULTS_PER_SECTION`` is set, keep all scheduled games plus the
+    most recent N completed games per section; otherwise keep everything.
+    """
     from collections import defaultdict
+
+    if MAX_RESULTS_PER_SECTION is None:
+        return sorted(games, key=lambda g: (g["date"], g["time"], g["division"], g["section"], g["home"]))
 
     by_section: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
     for game in games:
