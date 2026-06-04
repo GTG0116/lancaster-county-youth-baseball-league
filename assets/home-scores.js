@@ -48,7 +48,8 @@
     var grid = findGrid();
     if (!grid) return;
     L.load().then(function (data) {
-      var finals = (data.scheduleGames || []).filter(L.isFinal)
+      var today = new Date().toISOString().slice(0, 10);
+    var finals = (data.scheduleGames || []).filter(function (g) { return L.isFinal(g) && g.date <= today; })
         .sort(function (a, b) { return (b.date + (b.time || "")).localeCompare(a.date + (a.time || "")); });
       if (!finals.length) return;
       grid = findGrid();
