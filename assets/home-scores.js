@@ -30,18 +30,18 @@
     var homeWin = g.homeScore > g.awayScore, awayWin = g.awayScore > g.homeScore;
     function row(name, score, win) {
       return '<div class="flex items-center justify-between gap-3">' +
-        '<span class="truncate text-sm font-bold text-navy-900">' + L.esc(name) + '</span>' +
-        '<span class="min-w-[1.75rem] rounded-md px-1.5 py-0.5 text-center text-sm font-bold tabular-nums ' +
+        '<span class="min-w-0 truncate text-sm font-bold text-navy-900">' + L.esc(name) + '</span>' +
+        '<span class="min-w-[1.75rem] shrink-0 rounded-md px-1.5 py-0.5 text-center text-sm font-bold tabular-nums ' +
         (win ? 'bg-navy-900 text-white' : 'bg-navy-100 text-navy-700') + '">' + score + '</span></div>';
     }
     return '<div style="transition-delay:' + (delay) + 'ms"><div class="card-hover flex items-stretch overflow-hidden">' +
-      '<div class="flex w-16 shrink-0 flex-col items-center justify-center bg-navy-900 px-2 py-3 text-white">' +
+      '<div class="flex w-14 shrink-0 flex-col items-center justify-center bg-navy-900 px-1.5 py-3 text-white sm:w-16 sm:px-2">' +
       '<span class="text-[10px] font-bold uppercase tracking-wider text-brick-300">' + mo + '</span>' +
       '<span class="font-display text-2xl font-700 leading-none">' + day + '</span></div>' +
-      '<div class="flex flex-1 flex-col gap-2 p-4"><div class="flex items-center justify-between">' +
-      '<span class="chip bg-sand-200 text-navy-700">' + L.esc(L.ageSec(g)) + '</span>' +
-      '<span class="chip bg-navy-100 text-navy-700">Final</span></div>' +
-      '<div class="space-y-1.5">' + row(g.home, g.homeScore, homeWin) + row(g.away, g.awayScore, awayWin) + '</div></div></div></div>';
+      '<div class="flex min-w-0 flex-1 flex-col gap-2 p-3 sm:p-4"><div class="flex items-center justify-between gap-2">' +
+      '<span class="chip min-w-0 truncate bg-sand-200 text-navy-700">' + L.esc(L.ageSec(g)) + '</span>' +
+      '<span class="chip shrink-0 bg-navy-100 text-navy-700">Final</span></div>' +
+      '<div class="space-y-1.5">' + row(g.away, g.awayScore, awayWin) + row(g.home, g.homeScore, homeWin) + '</div></div></div></div>';
   }
 
   function run() {

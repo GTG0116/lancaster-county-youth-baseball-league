@@ -122,7 +122,7 @@
     }
     return '<div class="lc-game"><div class="lc-game-date"><span class="mo">' + L.mon(g.date) + '</span><span class="dy">' + L.day(g.date) + '</span><span class="wd">' + L.dow(g.date) + '</span></div>' +
       '<div class="lc-game-body"><div class="lc-game-head"><span class="lc-chip">' + esc(L.ageSec(g)) + '</span>' + chip + '</div>' +
-      side(g.home, g.homeScore, homeWin) + side(g.away, g.awayScore, awayWin) + '</div></div>';
+      side(g.away, g.awayScore, awayWin) + side(g.home, g.homeScore, homeWin) + '</div></div>';
   }
 
   /* ---- team view -------------------------------------------------------- */
