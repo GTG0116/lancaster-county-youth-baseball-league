@@ -1,6 +1,6 @@
 /* Hard-navigation shim for the built (Next.js) pages.
 
-   Several data-driven pages (schedule, calendar, matchups, teams) were rebuilt
+   Several data-driven pages (schedule, calendar, teams) were rebuilt
    as standalone live pages that read the latest published JSON. Next.js's
    client router would otherwise intercept in-app link clicks and try to render
    a stale cached route instead of loading those real documents. This shim

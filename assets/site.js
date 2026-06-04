@@ -74,30 +74,33 @@
      Matched by team-name prefix. { primary, secondary } where primary is the
      dominant school color. Unmapped teams fall back to league navy.
      ====================================================================== */
+  // Colors are the real Lancaster County, PA high-school colors (verified
+  // against each school / the Lancaster-Lebanon League). Order matters: more
+  // specific patterns first. "primary" is the dominant school color.
   var TEAM_THEMES = [
-    // order matters: more specific patterns first
-    { re: /^(mt |manheim twp|mt\b|mt$)/i,                      town: "Manheim Township", school: "Blue Streaks",        primary: "#14387a", secondary: "#ffffff" },
-    { re: /^manheim/i,                                          town: "Manheim Central",  school: "Barons",             primary: "#6b1f2a", secondary: "#f2a900" },
-    { re: /^(e-?town|elizabethtown)/i,                          town: "Elizabethtown",    school: "Bears",              primary: "#7c2230", secondary: "#939598" },
-    { re: /^warwick/i,                                          town: "Warwick / Lititz", school: "Warriors",           primary: "#00529b", secondary: "#f4c20d" },
-    { re: /^hempfield/i,                                        town: "Hempfield",        school: "Black Knights",      primary: "#1a1a1a", secondary: "#c8a951" },
-    { re: /^mountville/i,                                       town: "Mountville",       school: "Hempfield SD",       primary: "#8b1a1a", secondary: "#d4af37" },
-    { re: /^(ls |l-?s\b|lampeter)/i,                            town: "Lampeter-Strasburg", school: "Pioneers",         primary: "#b1242d", secondary: "#111111" },
-    { re: /(\bpm\b|penn manor)/i,                               town: "Penn Manor",       school: "Comets",             primary: "#003da5", secondary: "#ffffff" },
-    { re: /^(cv |conestoga valley)/i,                           town: "Conestoga Valley", school: "Buckskins",          primary: "#00693e", secondary: "#ffd200" },
-    { re: /^(pv |pequea valley)/i,                              town: "Pequea Valley",    school: "Braves",             primary: "#b01e28", secondary: "#14224b" },
-    { re: /^cocalico/i,                                         town: "Cocalico",         school: "Eagles",             primary: "#c8102e", secondary: "#111111" },
-    { re: /^donegal/i,                                          town: "Donegal",          school: "Indians",            primary: "#00573f", secondary: "#ffc72c" },
-    { re: /^garden spot/i,                                      town: "Garden Spot / ELANCO", school: "Spartans",       primary: "#003594", secondary: "#ffc72c" },
-    { re: /^ephrata/i,                                          town: "Ephrata",          school: "Mountaineers",       primary: "#6e2233", secondary: "#b5b7b9" },
-    { re: /^ce?dar crest/i,                                     town: "Cedar Crest",      school: "Falcons",            primary: "#006341", secondary: "#ffffff" },
-    { re: /^solanco/i,                                          town: "Solanco",          school: "Golden Mules",       primary: "#a86b00", secondary: "#111111" },
-    { re: /^octorara/i,                                         town: "Octorara",         school: "Braves",             primary: "#d2491c", secondary: "#111111" },
-    { re: /^columbia/i,                                         town: "Columbia",         school: "Crimson Tide",       primary: "#9e1b32", secondary: "#c0c0c0" },
-    { re: /^lanc.*mennonite|lancaster mennonite/i,              town: "Lancaster Mennonite", school: "Blazers",         primary: "#1f3a93", secondary: "#ffd200" },
-    { re: /^st\.? ?leo/i,                                       town: "St. Leo the Great", school: "Crusaders",         primary: "#1d4e89", secondary: "#ffcc00" },
-    { re: /^lititz/i,                                           town: "Lititz",           school: "",                   primary: "#14387a", secondary: "#c8102e" },
-    { re: /^(lanc jr|lanc rec|conoy|ctyaa)|tornado/i,           town: "Lancaster Rec",    school: "Tornadoes",          primary: "#c8102e", secondary: "#14224b" },
+    { re: /^mt\b|^manheim twp|^manheim township/i,  town: "Manheim Township",   school: "Blue Streaks",  primary: "#0a3d91", secondary: "#ffffff" }, // blue & white
+    { re: /^manheim/i,                              town: "Manheim Central",    school: "Barons",        primary: "#7a1f2b", secondary: "#9a9a9a" }, // maroon & gray
+    { re: /^e-?town|^elizabethtown/i,               town: "Elizabethtown",      school: "Bears",         primary: "#0046ad", secondary: "#ffffff" }, // royal & white
+    { re: /^warwick/i,                              town: "Warwick / Lititz",   school: "Warriors",      primary: "#c8102e", secondary: "#111111" }, // red & black
+    { re: /^hempfield/i,                            town: "Hempfield",          school: "Black Knights", primary: "#111111", secondary: "#c8102e" }, // black & red
+    { re: /^mountville/i,                           town: "Mountville",         school: "Hempfield SD",  primary: "#1a1a1a", secondary: "#c8102e" }, // (feeds Hempfield)
+    { re: /^ls\b|^l-?s\b|^lampeter/i,               town: "Lampeter-Strasburg", school: "Pioneers",      primary: "#00337f", secondary: "#ffffff" }, // blue & white
+    { re: /\bpm\b|^penn manor/i,                    town: "Penn Manor",         school: "Comets",        primary: "#0b2c5c", secondary: "#c5a64b" }, // navy & vegas gold
+    { re: /^cv\b|^conestoga valley/i,               town: "Conestoga Valley",   school: "Buckskins",     primary: "#c8102e", secondary: "#1a2f6b" }, // red & navy
+    { re: /^pv\b|^pequea valley/i,                  town: "Pequea Valley",      school: "Braves",        primary: "#c0102e", secondary: "#ffffff" }, // red & white
+    { re: /^cocalico/i,                             town: "Cocalico",           school: "Eagles",        primary: "#034ea2", secondary: "#ffffff" }, // blue & white
+    { re: /^donegal/i,                              town: "Donegal",            school: "Indians",       primary: "#00843d", secondary: "#ffffff" }, // kelly green & white
+    { re: /^garden spot/i,                          town: "Garden Spot / ELANCO", school: "Spartans",    primary: "#1f3a93", secondary: "#9a9a9a" }, // blue & gray
+    { re: /^ephrata/i,                              town: "Ephrata",            school: "Mountaineers",  primary: "#4b2e83", secondary: "#ffc72c" }, // purple & gold
+    { re: /^ce?dar crest/i,                         town: "Cedar Crest",        school: "Falcons",       primary: "#1d4ea8", secondary: "#9a9a9a" }, // royal blue & gray
+    { re: /^solanco/i,                              town: "Solanco",            school: "Golden Mules",  primary: "#111111", secondary: "#d4a017" }, // black & gold
+    { re: /^octorara/i,                             town: "Octorara",           school: "Braves",        primary: "#c8102e", secondary: "#14224b" }, // red, white & blue
+    { re: /^columbia/i,                             town: "Columbia",           school: "Crimson Tide",  primary: "#9e1b32", secondary: "#c5a64b" }, // crimson & gold
+    { re: /^lanc.*mennonite|^lancaster mennonite/i, town: "Lancaster Mennonite", school: "Blazers",      primary: "#111111", secondary: "#ffcc00" }, // black & gold
+    { re: /^st\.? ?leo/i,                           town: "Lancaster Catholic", school: "Crusaders",     primary: "#003087", secondary: "#ffc72c" }, // royal & gold
+    { re: /^lititz/i,                               town: "Lititz / Warwick SD", school: "Warriors",     primary: "#c8102e", secondary: "#111111" }, // Warwick red & black
+    { re: /^conoy/i,                                town: "Conoy / Donegal SD", school: "Indians",       primary: "#00843d", secondary: "#ffffff" }, // (feeds Donegal)
+    { re: /^lanc jr|^lanc rec|tornado/i,            town: "Lancaster (McCaskey)", school: "Red Tornado", primary: "#c8102e", secondary: "#111111" }, // red & black
   ];
   var FALLBACK = { town: "Lancaster County", school: "", primary: "#061a33", secondary: "#c8102e" };
 
@@ -169,8 +172,7 @@
     { label: "Compete", items: [
       ["schedule/", "Schedule &amp; Scores", "Game times, results, and matchups"],
       ["standings/", "Standings", "Division records and rankings"],
-      ["teams/", "Teams", "Pick a team &mdash; record, next &amp; past games"],
-      ["matchups/", "Matchups", "Head-to-head between any two teams"],
+      ["teams/", "Teams", "Search a team &mdash; record, next &amp; past games"],
       ["tournaments/", "Tournaments", "LNP, All-Star &amp; club tournaments"],
     ]},
     { label: "League", items: [

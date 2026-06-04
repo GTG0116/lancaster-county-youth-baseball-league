@@ -15,26 +15,35 @@
   <section class="lc-hero" id="lc-pickhero">
     <div class="lc-wrap">
       <span class="lc-eyebrow">Team Center</span>
-      <h1>Follow your team</h1>
-      <p>Pick an age group and section, then choose a team to see its record, next game, recent results and standings — in the colors of the town's high school.</p>
+      <h1>Search your team</h1>
+      <p>Start typing a team name to see its record, next game, recent results and section standings — in the colors of the town's high school.</p>
     </div>
   </section>
 
   <section class="lc-section" id="lc-picker">
     <div class="lc-wrap">
-      <div class="lc-card lc-card-pad">
-        <div style="margin-bottom:16px">
-          <span class="lc-label">Age group</span>
-          <div class="lc-pillrow" id="lc-divs"></div>
+      <div class="lc-card lc-card-pad lc-search-card">
+        <span class="lc-label">Search teams</span>
+        <div class="lc-search">
+          <input class="lc-field" id="lc-q" type="search" autocomplete="off"
+                 placeholder="Search a team — e.g. Warwick, Manheim, E-Town…" />
+          <div class="lc-results" id="lc-results" hidden></div>
         </div>
-        <div style="margin-bottom:16px">
-          <span class="lc-label">Section</span>
-          <div class="lc-pillrow" id="lc-secs"></div>
-        </div>
-        <div>
-          <span class="lc-label">Team</span>
-          <div class="lc-pillrow" id="lc-teams"></div>
-        </div>
+        <details class="lc-browse" id="lc-browse">
+          <summary>or browse by age group &amp; section</summary>
+          <div style="margin-top:14px">
+            <span class="lc-label">Age group</span>
+            <div class="lc-pillrow" id="lc-divs"></div>
+          </div>
+          <div style="margin-top:14px">
+            <span class="lc-label">Section</span>
+            <div class="lc-pillrow" id="lc-secs"></div>
+          </div>
+          <div style="margin-top:14px">
+            <span class="lc-label">Team</span>
+            <div class="lc-pillrow" id="lc-teams"></div>
+          </div>
+        </details>
       </div>
     </div>
   </section>
