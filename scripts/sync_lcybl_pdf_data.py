@@ -32,8 +32,29 @@ from pathlib import Path
 from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEDULE_CHUNK = ROOT / "_next/static/chunks/app/schedule/page-4d7f3905a5da1900.js"
-STANDINGS_CHUNK = ROOT / "_next/static/chunks/app/standings/page-c30f85e5d0d57d3c.js"
+
+
+def find_app_chunk(route: str) -> Path:
+    """Locate the (single) Next.js page chunk for an app route.
+
+    The filename carries a content hash (``page-<hash>.js``). Because this
+    script rewrites that hash on every data change to bust browser/CDN caches
+    (see ``cache_bust_chunk``), the chunk must be discovered by glob rather than
+    referenced by a fixed name that would go stale after the first sync.
+    """
+    matches = sorted((ROOT / "_next/static/chunks/app" / route).glob("page-*.js"))
+    if not matches:
+        raise RuntimeError(f"No page-*.js chunk found for the {route!r} route.")
+    if len(matches) > 1:
+        raise RuntimeError(
+            f"Expected exactly one page chunk for {route!r}; found {len(matches)}: "
+            + ", ".join(p.name for p in matches)
+        )
+    return matches[0]
+
+
+SCHEDULE_CHUNK = find_app_chunk("schedule")
+STANDINGS_CHUNK = find_app_chunk("standings")
 GENERATED_DIR = ROOT / "data/generated"
 GENERATED_JSON = GENERATED_DIR / "lcybl-official-data.json"
 USER_AGENT = "LCYBL-static-data-sync/1.0 (+https://github.com/)"
@@ -431,6 +452,34 @@ def serialize_js(data: Any) -> str:
     return json.dumps(data, ensure_ascii=False, separators=(",", ":"))
 
 
+def cache_bust_chunk(chunk: Path) -> Path:
+    """Rename a patched chunk to a fresh content-hash filename and update refs.
+
+    The deployed static pages reference each app chunk by its hashed filename in
+    exactly two places: the route's ``index.html`` (script tag + preloads) and
+    ``index.txt`` (the RSC flight payload). When we rewrite a chunk's contents in
+    place but keep the same filename, browsers and CDNs that already cached the
+    old file by URL keep serving stale standings/scores. Renaming the file to a
+    hash of its new contents changes the URL, forcing a fresh fetch the moment
+    the workflow publishes. Returns the (possibly unchanged) chunk path.
+    """
+    content = chunk.read_bytes()
+    new_name = f"page-{hashlib.sha256(content).hexdigest()[:16]}.js"
+    if new_name == chunk.name:
+        return chunk
+    route = chunk.parent.name  # e.g. "schedule" or "standings"
+    old_name = chunk.name
+    new_path = chunk.with_name(new_name)
+    chunk.rename(new_path)
+    for ref in (ROOT / route / "index.html", ROOT / route / "index.txt"):
+        if not ref.exists():
+            continue
+        text = ref.read_text(encoding="utf-8")
+        if old_name in text:
+            ref.write_text(text.replace(old_name, new_name), encoding="utf-8")
+    return new_path
+
+
 def patch_between(path: Path, start_marker: str, end_marker: str, replacement: str) -> bool:
     text = read_text(path)
     start = text.find(start_marker)
@@ -500,7 +549,14 @@ def patch_static_chunks(games: list[dict[str, Any]], standings: list[dict[str, A
         replacement = f"let c={serialize_js(standings)}"
         if patch_between(STANDINGS_CHUNK, "let c=", ";function l(e)", replacement):
             changed.append(STANDINGS_CHUNK)
-    return changed
+
+    # Bust caches for every chunk whose contents actually changed by renaming it
+    # to a fresh content hash and updating the pages that reference it. Without
+    # this, returning visitors keep the previously cached (stale) chunk URL.
+    busted: list[Path] = []
+    for chunk in dict.fromkeys(changed):  # preserve order, de-duplicate
+        busted.append(cache_bust_chunk(chunk))
+    return busted
 
 
 def sha256(data: bytes) -> str:
