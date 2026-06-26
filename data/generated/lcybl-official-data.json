@@ -10,7 +10,7 @@
       "division": "10U",
       "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/10uSec2Scores.XLS-0728ed4.pdf",
       "section": 2,
-      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2010u%20Section%202%20Standings%20750--two%20-e19f6eb.pdf"
+      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2010u%20Section%202%20Standings%20750--two%20-ea641d3.pdf"
     },
     {
       "division": "10U",
@@ -20,9 +20,9 @@
     },
     {
       "division": "12U",
-      "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/12uSec1Scores.XLS-b7e2a44.pdf",
+      "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/12uSec1Scores.XLS-8604088.pdf",
       "section": 1,
-      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2012u%20Section%201%20Standings%202%20divisio-797844b.pdf"
+      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2012u%20Section%201%20Standings%202%20divisio-f2cc706.pdf"
     },
     {
       "division": "12U",
@@ -34,13 +34,13 @@
       "division": "12U",
       "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/12uSec3Scores.XLS-dd7615d.pdf",
       "section": 3,
-      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2012u%20Section%203%20Standings%20750%202%20div-b62694b.pdf"
+      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2012u%20Section%203%20Standings%20750%202%20div-3634e4d.pdf"
     },
     {
       "division": "14U",
-      "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec1Scores.XLS-3f2ba2f.pdf",
+      "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec1Scores.XLS-c931770.pdf",
       "section": 1,
-      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%201%20Standings%20one%20divis-b00b0d6.pdf"
+      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%201%20Standings%20one%20divis-1339294.pdf"
     },
     {
       "division": "14U",
@@ -52,11 +52,11 @@
       "division": "14U",
       "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec3Scores.XLS-d85750b.pdf",
       "section": 3,
-      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%203%20Standings%20750%20one%20d-d009c74.pdf"
+      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%203%20Standings%20750%20one%20d-ba5e32e.pdf"
     }
   ],
   "failures": [],
-  "generatedAt": "2026-06-25T12:34:09.268761+00:00",
+  "generatedAt": "2026-06-26T04:00:36.626015+00:00",
   "scheduleGames": [
     {
       "away": "Donegal Indians",
@@ -17651,24 +17651,28 @@
     },
     {
       "away": "Donegal Indians",
+      "awayScore": 2,
       "date": "2026-06-25",
       "division": "12U",
       "field": "Hempfield Fire Dept.",
       "home": "Hempfield Black",
+      "homeScore": 12,
       "id": "12U-1-140",
       "section": "Section 1",
-      "status": "scheduled",
+      "status": "final",
       "time": "6:00PM"
     },
     {
       "away": "Cedar Crest",
+      "awayScore": 7,
       "date": "2026-06-25",
       "division": "12U",
       "field": "Manor MS",
       "home": "PM Comets",
+      "homeScore": 8,
       "id": "12U-1-142",
       "section": "Section 1",
-      "status": "scheduled",
+      "status": "final",
       "time": "6:00PM"
     },
     {
@@ -17684,24 +17688,28 @@
     },
     {
       "away": "MT Streaks",
+      "awayScore": 15,
       "date": "2026-06-25",
       "division": "14U",
       "field": "Snyder Park #1",
       "home": "Ephrata Drillerz",
+      "homeScore": 7,
       "id": "14U-1-123",
       "section": "Section 1",
-      "status": "scheduled",
+      "status": "final",
       "time": "6:00PM"
     },
     {
       "away": "PM Comets",
+      "awayScore": 3,
       "date": "2026-06-25",
       "division": "14U",
       "field": "A. Herr Park",
       "home": "Hempfield Black",
+      "homeScore": 12,
       "id": "14U-1-120",
       "section": "Section 1",
-      "status": "scheduled",
+      "status": "final",
       "time": "6:00PM"
     },
     {
@@ -17717,13 +17725,15 @@
     },
     {
       "away": "E-Town Black",
+      "awayScore": 16,
       "date": "2026-06-25",
       "division": "14U",
       "field": "Mountville Boro",
       "home": "Mountville Angels",
+      "homeScore": 3,
       "id": "14U-1-121",
       "section": "Section 1",
-      "status": "scheduled",
+      "status": "final",
       "time": "6:00PM"
     },
     {
@@ -17818,9 +17828,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:03 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:28 GMT",
         "ETag": "\"f9e56268d5d4d746465ced1c6f0378d5\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:03 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:28 GMT",
         "Last-Modified": "Sat, 20 Jun 2026 01:38:52 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17850,9 +17860,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:03 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:29 GMT",
         "ETag": "\"b024683bdf7dd72cdaf9c98116750380\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:03 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:29 GMT",
         "Last-Modified": "Sat, 20 Jun 2026 01:48:28 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17882,9 +17892,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:04 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:29 GMT",
         "ETag": "\"4224274ef250c4413719b249bd6dae5e\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:04 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:29 GMT",
         "Last-Modified": "Thu, 25 Jun 2026 03:32:22 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17902,9 +17912,9 @@
       "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/10uSec2Scores.XLS-0728ed4.pdf"
     },
     {
-      "bytes": 152199,
+      "bytes": 152205,
       "division": "10U",
-      "extractedText": "\n--- page 1 ---\n10u Section 2\nYellow Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD LS Regulators Orange 14 0 0 100.0% 42 41 0\nEphrata Athletics Orange 12 2 0 85.7% 36 31 0\nPM Blue Orange 12 2 0 85.7% 36 63 0\nHempfield Black Orange 10 4 0 71.4% 30 70 0\nPM White Orange 9 4 1 67.9% 28 71 0\nManheim Maroon Orange 9 5 0 64.3% 27 71 0\nMT Lightning Orange 9 5 0 64.3% 27 78 0\nDonegal Green Orange 6 8 0 42.9% 18 111 0\nCocalico Eagles Orange 4 9 1 32.1% 13 131 0\nWarwick Rangers Orange 4 10 0 28.6% 12 144 0\nHempfield White Orange 4 10 0 28.6% 12 149 0\nCedar Crest Orange 2 11 0 15.4% 6 118 1\nColumbia Red Orange 2 12 0 14.3% 6 129 0\nGarden Spot Blue Orange 0 13 0 0.0% 0 230 1\nBrown\nD PV Braves Blue 13 1 0 92.9% 39 38 0\nMt Thunder Blue 13 1 0 92.9% 39 49 0\nLS Blue Crew Blue 12 2 0 85.7% 36 63 0\nMountville Pirates Blue 10 4 0 71.4% 30 95 0\nLanc Jr Tornados Blue 9 5 0 64.3% 27 66 0\nWarwick Diamondbacks Blue 8 5 1 60.7% 25 87 0\nManheim Gray Blue 8 6 0 57.1% 24 57 0\nSt. Leo Crusaders Blue 7 7 0 50.0% 21 86 0\nPM Gold Blue 5 7 1 42.3% 16 90 1\nCV Bucks Blue 4 10 0 28.6% 12 105 0\nHempfield Gray Blue 2 11 0 15.4% 6 145 1\nSOLANCO Black Blue 2 11 0 15.4% 6 152 1\nHempfield Red Blue 1 12 0 7.7% 3 112 1\nGarden Spot White Blue 0 14 0 0.0% 0 200 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 LS Regulators Orange 14 0 0 100.0% 42 41 0\nX PV Braves Blue 13 1 0 92.9% 39 38 0\n\n--- page 2 ---\nD2 Mt Thunder Blue 13 1 0 92.9% 39 49 0\n3 Ephrata Athletics Orange 12 2 0 85.7% 36 31 0\nCoin Flip LS Blue Crew Blue 12 2 0 85.7% 36 63 0\nCoin Flip PM Blue Orange 12 2 0 85.7% 36 63 0\n6 Hempfield Black Orange 10 4 0 71.4% 30 70 0\n7 Mountville Pirates Blue 10 4 0 71.4% 30 95 0\n8 PM White Orange 9 4 1 67.9% 28 71 0\n9 Lanc Jr Tornados Blue 9 5 0 64.3% 27 66 0\nX Manheim Maroon Orange 9 5 0 64.3% 27 71 0\n10 MT Lightning Orange 9 5 0 64.3% 27 78 0\n11 Warwick Diamondbacks Blue 8 5 1 60.7% 25 87 0\n12 Manheim Gray Blue 8 6 0 57.1% 24 57 0\n13 St. Leo Crusaders Blue 7 7 0 50.0% 21 86 0\n14 Donegal Green Orange 6 8 0 42.9% 18 111 0\n15 PM Gold Blue 5 7 1 42.3% 16 90 1\n16 Cocalico Eagles Orange 4 9 1 32.1% 13 131 0\n17 CV Bucks Blue 4 10 0 28.6% 12 105 0\n18 Warwick Rangers Orange 4 10 0 28.6% 12 144 0\n19 Hempfield White Orange 4 10 0 28.6% 12 149 0\n20 Cedar Crest Orange 2 11 0 15.4% 6 118 1\n21 Columbia Red Orange 2 12 0 14.3% 6 129 0\n22 Hempfield Gray Blue 2 11 0 15.4% 6 145 1\n23 SOLANCO Black Blue 2 11 0 15.4% 6 152 1\n24 Hempfield Red Blue 1 12 0 7.7% 3 112 1\nX Garden Spot White Blue 0 14 0 0.0% 0 200 0\nX Garden Spot Blue Orange 0 13 0 0.0% 0 230 1\nDouble\nWins Losses Ties Forfeit Last updated ==>6/25/2026\n191 191 4 0\n1. Points\nAll teams qualify for the Year End Tournament 2. Head2Head Calculated End Of Season\nDivision Winners are the #1 & #2 Seeds 3. Runs Allowed\n4. Coin Flip\n.750 Rule\nColumbia Eligible\nSt. Leo Eligible\n\n--- page 3 ---\nLanc Jr Tonados Eligible\nMountville Pirates Eligible\nPV Braves Ineligible",
+      "extractedText": "\n--- page 1 ---\n10u Section 2\nYellow Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD LS Regulators Orange 14 0 0 100.0% 42 41 0\nEphrata Athletics Orange 12 2 0 85.7% 36 31 0\nPM Blue Orange 12 2 0 85.7% 36 63 0\nHempfield Black Orange 10 4 0 71.4% 30 70 0\nPM White Orange 9 4 1 67.9% 28 71 0\nManheim Maroon Orange 9 5 0 64.3% 27 71 0\nMT Lightning Orange 9 5 0 64.3% 27 78 0\nDonegal Green Orange 6 8 0 42.9% 18 111 0\nCocalico Eagles Orange 4 9 1 32.1% 13 131 0\nWarwick Rangers Orange 4 10 0 28.6% 12 144 0\nHempfield White Orange 4 10 0 28.6% 12 149 0\nCedar Crest Orange 2 11 0 15.4% 6 118 1\nColumbia Red Orange 2 12 0 14.3% 6 129 0\nGarden Spot Blue Orange 0 13 0 0.0% 0 230 1\nBrown\nD PV Braves Blue 13 1 0 92.9% 39 38 0\nMt Thunder Blue 13 1 0 92.9% 39 49 0\nLS Blue Crew Blue 12 2 0 85.7% 36 63 0\nMountville Pirates Blue 10 4 0 71.4% 30 95 0\nLanc Jr Tornados Blue 9 5 0 64.3% 27 66 0\nWarwick Diamondbacks Blue 8 5 1 60.7% 25 87 0\nManheim Gray Blue 8 6 0 57.1% 24 57 0\nSt. Leo Crusaders Blue 7 7 0 50.0% 21 86 0\nPM Gold Blue 5 7 1 42.3% 16 90 1\nCV Bucks Blue 4 10 0 28.6% 12 105 0\nHempfield Gray Blue 2 11 0 15.4% 6 145 1\nSOLANCO Black Blue 2 11 0 15.4% 6 152 1\nHempfield Red Blue 1 12 0 7.7% 3 112 1\nGarden Spot White Blue 0 14 0 0.0% 0 200 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 LS Regulators Orange 14 0 0 100.0% 42 41 0\nX PV Braves Blue 13 1 0 92.9% 39 38 0\n\n--- page 2 ---\nD2 Mt Thunder Blue 13 1 0 92.9% 39 49 0\n3 Ephrata Athletics Orange 12 2 0 85.7% 36 31 0\nCoin Flip #5 LS Blue Crew Blue 12 2 0 85.7% 36 63 0\nCoin Flip #4 PM Blue Orange 12 2 0 85.7% 36 63 0\n6 Hempfield Black Orange 10 4 0 71.4% 30 70 0\n7 Mountville Pirates Blue 10 4 0 71.4% 30 95 0\n8 PM White Orange 9 4 1 67.9% 28 71 0\n9 Lanc Jr Tornados Blue 9 5 0 64.3% 27 66 0\nX Manheim Maroon Orange 9 5 0 64.3% 27 71 0\n10 MT Lightning Orange 9 5 0 64.3% 27 78 0\n11 Warwick Diamondbacks Blue 8 5 1 60.7% 25 87 0\n12 Manheim Gray Blue 8 6 0 57.1% 24 57 0\n13 St. Leo Crusaders Blue 7 7 0 50.0% 21 86 0\n14 Donegal Green Orange 6 8 0 42.9% 18 111 0\n15 PM Gold Blue 5 7 1 42.3% 16 90 1\n16 Cocalico Eagles Orange 4 9 1 32.1% 13 131 0\n17 CV Bucks Blue 4 10 0 28.6% 12 105 0\n18 Warwick Rangers Orange 4 10 0 28.6% 12 144 0\n19 Hempfield White Orange 4 10 0 28.6% 12 149 0\n20 Cedar Crest Orange 2 11 0 15.4% 6 118 1\n21 Columbia Red Orange 2 12 0 14.3% 6 129 0\n22 Hempfield Gray Blue 2 11 0 15.4% 6 145 1\n23 SOLANCO Black Blue 2 11 0 15.4% 6 152 1\n24 Hempfield Red Blue 1 12 0 7.7% 3 112 1\nX Garden Spot White Blue 0 14 0 0.0% 0 200 0\nX Garden Spot Blue Orange 0 13 0 0.0% 0 230 1\nDouble\nWins Losses Ties Forfeit Last updated ==>6/25/2026\n191 191 4 0\n1. Points\nAll teams qualify for the Year End Tournament 2. Head2Head Calculated End Of Season\nDivision Winners are the #1 & #2 Seeds 3. Runs Allowed\n4. Coin Flip\n.750 Rule\nColumbia Eligible\nSt. Leo Eligible\n\n--- page 3 ---\nLanc Jr Tonados Eligible\nMountville Pirates Eligible\nPV Braves Ineligible",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -17914,15 +17924,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:04 GMT",
-        "ETag": "\"76a8f7e1a8c8c261ebacc519a66d2ec6\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:04 GMT",
-        "Last-Modified": "Thu, 25 Jun 2026 04:06:16 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:30 GMT",
+        "ETag": "\"c9aaa99096f1ff9735c53bfe1e2488c7\"",
+        "Expires": "Sat, 26 Jun 2027 04:00:30 GMT",
+        "Last-Modified": "Fri, 26 Jun 2026 01:43:48 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
-        "X-Forwarded-For": "50.63.4.71",
-        "x-amzn-trace-id": "Root=1-6a3ca937-571e472a39e188f10102fd39",
+        "X-Forwarded-For": "50.63.4.67",
+        "x-amzn-trace-id": "Root=1-6a3dd953-374012164a5234d5215ec9cb",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-fb2a2ba"
@@ -17930,8 +17940,8 @@
       "kind": "standings",
       "parsedCount": 28,
       "section": 2,
-      "sha256": "73050266aa6df402b535f11ae33af395e01340c375096fda89503a75856af5e9",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2010u%20Section%202%20Standings%20750--two%20-e19f6eb.pdf"
+      "sha256": "bbad335faab38fcce6efa0f42f8bab2aea4631182d0aae0a4c4458d334267f2d",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2010u%20Section%202%20Standings%20750--two%20-ea641d3.pdf"
     },
     {
       "bytes": 144981,
@@ -17946,9 +17956,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:04 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:31 GMT",
         "ETag": "\"76a947a59da466dff6f3d9322c78d1a0\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:04 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:31 GMT",
         "Last-Modified": "Thu, 18 Jun 2026 03:52:13 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17978,9 +17988,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:05 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:31 GMT",
         "ETag": "\"b7659087f838ebe8c124ddbff2e0e0a7\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:05 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:31 GMT",
         "Last-Modified": "Thu, 18 Jun 2026 04:09:50 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17998,9 +18008,9 @@
       "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2010u%20Section%203%20Standings%20one%20divis-50c368e.pdf"
     },
     {
-      "bytes": 187629,
+      "bytes": 187633,
       "division": "12U",
-      "extractedText": "\n--- page 1 ---\nDate Day Sequence# Time Location Home Score Visitor Score\n13-Apr-26 Mon 734 6:00PM Herr Flowers #2          LS Atta Boys             2 Hempfield Red            7 Z\n13-Apr-26 Mon 645 6:00PM Manor MS                 PM Comets                8 Octorara Braves          8 T\n13-Apr-26 Mon 733 6:00PM SYBA Field Complex #2    SOLANCO Black            10 CV Bucks                 16 Z\n13-Apr-26 Mon 643 6:00PM Reamstown Park           Cocalico Eagles          14 Warwick Phillies         1 Z\n13-Apr-26 Mon 644 6:00PM Minor Field              E-Town Blue              6 Cedar Crest              8 Z\n14-Apr-26 Tue 648 6:00PM Hempfield Fire Dept.     Hempfield Black          4 Ephrata Drillerz         4 T\n14-Apr-26 Tue 646 6:00PM Overlook #2              MT Streaks               14 Mountville Indians       0 Z\n14-Apr-26 Tue 647 6:00PM Creek Field              Manheim                  5 Donegal Indians          1 Z\n15-Apr-26 Wed 735 6:00PM Farmdale Elementary      Hempfield Red            6 SOLANCO Black            4 Z\n16-Apr-26 Thu 738 6:00PM Warwick Twp #2           Warwick Phillies         7 Manheim                  10 Z\n16-Apr-26 Thu 737 6:00PM Snyder Park #3           Ephrata Drillerz         6 E-Town Blue              5 Z\n16-Apr-26 Thu 649 6:00PM Froelich Park East       Mountville Indians       7 PM Comets                2 Z\n17-Apr-26 Fri 736 6:00PM Flory Park #2            CV Bucks                 14 LS Atta Boys             16 Z\n17-Apr-26 Fri 650 6:00PM Highland Twp.            Octorara Braves          15 MT Streaks               4 Z\n17-Apr-26 Fri 651 6:00PM Gloninger Woods Park     Cedar Crest              12 Cocalico Eagles          11 Z\n17-Apr-26 Fri 739 8:00PM Kunkle Field             Donegal Indians          3 Hempfield Black          17 Z\n20-Apr-26 Mon 652 6:00PM Minor Field              E-Town Blue              11 Warwick Phillies         1 Z\n21-Apr-26 Tue 653 6:00PM Froelich Park East       Mountville Indians       6 CV Bucks                 9 Z\n21-Apr-26 Tue 741 6:00PM Farmdale Elementary      Hempfield Red            1 MT Streaks               3 Z\n22-Apr-26 Wed 743 6:00PM Fuhrman Park #2          Donegal Indians          5 Cedar Crest              2 Z\n22-Apr-26 Wed 654 6:00PM Manor MS                 PM Comets                5 Hempfield Black          18 Z\n22-Apr-26 Wed 655 6:00PM Creek Field              Manheim                  11 Cocalico Eagles          4 Z\n22-Apr-26 Wed 742 6:00PM Snyder Park #3           Ephrata Drillerz         3 Octorara Braves          2 Z\n23-Apr-26 Thu 740 6:00PM SYBA Field Complex #2    SOLANCO Black            6 LS Atta Boys             18 Z\n27-Apr-26 Mon 658 6:00PM Kunkle Field             Donegal Indians          5 Ephrata Drillerz         10 Z\n27-Apr-26 Mon 656 6:00PM Gloninger Woods Park     Cedar Crest              12 Warwick Phillies         2 Z\n27-Apr-26 Mon 657 6:00PM Reamstown Park           Cocalico Eagles          3 E-Town Blue              2 Z\n28-Apr-26 Tue 660 6:00PM Highland Twp.            Octorara Braves          6 Hempfield Red            3 Z\n28-Apr-26 Tue 744 6:00PM Herr Flowers #2          LS Atta Boys             18 Mountville Indians       7 Z\n28-Apr-26 Tue 661 6:00PM Hempfield Fire Dept.     Hempfield Black          12 Manheim                  2 Z\n30-Apr-26 Thu 745 6:00PM Warwick Twp #2           Warwick Phillies         2 Ephrata Drillerz         6 Z\n30-Apr-26 Thu 666 6:00PM Froelich Park East       Mountville Indians       3 Manheim                  6 Z\n30-Apr-26 Thu 665 6:00PM Hempfield Fire Dept.     Hempfield Black          4 LS Atta Boys             14 Z\n1-May-26 Fri 746 6:00PM Flory Park #2            CV Bucks                 2 Hempfield Red            9 Z\n4-May-26 Mon 750 6:00PM Warwick Twp #2           Warwick Phillies         5 Donegal Indians          4 Z\n4-May-26 Mon 749 6:00PM Flory Park #2            CV Bucks                 2 MT Streaks               5 Z\n4-May-26 Mon 667 6:00PM Reamstown Park           Cocalico Eagles          1 Hempfield Black          4 Z\n4-May-26 Mon 748 6:00PM Snyder Park #3           Ephrata Drillerz         6 Cedar Crest              4 Z\n5-May-26 Tue 751 6:00PM Farmdale Elementary      Hempfield Red            8 Mountville Indians       3 Z\n5-May-26 Tue 669 6:00PM Creek Field              Manheim                  11 SOLANCO Black            1 Z\n5-May-26 Tue 668 6:00PM Manor MS                 PM Comets                5 LS Atta Boys             11 Z\n5-May-26 Tue 670 6:00PM Minor Field              E-Town Blue              15 Ephrata Drillerz         5 Z\n6-May-26 Wed 671 6:00PM Hempfield Fire Dept.     Hempfield Black          13 Warwick Phillies         3 Z\n7-May-26 Thu 676 6:00PM Dairy Road Field         Cedar Crest              5 Manheim                  15 Z\n7-May-26 Thu 674 6:00PM Kunkle Field             Donegal Indians          2 Cocalico Eagles          3 Z\n7-May-26 Thu 673 6:00PM Legion Park              SOLANCO Black            9 PM Comets                19 Z\n7-May-26 Thu 677 6:00PM Minor Field              E-Town Blue              2 MT Streaks               1 Z\n8-May-26 Fri 675 6:00PM Froelich Park East       Mountville Indians       0 Octorara Braves          9 Z\n8-May-26 Fri 752 6:00PM Warwick Twp #2           Warwick Phillies         11 Hempfield Red            15 Z\n11-May-26 Mon 663 6:00PM Overlook #2              MT Streaks               8 SOLANCO Black            2 Z\n11-May-26 Mon 754 6:00PM Snyder Park #3           Ephrata Drillerz         3 CV Bucks                 2 Z\n11-May-26 Mon 678 6:00PM Hempfield Fire Dept.     Hempfield Black          3 Cedar Crest              0 Z\n11-May-26 Mon 709 6:00PM Minor Field              E-Town Blue              0 Manheim                  3 Z\n12-May-26 Tue 753 6:00PM Herr Flowers #2          LS Atta Boys             11 Cocalico Eagles          1 Z\n12-May-26 Tue 679 6:00PM Kunkle Field             Donegal Indians          10 PM Comets                9 Z\n12-May-26 Tue 755 6:00PM SYBA Field Complex #2    SOLANCO Black            4 Mountville Indians       10 Z\n12-May-26 Tue 680 6:00PM Creek Field              Manheim                  11 E-Town Blue              3 Z\n12-May-26 Tue 756 6:00PM Hempfield Fire Dept.     Hempfield Red            3 Octorara Braves          14 Z\n13-May-26 Wed 681 6:00PM Overlook #2              MT Streaks               13 Warwick Phillies         6 Z\n14-May-26 Thu 682 6:00PM Dairy Road Field         Cedar Crest              12 Mountville Indians       3 Z\n14-May-26 Thu 683 6:00PM Reamstown Park           Cocalico Eagles          10 Ephrata Drillerz         1 Z\n14-May-26 Thu 684 6:00PM Manor MS                 PM Comets                9 Hempfield Red            13 Z\n15-May-26 Fri 686 6:00PM Overlook #2              MT Streaks               2 LS Atta Boys             4 Z\n15-May-26 Fri 757 6:00PM Flory Park #2            CV Bucks                 8 Donegal Indians          1 Z\n\n--- page 2 ---\n15-May-26 Fri 685 6:00PM Highland Twp.            Octorara Braves          10 Hempfield Black          9 Z\n18-May-26 Mon 664 6:00PM Manor MS                 PM Comets                15 CV Bucks                 6 Z\n18-May-26 Mon 662 6:00PM Minor Field              E-Town Blue              17 Donegal Indians          7 Z\n18-May-26 Mon 758 6:00PM Snyder Park #3           Ephrata Drillerz         5 Manheim                  2 Z\n18-May-26 Mon 759 6:00PM Warwick Twp #2           Warwick Phillies         5 Octorara Braves          21 Z\n18-May-26 Mon 782 6:00PM Overlook #1              LS Atta Boys             17 MT Streaks               9 Z\n19-May-26 Tue 688 6:00PM Dairy Road Field         Cedar Crest              5 Hempfield Red            4 Z\n19-May-26 Tue 689 6:00PM Hempfield Fire Dept.     Hempfield Black          14 SOLANCO Black            0 Z\n20-May-26 Wed 691 6:00PM Creek Field              Manheim                  6 PM Comets                2 Z\n26-May-26 Tue 659 6:00PM Manor MS                 PM Comets                1 MT Streaks               6 Z\n26-May-26 Tue 695 6:00PM Creek Field              Manheim                  3 Hempfield Black          15 Z\n26-May-26 Tue 697 6:00PM Minor Field              E-Town Blue              13 Mountville Indians       2 Z\n26-May-26 Tue 696 6:00PM Highland Twp.            Octorara Braves          10 SOLANCO Black            2 Z\n27-May-26 Wed 690 6:00PM Froelich Park East       Mountville Indians       2 Donegal Indians          4 Z\n27-May-26 Wed 698 6:00PM Reamstown Park           Cocalico Eagles          6 CV Bucks                 7 Z\n27-May-26 Wed 763 6:00PM Snyder Park #3           Ephrata Drillerz         13 Warwick Phillies         3 Z\n27-May-26 Wed 765 6:00PM Farmdale Elementary      Hempfield Red            6 Manheim                  2 Z\n28-May-26 Thu 693 6:00PM SOLANCO Legion           SOLANCO Black            0 Ephrata Drillerz         14 Z\n28-May-26 Thu 701 6:00PM Dairy Road Field         Cedar Crest              9 Donegal Indians          7 Z\n28-May-26 Thu 700 6:00PM Hempfield Fire Dept.     Hempfield Black          10 E-Town Blue              0 Z\n29-May-26 Fri 766 6:00PM Herr Flowers #2          LS Atta Boys             16 Octorara Braves          6 Z\n29-May-26 Fri 764 6:00PM Flory Park #2            CV Bucks                 5 PM Comets                18 Z\n29-May-26 Fri 767 6:00PM SYBA Field Complex #2    SOLANCO Black            2 MT Streaks               12 Z\n1-Jun-26 Mon 702 6:00PM Froelich Park East       Mountville Indians       12 Hempfield Red            6 Z\n1-Jun-26 Mon 705 6:00PM Highland Twp.            Octorara Braves          9 Cocalico Eagles          10 Z\n1-Jun-26 Mon 704 6:00PM Kunkle Field             Donegal Indians          6 Warwick Phillies         7 Z\n1-Jun-26 Mon 703 6:00PM Overlook #2              MT Streaks               14 Cedar Crest              0 Z\n2-Jun-26 Tue 769 6:00PM Flory Park #2            CV Bucks                 10 SOLANCO Black            9 Z\n3-Jun-26 Wed 672 6:00PM Highland Twp.            Octorara Braves          8 CV Bucks                 9 Z\n3-Jun-26 Wed 768 6:00PM Herr Flowers #2          LS Atta Boys             1 Ephrata Drillerz         4 Z\n3-Jun-26 Wed 770 6:00PM Warwick Twp #2           Warwick Phillies         2 E-Town Blue              13 Z\n3-Jun-26 Wed 707 6:00PM Dairy Road Field         Cedar Crest              7 Hempfield Black          18 Z\n3-Jun-26 Wed 708 6:00PM Manor MS                 PM Comets                5 Mountville Indians       12 Z\n3-Jun-26 Wed 706 6:00PM Reamstown Park           Cocalico Eagles          9 Manheim                  6 Z\n4-Jun-26 Thu 771 6:00PM Farmdale Elementary      Hempfield Red            5 LS Atta Boys             8 Z\n4-Jun-26 Thu 772 6:00PM Snyder Park #3           Ephrata Drillerz         9 Donegal Indians          12 Z\n5-Jun-26 Fri 710 6:00PM Overlook #2              MT Streaks               7 CV Bucks                 6 Z\n5-Jun-26 Fri 711 6:00PM Highland Twp.            Octorara Braves          10 PM Comets                8 Z\n5-Jun-26 Fri 729 6:00PM Reamstown Park           Cocalico Eagles          6 Cedar Crest              8 Z\n8-Jun-26 Mon 712 6:00PM Kunkle Field             Donegal Indians          11 E-Town Blue              1 Z\n9-Jun-26 Tue 714 6:00PM Highland Twp.            Octorara Braves          7 LS Atta Boys             11 Z\n9-Jun-26 Tue 773 6:00PM SYBA Field Complex #2    SOLANCO Black            6 Warwick Phillies         5 Z\n9-Jun-26 Tue 715 6:00PM Creek Field              Manheim                  12 Cedar Crest              2 Z\n9-Jun-26 Tue 774 6:00PM Snyder Park #3           Ephrata Drillerz         6 Hempfield Black          18 Z\n9-Jun-26 Tue 713 6:00PM Froelich Park East       Mountville Indians       1 MT Streaks               3 Z\n10-Jun-26 Wed 775 6:00PM Farmdale Elementary      Hempfield Red            3 PM Comets                9 Z\n11-Jun-26 Thu 776 6:00PM Flory Park #2            CV Bucks                 7 E-Town Blue              12 Z\n11-Jun-26 Thu 716 6:00PM Reamstown Park           Cocalico Eagles          15 Donegal Indians          10 Z\n11-Jun-26 Thu 717 6:00PM Overlook #2              MT Streaks               8 Octorara Braves          1 Z\n11-Jun-26 Thu 718 6:00PM Creek Field              Manheim                  14 Warwick Phillies         4 Z\n11-Jun-26 Thu 720 6:00PM Dairy Road Field         Cedar Crest              4 Ephrata Drillerz         11 Z\n12-Jun-26 Fri 761 6:00PM Farmdale Elementary      Hempfield Red            11 E-Town Blue              5 Z\n12-Jun-26 Fri 719 6:00PM Hempfield Fire Dept.     Hempfield Black          10 Cocalico Eagles          0 Z\n12-Jun-26 Fri 777 6:00PM Flory Park #2            CV Bucks                 12 Mountville Indians       10 Z\n12-Jun-26 Fri 778 6:00PM Herr Flowers #2          LS Atta Boys             12 SOLANCO Black            2 Z\n15-Jun-26 Mon 721 6:00PM SOLANCO Legion           SOLANCO Black            8 Hempfield Red            1 Z\n15-Jun-26 Mon 779 6:00PM Warwick Twp #2           Warwick Phillies         3 Cedar Crest              10 Z\n16-Jun-26 Tue 747 6:00PM SYBA Field Complex #2    SOLANCO Black            3 Octorara Braves          5 Z\n16-Jun-26 Tue 725 6:00PM Froelich Park East       Mountville Indians       9 LS Atta Boys             20 Z\n16-Jun-26 Tue 724 6:00PM Kunkle Field             Donegal Indians          6 Manheim                  12 Z\n16-Jun-26 Tue 780 6:00PM Snyder Park #3           Ephrata Drillerz         2 Cocalico Eagles          7 Z\n16-Jun-26 Tue 722 6:00PM Minor Field              E-Town Blue              0 Hempfield Black          15 Z\n17-Jun-26 Wed 723 6:00PM Overlook #2              MT Streaks               5 PM Comets                3 Z\n17-Jun-26 Wed 781 6:00PM Farmdale Elementary      Hempfield Red            6 CV Bucks                 3 Z\n18-Jun-26 Thu 687 6:00PM Minor Field              E-Town Blue              14 Cocalico Eagles          4 Z\n\n--- page 3 ---\n18-Jun-26 Thu 760 6:00PM Herr Flowers #2          LS Atta Boys             13 CV Bucks                 1 Z\n18-Jun-26 Thu 726 6:00PM Manor MS                 PM Comets                23 SOLANCO Black            13 Z\n18-Jun-26 Thu 728 6:00PM Minch Park               Octorara Braves          6 Mountville Indians       10 Z\n18-Jun-26 Thu 730 6:00PM Creek Field              Manheim                  13 Ephrata Drillerz         10 Z\n22-Jun-26 Mon 692 6:00PM Reamstown Park           Cocalico Eagles          4 MT Streaks               0 Z\n22-Jun-26 Mon 784 6:00PM Warwick Twp #2           Warwick Phillies         0 Hempfield Black          15 Z\n23-Jun-26 Tue 731 6:00PM Dairy Road Field         Cedar Crest              16 E-Town Blue              5 Z\n23-Jun-26 Tue 732 6:00PM Froelich Park East       Mountville Indians       13 SOLANCO Black            12 Z\n23-Jun-26 Tue 785 6:00PM Herr Flowers #2          LS Atta Boys             11 PM Comets                1 Z\n24-Jun-26 Wed 786 6:00PM Warwick Twp #2           Warwick Phillies         5 Cocalico Eagles          3 Z\n24-Jun-26 Wed 762 6:00PM Kunkle Field             Donegal Indians          1 LS Atta Boys             16 Z\n25-Jun-26 Thu 727 6:00PM Hempfield Fire Dept.     Hempfield Black          0 Donegal Indians          0  \n25-Jun-26 Thu 783 6:00PM Flory Park #2            CV Bucks                 0 Octorara Braves          0  \n25-Jun-26 Thu 694 6:00PM Manor MS                 PM Comets                0 Cedar Crest              0  \n26-Jun-26 Fri 699 6:00PM Overlook #2              MT Streaks               0 Hempfield Red            0  ",
+      "extractedText": "\n--- page 1 ---\nDate Day Sequence# Time Location Home Score Visitor Score\n13-Apr-26 Mon 734 6:00PM Herr Flowers #2          LS Atta Boys             2 Hempfield Red            7 Z\n13-Apr-26 Mon 645 6:00PM Manor MS                 PM Comets                8 Octorara Braves          8 T\n13-Apr-26 Mon 733 6:00PM SYBA Field Complex #2    SOLANCO Black            10 CV Bucks                 16 Z\n13-Apr-26 Mon 643 6:00PM Reamstown Park           Cocalico Eagles          14 Warwick Phillies         1 Z\n13-Apr-26 Mon 644 6:00PM Minor Field              E-Town Blue              6 Cedar Crest              8 Z\n14-Apr-26 Tue 648 6:00PM Hempfield Fire Dept.     Hempfield Black          4 Ephrata Drillerz         4 T\n14-Apr-26 Tue 646 6:00PM Overlook #2              MT Streaks               14 Mountville Indians       0 Z\n14-Apr-26 Tue 647 6:00PM Creek Field              Manheim                  5 Donegal Indians          1 Z\n15-Apr-26 Wed 735 6:00PM Farmdale Elementary      Hempfield Red            6 SOLANCO Black            4 Z\n16-Apr-26 Thu 738 6:00PM Warwick Twp #2           Warwick Phillies         7 Manheim                  10 Z\n16-Apr-26 Thu 737 6:00PM Snyder Park #3           Ephrata Drillerz         6 E-Town Blue              5 Z\n16-Apr-26 Thu 649 6:00PM Froelich Park East       Mountville Indians       7 PM Comets                2 Z\n17-Apr-26 Fri 736 6:00PM Flory Park #2            CV Bucks                 14 LS Atta Boys             16 Z\n17-Apr-26 Fri 650 6:00PM Highland Twp.            Octorara Braves          15 MT Streaks               4 Z\n17-Apr-26 Fri 651 6:00PM Gloninger Woods Park     Cedar Crest              12 Cocalico Eagles          11 Z\n17-Apr-26 Fri 739 8:00PM Kunkle Field             Donegal Indians          3 Hempfield Black          17 Z\n20-Apr-26 Mon 652 6:00PM Minor Field              E-Town Blue              11 Warwick Phillies         1 Z\n21-Apr-26 Tue 653 6:00PM Froelich Park East       Mountville Indians       6 CV Bucks                 9 Z\n21-Apr-26 Tue 741 6:00PM Farmdale Elementary      Hempfield Red            1 MT Streaks               3 Z\n22-Apr-26 Wed 743 6:00PM Fuhrman Park #2          Donegal Indians          5 Cedar Crest              2 Z\n22-Apr-26 Wed 654 6:00PM Manor MS                 PM Comets                5 Hempfield Black          18 Z\n22-Apr-26 Wed 655 6:00PM Creek Field              Manheim                  11 Cocalico Eagles          4 Z\n22-Apr-26 Wed 742 6:00PM Snyder Park #3           Ephrata Drillerz         3 Octorara Braves          2 Z\n23-Apr-26 Thu 740 6:00PM SYBA Field Complex #2    SOLANCO Black            6 LS Atta Boys             18 Z\n27-Apr-26 Mon 658 6:00PM Kunkle Field             Donegal Indians          5 Ephrata Drillerz         10 Z\n27-Apr-26 Mon 656 6:00PM Gloninger Woods Park     Cedar Crest              12 Warwick Phillies         2 Z\n27-Apr-26 Mon 657 6:00PM Reamstown Park           Cocalico Eagles          3 E-Town Blue              2 Z\n28-Apr-26 Tue 660 6:00PM Highland Twp.            Octorara Braves          6 Hempfield Red            3 Z\n28-Apr-26 Tue 744 6:00PM Herr Flowers #2          LS Atta Boys             18 Mountville Indians       7 Z\n28-Apr-26 Tue 661 6:00PM Hempfield Fire Dept.     Hempfield Black          12 Manheim                  2 Z\n30-Apr-26 Thu 745 6:00PM Warwick Twp #2           Warwick Phillies         2 Ephrata Drillerz         6 Z\n30-Apr-26 Thu 666 6:00PM Froelich Park East       Mountville Indians       3 Manheim                  6 Z\n30-Apr-26 Thu 665 6:00PM Hempfield Fire Dept.     Hempfield Black          4 LS Atta Boys             14 Z\n1-May-26 Fri 746 6:00PM Flory Park #2            CV Bucks                 2 Hempfield Red            9 Z\n4-May-26 Mon 750 6:00PM Warwick Twp #2           Warwick Phillies         5 Donegal Indians          4 Z\n4-May-26 Mon 749 6:00PM Flory Park #2            CV Bucks                 2 MT Streaks               5 Z\n4-May-26 Mon 667 6:00PM Reamstown Park           Cocalico Eagles          1 Hempfield Black          4 Z\n4-May-26 Mon 748 6:00PM Snyder Park #3           Ephrata Drillerz         6 Cedar Crest              4 Z\n5-May-26 Tue 751 6:00PM Farmdale Elementary      Hempfield Red            8 Mountville Indians       3 Z\n5-May-26 Tue 669 6:00PM Creek Field              Manheim                  11 SOLANCO Black            1 Z\n5-May-26 Tue 668 6:00PM Manor MS                 PM Comets                5 LS Atta Boys             11 Z\n5-May-26 Tue 670 6:00PM Minor Field              E-Town Blue              15 Ephrata Drillerz         5 Z\n6-May-26 Wed 671 6:00PM Hempfield Fire Dept.     Hempfield Black          13 Warwick Phillies         3 Z\n7-May-26 Thu 676 6:00PM Dairy Road Field         Cedar Crest              5 Manheim                  15 Z\n7-May-26 Thu 674 6:00PM Kunkle Field             Donegal Indians          2 Cocalico Eagles          3 Z\n7-May-26 Thu 673 6:00PM Legion Park              SOLANCO Black            9 PM Comets                19 Z\n7-May-26 Thu 677 6:00PM Minor Field              E-Town Blue              2 MT Streaks               1 Z\n8-May-26 Fri 675 6:00PM Froelich Park East       Mountville Indians       0 Octorara Braves          9 Z\n8-May-26 Fri 752 6:00PM Warwick Twp #2           Warwick Phillies         11 Hempfield Red            15 Z\n11-May-26 Mon 663 6:00PM Overlook #2              MT Streaks               8 SOLANCO Black            2 Z\n11-May-26 Mon 754 6:00PM Snyder Park #3           Ephrata Drillerz         3 CV Bucks                 2 Z\n11-May-26 Mon 678 6:00PM Hempfield Fire Dept.     Hempfield Black          3 Cedar Crest              0 Z\n11-May-26 Mon 709 6:00PM Minor Field              E-Town Blue              0 Manheim                  3 Z\n12-May-26 Tue 753 6:00PM Herr Flowers #2          LS Atta Boys             11 Cocalico Eagles          1 Z\n12-May-26 Tue 679 6:00PM Kunkle Field             Donegal Indians          10 PM Comets                9 Z\n12-May-26 Tue 755 6:00PM SYBA Field Complex #2    SOLANCO Black            4 Mountville Indians       10 Z\n12-May-26 Tue 680 6:00PM Creek Field              Manheim                  11 E-Town Blue              3 Z\n12-May-26 Tue 756 6:00PM Hempfield Fire Dept.     Hempfield Red            3 Octorara Braves          14 Z\n13-May-26 Wed 681 6:00PM Overlook #2              MT Streaks               13 Warwick Phillies         6 Z\n14-May-26 Thu 682 6:00PM Dairy Road Field         Cedar Crest              12 Mountville Indians       3 Z\n14-May-26 Thu 683 6:00PM Reamstown Park           Cocalico Eagles          10 Ephrata Drillerz         1 Z\n14-May-26 Thu 684 6:00PM Manor MS                 PM Comets                9 Hempfield Red            13 Z\n15-May-26 Fri 686 6:00PM Overlook #2              MT Streaks               2 LS Atta Boys             4 Z\n15-May-26 Fri 757 6:00PM Flory Park #2            CV Bucks                 8 Donegal Indians          1 Z\n\n--- page 2 ---\n15-May-26 Fri 685 6:00PM Highland Twp.            Octorara Braves          10 Hempfield Black          9 Z\n18-May-26 Mon 664 6:00PM Manor MS                 PM Comets                15 CV Bucks                 6 Z\n18-May-26 Mon 662 6:00PM Minor Field              E-Town Blue              17 Donegal Indians          7 Z\n18-May-26 Mon 758 6:00PM Snyder Park #3           Ephrata Drillerz         5 Manheim                  2 Z\n18-May-26 Mon 759 6:00PM Warwick Twp #2           Warwick Phillies         5 Octorara Braves          21 Z\n18-May-26 Mon 782 6:00PM Overlook #1              LS Atta Boys             17 MT Streaks               9 Z\n19-May-26 Tue 688 6:00PM Dairy Road Field         Cedar Crest              5 Hempfield Red            4 Z\n19-May-26 Tue 689 6:00PM Hempfield Fire Dept.     Hempfield Black          14 SOLANCO Black            0 Z\n20-May-26 Wed 691 6:00PM Creek Field              Manheim                  6 PM Comets                2 Z\n26-May-26 Tue 659 6:00PM Manor MS                 PM Comets                1 MT Streaks               6 Z\n26-May-26 Tue 695 6:00PM Creek Field              Manheim                  3 Hempfield Black          15 Z\n26-May-26 Tue 697 6:00PM Minor Field              E-Town Blue              13 Mountville Indians       2 Z\n26-May-26 Tue 696 6:00PM Highland Twp.            Octorara Braves          10 SOLANCO Black            2 Z\n27-May-26 Wed 690 6:00PM Froelich Park East       Mountville Indians       2 Donegal Indians          4 Z\n27-May-26 Wed 698 6:00PM Reamstown Park           Cocalico Eagles          6 CV Bucks                 7 Z\n27-May-26 Wed 763 6:00PM Snyder Park #3           Ephrata Drillerz         13 Warwick Phillies         3 Z\n27-May-26 Wed 765 6:00PM Farmdale Elementary      Hempfield Red            6 Manheim                  2 Z\n28-May-26 Thu 693 6:00PM SOLANCO Legion           SOLANCO Black            0 Ephrata Drillerz         14 Z\n28-May-26 Thu 701 6:00PM Dairy Road Field         Cedar Crest              9 Donegal Indians          7 Z\n28-May-26 Thu 700 6:00PM Hempfield Fire Dept.     Hempfield Black          10 E-Town Blue              0 Z\n29-May-26 Fri 766 6:00PM Herr Flowers #2          LS Atta Boys             16 Octorara Braves          6 Z\n29-May-26 Fri 764 6:00PM Flory Park #2            CV Bucks                 5 PM Comets                18 Z\n29-May-26 Fri 767 6:00PM SYBA Field Complex #2    SOLANCO Black            2 MT Streaks               12 Z\n1-Jun-26 Mon 702 6:00PM Froelich Park East       Mountville Indians       12 Hempfield Red            6 Z\n1-Jun-26 Mon 705 6:00PM Highland Twp.            Octorara Braves          9 Cocalico Eagles          10 Z\n1-Jun-26 Mon 704 6:00PM Kunkle Field             Donegal Indians          6 Warwick Phillies         7 Z\n1-Jun-26 Mon 703 6:00PM Overlook #2              MT Streaks               14 Cedar Crest              0 Z\n2-Jun-26 Tue 769 6:00PM Flory Park #2            CV Bucks                 10 SOLANCO Black            9 Z\n3-Jun-26 Wed 672 6:00PM Highland Twp.            Octorara Braves          8 CV Bucks                 9 Z\n3-Jun-26 Wed 768 6:00PM Herr Flowers #2          LS Atta Boys             1 Ephrata Drillerz         4 Z\n3-Jun-26 Wed 770 6:00PM Warwick Twp #2           Warwick Phillies         2 E-Town Blue              13 Z\n3-Jun-26 Wed 707 6:00PM Dairy Road Field         Cedar Crest              7 Hempfield Black          18 Z\n3-Jun-26 Wed 708 6:00PM Manor MS                 PM Comets                5 Mountville Indians       12 Z\n3-Jun-26 Wed 706 6:00PM Reamstown Park           Cocalico Eagles          9 Manheim                  6 Z\n4-Jun-26 Thu 771 6:00PM Farmdale Elementary      Hempfield Red            5 LS Atta Boys             8 Z\n4-Jun-26 Thu 772 6:00PM Snyder Park #3           Ephrata Drillerz         9 Donegal Indians          12 Z\n5-Jun-26 Fri 710 6:00PM Overlook #2              MT Streaks               7 CV Bucks                 6 Z\n5-Jun-26 Fri 711 6:00PM Highland Twp.            Octorara Braves          10 PM Comets                8 Z\n5-Jun-26 Fri 729 6:00PM Reamstown Park           Cocalico Eagles          6 Cedar Crest              8 Z\n8-Jun-26 Mon 712 6:00PM Kunkle Field             Donegal Indians          11 E-Town Blue              1 Z\n9-Jun-26 Tue 714 6:00PM Highland Twp.            Octorara Braves          7 LS Atta Boys             11 Z\n9-Jun-26 Tue 773 6:00PM SYBA Field Complex #2    SOLANCO Black            6 Warwick Phillies         5 Z\n9-Jun-26 Tue 715 6:00PM Creek Field              Manheim                  12 Cedar Crest              2 Z\n9-Jun-26 Tue 774 6:00PM Snyder Park #3           Ephrata Drillerz         6 Hempfield Black          18 Z\n9-Jun-26 Tue 713 6:00PM Froelich Park East       Mountville Indians       1 MT Streaks               3 Z\n10-Jun-26 Wed 775 6:00PM Farmdale Elementary      Hempfield Red            3 PM Comets                9 Z\n11-Jun-26 Thu 776 6:00PM Flory Park #2            CV Bucks                 7 E-Town Blue              12 Z\n11-Jun-26 Thu 716 6:00PM Reamstown Park           Cocalico Eagles          15 Donegal Indians          10 Z\n11-Jun-26 Thu 717 6:00PM Overlook #2              MT Streaks               8 Octorara Braves          1 Z\n11-Jun-26 Thu 718 6:00PM Creek Field              Manheim                  14 Warwick Phillies         4 Z\n11-Jun-26 Thu 720 6:00PM Dairy Road Field         Cedar Crest              4 Ephrata Drillerz         11 Z\n12-Jun-26 Fri 761 6:00PM Farmdale Elementary      Hempfield Red            11 E-Town Blue              5 Z\n12-Jun-26 Fri 719 6:00PM Hempfield Fire Dept.     Hempfield Black          10 Cocalico Eagles          0 Z\n12-Jun-26 Fri 777 6:00PM Flory Park #2            CV Bucks                 12 Mountville Indians       10 Z\n12-Jun-26 Fri 778 6:00PM Herr Flowers #2          LS Atta Boys             12 SOLANCO Black            2 Z\n15-Jun-26 Mon 721 6:00PM SOLANCO Legion           SOLANCO Black            8 Hempfield Red            1 Z\n15-Jun-26 Mon 779 6:00PM Warwick Twp #2           Warwick Phillies         3 Cedar Crest              10 Z\n16-Jun-26 Tue 747 6:00PM SYBA Field Complex #2    SOLANCO Black            3 Octorara Braves          5 Z\n16-Jun-26 Tue 725 6:00PM Froelich Park East       Mountville Indians       9 LS Atta Boys             20 Z\n16-Jun-26 Tue 724 6:00PM Kunkle Field             Donegal Indians          6 Manheim                  12 Z\n16-Jun-26 Tue 780 6:00PM Snyder Park #3           Ephrata Drillerz         2 Cocalico Eagles          7 Z\n16-Jun-26 Tue 722 6:00PM Minor Field              E-Town Blue              0 Hempfield Black          15 Z\n17-Jun-26 Wed 723 6:00PM Overlook #2              MT Streaks               5 PM Comets                3 Z\n17-Jun-26 Wed 781 6:00PM Farmdale Elementary      Hempfield Red            6 CV Bucks                 3 Z\n18-Jun-26 Thu 687 6:00PM Minor Field              E-Town Blue              14 Cocalico Eagles          4 Z\n\n--- page 3 ---\n18-Jun-26 Thu 760 6:00PM Herr Flowers #2          LS Atta Boys             13 CV Bucks                 1 Z\n18-Jun-26 Thu 726 6:00PM Manor MS                 PM Comets                23 SOLANCO Black            13 Z\n18-Jun-26 Thu 728 6:00PM Minch Park               Octorara Braves          6 Mountville Indians       10 Z\n18-Jun-26 Thu 730 6:00PM Creek Field              Manheim                  13 Ephrata Drillerz         10 Z\n22-Jun-26 Mon 692 6:00PM Reamstown Park           Cocalico Eagles          4 MT Streaks               0 Z\n22-Jun-26 Mon 784 6:00PM Warwick Twp #2           Warwick Phillies         0 Hempfield Black          15 Z\n23-Jun-26 Tue 731 6:00PM Dairy Road Field         Cedar Crest              16 E-Town Blue              5 Z\n23-Jun-26 Tue 732 6:00PM Froelich Park East       Mountville Indians       13 SOLANCO Black            12 Z\n23-Jun-26 Tue 785 6:00PM Herr Flowers #2          LS Atta Boys             11 PM Comets                1 Z\n24-Jun-26 Wed 786 6:00PM Warwick Twp #2           Warwick Phillies         5 Cocalico Eagles          3 Z\n24-Jun-26 Wed 762 6:00PM Kunkle Field             Donegal Indians          1 LS Atta Boys             16 Z\n25-Jun-26 Thu 727 6:00PM Hempfield Fire Dept.     Hempfield Black          12 Donegal Indians          2 Z\n25-Jun-26 Thu 783 6:00PM Flory Park #2            CV Bucks                 0 Octorara Braves          0  \n25-Jun-26 Thu 694 6:00PM Manor MS                 PM Comets                8 Cedar Crest              7 Z\n26-Jun-26 Fri 699 6:00PM Overlook #2              MT Streaks               0 Hempfield Red            0  ",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -18010,15 +18020,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:05 GMT",
-        "ETag": "\"0962a3c9b157bd806938cb11fb6c2f60\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:05 GMT",
-        "Last-Modified": "Thu, 25 Jun 2026 03:32:43 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:31 GMT",
+        "ETag": "\"5b5055e4d1f30d8ed07f9d52f878a884\"",
+        "Expires": "Sat, 26 Jun 2027 04:00:31 GMT",
+        "Last-Modified": "Fri, 26 Jun 2026 03:20:35 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
         "X-Forwarded-For": "50.63.4.66",
-        "x-amzn-trace-id": "Root=1-6a3ca15a-61626e885ae66f4e119bcf95",
+        "x-amzn-trace-id": "Root=1-6a3df002-53ae0c753a8e7a4b6b4cef2a",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-fb2a2ba"
@@ -18026,13 +18036,13 @@
       "kind": "scores",
       "parsedCount": 144,
       "section": 1,
-      "sha256": "3bcd4e9cb259ea20c1546a0c7355787e7893a088e7bca3f4d6317dee2dc8aed7",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/12uSec1Scores.XLS-b7e2a44.pdf"
+      "sha256": "0c7e2bd17398107421144b2006802b60a0448727db3bde26dd471af16fdb56f0",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/12uSec1Scores.XLS-8604088.pdf"
     },
     {
-      "bytes": 135430,
+      "bytes": 135433,
       "division": "12U",
-      "extractedText": "\n--- page 1 ---\n12u Section 1\nAmerican Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Hempfield Black American 14 2 1 85.3% 43 58 1\nManheim American 13 5 0 72.2% 39 95 0\nEphrata Drillerz American 11 6 1 63.9% 34 109 0\nCocalico Eagles American 9 8 0 52.9% 27 110 1\nCedar Crest American 9 8 0 52.9% 27 131 1\nE-Town Blue American 8 10 0 44.4% 24 123 0\nDonegal Indians American 5 11 0 31.3% 15 131 2\nWarwick Phillies American 2 15 0 11.8% 6 196 1\nNational Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD LS Atta Boys National 15 2 0 88.2% 45 90 1\nMT Streaks National 12 5 0 70.6% 36 67 1\nOctorara Braves National 9 7 1 55.9% 28 112 1\nHempfield Red National 9 8 0 52.9% 27 106 1\nCV Bucks National 7 10 0 41.2% 21 154 1\nMountville Indians National 6 12 0 33.3% 18 163 0\nPM Comets National 5 11 1 32.4% 16 153 1\nSOLANCO Black National 2 16 0 11.1% 6 207 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 LS Atta Boys National 15 2 0 88.2% 45 90 1 LCYBL Playoffs\nD2 Hempfield Black American 14 2 1 85.3% 43 58 1\n3 Manheim American 13 5 0 72.2% 39 95 0\n4 MT Streaks National 12 5 0 70.6% 36 67 1\n5 Ephrata Drillerz American 11 6 1 63.9% 34 109 0\n6 Octorara Braves National 9 7 1 55.9% 28 112 1\n7 Hempfield Red National 9 8 0 52.9% 27 106 1 LNP Play-In\n8 Cocalico Eagles American 9 8 0 52.9% 27 110 1 7 vs. 10\n9 Cedar Crest American 9 8 0 52.9% 27 131 1\n10 E-Town Blue American 8 10 0 44.4% 24 123 0 8 vs. 9\n11 CV Bucks National 7 10 0 41.2% 21 154 1\n12 Mountville Indians National 6 12 0 33.3% 18 163 0\n\n--- page 2 ---\n13 PM Comets National 5 11 1 32.4% 16 153 1\n14 Donegal Indians American 5 11 0 31.3% 15 131 2\n15 Warwick Phillies American 2 15 0 11.8% 6 196 1\n16 SOLANCO Black National 2 16 0 11.1% 6 207 0\nDouble\nWins Losses Ties Forfeit Last updated ==> 6/24/2026 0:05\n136 136 4 0\n1. Points\n2. Head 2 Head Calculated End Of Season\n#1 & #2 Seeds are the Division Winners 3. Runs Allowed\nSeeds #3 ~ 14 are the rest",
+      "extractedText": "\n--- page 1 ---\n12u Section 1\nAmerican Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Hempfield Black American 15 2 1 86.1% 46 60 0\nManheim American 13 5 0 72.2% 39 95 0\nEphrata Drillerz American 11 6 1 63.9% 34 109 0\nCocalico Eagles American 9 9 0 50.0% 27 115 0\nCedar Crest American 9 9 0 50.0% 27 139 0\nE-Town Blue American 8 10 0 44.4% 24 123 0\nDonegal Indians American 5 13 0 27.8% 15 159 0\nWarwick Phillies American 3 15 0 16.7% 9 199 0\nNational Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD LS Atta Boys National 16 2 0 88.9% 48 91 0\nMT Streaks National 12 5 0 70.6% 36 67 1\nOctorara Braves National 9 7 1 55.9% 28 112 1\nHempfield Red National 9 8 0 52.9% 27 106 1\nCV Bucks National 7 10 0 41.2% 21 154 1\nPM Comets National 6 11 1 36.1% 19 160 0\nMountville Indians National 6 12 0 33.3% 18 163 0\nSOLANCO Black National 2 16 0 11.1% 6 207 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 LS Atta Boys National 16 2 0 88.9% 48 91 0 LCYBL Playoffs\nD2 Hempfield Black American 15 2 1 86.1% 46 60 0\n3 Manheim American 13 5 0 72.2% 39 95 0\n4 MT Streaks National 12 5 0 70.6% 36 67 1\n5 Ephrata Drillerz American 11 6 1 63.9% 34 109 0\n6 Octorara Braves National 9 7 1 55.9% 28 112 1\n7 Hempfield Red National 9 8 0 52.9% 27 106 1 LNP Play-In\n8 Cocalico Eagles American 9 9 0 50.0% 27 115 0 7 vs. 10\n9 Cedar Crest American 9 9 0 50.0% 27 139 0\n10 E-Town Blue American 8 10 0 44.4% 24 123 0 8 vs. 9\n11 CV Bucks National 7 10 0 41.2% 21 154 1\n12 PM Comets National 6 11 1 36.1% 19 160 0\n\n--- page 2 ---\n13 Mountville Indians National 6 12 0 33.3% 18 163 0\n14 Donegal Indians American 5 13 0 27.8% 15 159 0\n15 Warwick Phillies American 3 15 0 16.7% 9 199 0\n16 SOLANCO Black National 2 16 0 11.1% 6 207 0\nDouble\nWins Losses Ties Forfeit Last updated ==> 6/25/2026 23:22\n140 140 4 0\n1. Points\n2. Head 2 Head Calculated End Of Season\n#1 & #2 Seeds are the Division Winners 3. Runs Allowed\nSeeds #3 ~ 14 are the rest",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -18042,15 +18052,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:05 GMT",
-        "ETag": "\"294d3a2ecb07df92f6bc57a118725a28\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:05 GMT",
-        "Last-Modified": "Wed, 24 Jun 2026 04:11:17 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:32 GMT",
+        "ETag": "\"8c306594b4234850fdf6b133534d6c24\"",
+        "Expires": "Sat, 26 Jun 2027 04:00:32 GMT",
+        "Last-Modified": "Fri, 26 Jun 2026 03:25:15 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
-        "X-Forwarded-For": "50.63.4.69",
-        "x-amzn-trace-id": "Root=1-6a3b58e4-7d65e8b0078aacca46d7e742",
+        "X-Forwarded-For": "50.63.4.68",
+        "x-amzn-trace-id": "Root=1-6a3df11a-3de3e8c92e9b987b168a8b73",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-fb2a2ba"
@@ -18058,8 +18068,8 @@
       "kind": "standings",
       "parsedCount": 16,
       "section": 1,
-      "sha256": "07d1e39beb6a30fa771d3a48d9a8767b8f7be691f66f838f3379d8556206f05a",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2012u%20Section%201%20Standings%202%20divisio-797844b.pdf"
+      "sha256": "39c171299d3c644562f7a3dfc41a4d81eabc0e172c1001dc683a2888767d1bc1",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2012u%20Section%201%20Standings%202%20divisio-f2cc706.pdf"
     },
     {
       "bytes": 229896,
@@ -18074,9 +18084,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:05 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:32 GMT",
         "ETag": "\"0432734f8375b0eb6e6b584445e579c7\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:05 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:32 GMT",
         "Last-Modified": "Sat, 20 Jun 2026 03:30:18 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18106,9 +18116,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:06 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:33 GMT",
         "ETag": "\"6ad37842d05b19bce525ea41e05e5e29\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:06 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:33 GMT",
         "Last-Modified": "Sat, 20 Jun 2026 01:25:53 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18138,9 +18148,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:06 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:33 GMT",
         "ETag": "\"803f503d19dbc1ec3a6a63f4484684b7\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:06 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:33 GMT",
         "Last-Modified": "Thu, 25 Jun 2026 03:33:02 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18158,9 +18168,9 @@
       "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/12uSec3Scores.XLS-dd7615d.pdf"
     },
     {
-      "bytes": 166022,
+      "bytes": 166048,
       "division": "12U",
-      "extractedText": "\n--- page 1 ---\n12u Section 3\nEast Division Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Ephrata Power East 13 1 0 92.9% 39 88 0\nE-Town Gray East 12 1 0 92.3% 36 55 1\nDonegal Black East 12 2 0 85.7% 36 106 0\nMountville Tigers East 11 3 0 78.6% 33 116 0\nSt. Leo Gold East 9 5 0 64.3% 27 84 0\nPM Gold East 7 6 1 53.6% 22 81 0\nCocalico Eagles East 6 7 1 46.4% 19 191 0\nMT Chargers East 6 8 0 42.9% 18 136 0\nPM White East 4 9 1 32.1% 13 161 0\nLanc Mennonite East 4 10 0 28.6% 12 166 0\nHempfield Black East 3 11 0 21.4% 9 204 0\nSOLANCO Gold East 0 11 1 4.2% 1 201 2\nCV Bucks Red East 0 12 0 0.0% 0 175 2\nWest Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Ephrata Tourists West 13 1 0 92.9% 39 93 0\nCV Bucks Blue West 13 1 0 92.9% 39 110 0\nGarden Spot West 12 2 0 85.7% 36 83 0\nDonegal White West 11 3 0 78.6% 33 92 0\nE-Town Navy West 10 4 0 71.4% 30 99 0\nE-Town White West 6 8 0 42.9% 18 175 0\nSOLANCO Black West 5 9 0 35.7% 15 139 0\nLS Black West 5 9 0 35.7% 15 190 0\nLS Blue West 4 9 0 30.8% 12 168 1\nCedar Crest West 3 11 0 21.4% 9 179 0\nMT Bolts West 3 11 0 21.4% 9 200 0\nHempfield Red West 3 11 0 21.4% 9 233 0\nPM Blue West 2 12 0 14.3% 6 177 0\n\n--- page 2 ---\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 Ephrata Power East 13 1 0 92.9% 39 88 0\nD2 Ephrata Tourists West 13 1 0 92.9% 39 93 0\n3 CV Bucks Blue West 13 1 0 92.9% 39 110 0\n5 H2H E-Town Gray East 12 1 0 92.3% 36 55 1\nX Garden Spot West 12 2 0 85.7% 36 83 0\n4 H2H Donegal Black East 12 2 0 85.7% 36 106 0\nX Donegal White West 11 3 0 78.6% 33 92 0\n6 Mountville Tigers East 11 3 0 78.6% 33 116 0\nX E-Town Navy West 10 4 0 71.4% 30 99 0\n7 St. Leo Gold East 9 5 0 64.3% 27 84 0\n8 PM Gold East 7 6 1 53.6% 22 81 0\n9 Cocalico Eagles East 6 7 1 46.4% 19 191 0\n10 MT Chargers East 6 8 0 42.9% 18 136 0\n11 E-Town White West 6 8 0 42.9% 18 175 0\n12 H2H SOLANCO Black West 5 9 0 35.7% 15 139 0\n13 H2H LS Black West 5 9 0 35.7% 15 190 0\nX PM White East 4 9 1 32.1% 13 161 0\nX Lanc Mennonite East 4 10 0 28.6% 12 166 0\n14 LS Blue West 4 9 0 30.8% 12 168 1\nX Cedar Crest West 3 11 0 21.4% 9 179 0\nX MT Bolts West 3 11 0 21.4% 9 200 0\n15 Hempfield Black East 3 11 0 21.4% 9 204 0\n16 Hempfield Red West 3 11 0 21.4% 9 233 0\n17 PM Blue West 2 12 0 14.3% 6 177 0\nX SOLANCO Gold East 0 11 1 4.2% 1 201 2\nX CV Bucks Red East 0 12 0 0.0% 0 175 2\nDouble\nWins Losses Ties Forfeit Last updated ==> 6/25/2026 0:41\n177 177 4 0\nAll teams qualify for the Year End Tournament 1. Points\nDivision Winners are the #1 & #2 Seeds 2. Head 2 Head Calculated EOS\n3. Runs Allowed\n.750 Rule\nSt. Leo Eligible\n\n--- page 3 ---\nGarden Spot Ineligible\nLanc Mennonite Eligible",
+      "extractedText": "\n--- page 1 ---\n12u Section 3\nEast Division Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Ephrata Power East 13 1 0 92.9% 39 88 0\nE-Town Gray East 12 1 0 92.3% 36 55 1\nDonegal Black East 12 2 0 85.7% 36 106 0\nMountville Tigers East 11 3 0 78.6% 33 116 0\nSt. Leo Gold East 9 5 0 64.3% 27 84 0\nPM Gold East 7 6 1 53.6% 22 81 0\nCocalico Eagles East 6 7 1 46.4% 19 191 0\nMT Chargers East 6 8 0 42.9% 18 136 0\nPM White East 4 9 1 32.1% 13 161 0\nLanc Mennonite East 4 10 0 28.6% 12 166 0\nHempfield Black East 3 11 0 21.4% 9 204 0\nSOLANCO Gold East 0 11 1 4.2% 1 201 2\nCV Bucks Red East 0 12 0 0.0% 0 175 2\nWest Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Ephrata Tourists West 13 1 0 92.9% 39 93 0\nCV Bucks Blue West 13 1 0 92.9% 39 110 0\nGarden Spot West 12 2 0 85.7% 36 83 0\nDonegal White West 11 3 0 78.6% 33 92 0\nE-Town Navy West 10 4 0 71.4% 30 99 0\nE-Town White West 6 8 0 42.9% 18 175 0\nSOLANCO Black West 5 9 0 35.7% 15 139 0\nLS Black West 5 9 0 35.7% 15 190 0\nLS Blue West 4 9 0 30.8% 12 168 1\nCedar Crest West 3 11 0 21.4% 9 179 0\nMT Bolts West 3 11 0 21.4% 9 200 0\nHempfield Red West 3 11 0 21.4% 9 233 0\nPM Blue West 2 12 0 14.3% 6 177 0\n\n--- page 2 ---\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 Ephrata Power East 13 1 0 92.9% 39 88 0\nD2 Ephrata Tourists West 13 1 0 92.9% 39 93 0\n3 CV Bucks Blue West 13 1 0 92.9% 39 110 0\n5 H2H E-Town Gray East 12 1 0 92.3% 36 55 1\nX Garden Spot West 12 2 0 85.7% 36 83 0\n4 H2H Donegal Black East 12 2 0 85.7% 36 106 0\nX Donegal White West 11 3 0 78.6% 33 92 0\n6 Mountville Tigers East 11 3 0 78.6% 33 116 0\n7 E-Town Navy West 10 4 0 71.4% 30 99 0\n8 St. Leo Gold East 9 5 0 64.3% 27 84 0\n9 PM Gold East 7 6 1 53.6% 22 81 0\nX Cocalico Eagles East 6 7 1 46.4% 19 191 0\n10 MT Chargers East 6 8 0 42.9% 18 136 0\n11 E-Town White West 6 8 0 42.9% 18 175 0\n12 H2H SOLANCO Black West 5 9 0 35.7% 15 139 0\n13 H2H LS Black West 5 9 0 35.7% 15 190 0\nX PM White East 4 9 1 32.1% 13 161 0\nX Lanc Mennonite East 4 10 0 28.6% 12 166 0\n14 LS Blue West 4 9 0 30.8% 12 168 1\nX Cedar Crest West 3 11 0 21.4% 9 179 0\nX MT Bolts West 3 11 0 21.4% 9 200 0\n15 Hempfield Black East 3 11 0 21.4% 9 204 0\n16 Hempfield Red West 3 11 0 21.4% 9 233 0\n17 PM Blue West 2 12 0 14.3% 6 177 0\n18 SOLANCO Gold East 0 11 1 4.2% 1 201 2\nX CV Bucks Red East 0 12 0 0.0% 0 175 2\nDouble\nWins Losses Ties Forfeit Last updated ==> 6/25/2026 12:13\n177 177 4 0\nAll teams qualify for the Year End Tournament 1. Points\nDivision Winners are the #1 & #2 Seeds 2. Head 2 Head Calculated EOS\n3. Runs Allowed\n.750 Rule\nSt. Leo Eligible\n\n--- page 3 ---\nGarden Spot Ineligible\nLanc Mennonite Eligible",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -18170,15 +18180,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:07 GMT",
-        "ETag": "\"62331e7764dc5279a6646f66e9c08e7c\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:07 GMT",
-        "Last-Modified": "Thu, 25 Jun 2026 04:42:42 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:34 GMT",
+        "ETag": "\"519186a3f548bc206e9503bf55915d7e\"",
+        "Expires": "Sat, 26 Jun 2027 04:00:34 GMT",
+        "Last-Modified": "Thu, 25 Jun 2026 16:17:05 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
-        "X-Forwarded-For": "50.63.4.68",
-        "x-amzn-trace-id": "Root=1-6a3cb1c1-4ca697f66e278e5149badad0",
+        "X-Forwarded-For": "50.63.4.66",
+        "x-amzn-trace-id": "Root=1-6a3d5480-569e1fb242c7cde2604f1723",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-fb2a2ba"
@@ -18186,13 +18196,13 @@
       "kind": "standings",
       "parsedCount": 26,
       "section": 3,
-      "sha256": "c9790c43e07d7db8997f0b714b831075673a584f22f9789ec3e923dee3e8606f",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2012u%20Section%203%20Standings%20750%202%20div-b62694b.pdf"
+      "sha256": "9270ad19a166f84ec0c000243cd3f61c6649b0f48fdef27382825192177e0b36",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2012u%20Section%203%20Standings%20750%202%20div-3634e4d.pdf"
     },
     {
-      "bytes": 174903,
+      "bytes": 174917,
       "division": "14U",
-      "extractedText": "\n--- page 1 ---\nDate Day Sequence# Time Location Home Score Visitor Score\n13-Apr-26 Mon 201 6:00PM A. Herr Park             Hempfield Black          11 LS Blue                  1 Z\n13-Apr-26 Mon 202 6:00PM Highville FC             PM Comets                10 Mountville Angels        0 Z\n13-Apr-26 Mon 207 6:00PM Warwick Twp #1           Lititz VFW               11 Cedar Crest              5 Z\n14-Apr-26 Tue 203 6:00PM Penryn Field             Manheim Lions            10 MT Streaks               0 Z\n15-Apr-26 Wed 204 6:00PM Cornwall Field           Cedar Crest              8 E-Town Black             7 Z\n15-Apr-26 Wed 209 6:00PM Herr Flowers #3          LS Blue                  1 PM Comets                11 Z\n16-Apr-26 Thu 205 6:00PM Mountville Boro          Mountville Angels        4 Hempfield Red            7 Z\n17-Apr-26 Fri 210 6:00PM Community #3             Lanc Rec Tornados        3 E-Town Black             9 Z\n17-Apr-26 Fri 211 6:00PM Snyder Park #1           Ephrata Drillerz         0 Manheim Lions            18 Z\n17-Apr-26 Fri 206 6:00PM SYBA Field Complex #1    SOLANCO Black            6 Lititz VFW               4 Z\n20-Apr-26 Mon 214 6:00PM Governor Stables         E-Town Black             5 Hempfield Black          12 Z\n20-Apr-26 Mon 213 6:00PM McNickle Field           MT Streaks               16 Hempfield Red            13 Z\n20-Apr-26 Mon 212 6:00PM Mountville Boro          Mountville Angels        7 Cedar Crest              11 Z\n21-Apr-26 Tue 265 6:00PM Community #3             Lanc Rec Tornados        4 Lititz VFW               1 Z\n21-Apr-26 Tue 264 6:00PM Herr Flowers #3          LS Blue                  11 Ephrata Drillerz         1 Z\n22-Apr-26 Wed 217 6:00PM A. Herr Park             Hempfield Black          11 Mountville Angels        7 Z\n22-Apr-26 Wed 216 6:00PM Penryn Field             Manheim Lions            9 Cedar Crest              2 Z\n22-Apr-26 Wed 266 6:00PM Warwick Twp #1           Lititz VFW               0 E-Town Black             8 Z\n23-Apr-26 Thu 218 6:00PM McNickle Field           MT Streaks               7 SOLANCO Black            7 T\n23-Apr-26 Thu 219 6:00PM Silver Spring Park       Hempfield Red            2 LS Blue                  17 Z\n23-Apr-26 Thu 267 6:00PM Snyder Park #1           Ephrata Drillerz         5 Lanc Rec Tornados        14 Z\n27-Apr-26 Mon 220 6:00PM A. Herr Park             Hempfield Red            9 Lititz VFW               2 Z\n27-Apr-26 Mon 221 6:00PM Cornwall Field           Cedar Crest              18 Ephrata Drillerz         7 Z\n28-Apr-26 Tue 223 6:00PM Governor Stables         E-Town Black             4 Mountville Angels        5 Z\n28-Apr-26 Tue 268 6:00PM Herr Flowers #3          LS Blue                  3 SOLANCO Black            8 Z\n28-Apr-26 Tue 222 6:00PM Highville FC             PM Comets                3 Lanc Rec Tornados        1 Z\n28-Apr-26 Tue 224 6:00PM Penryn Field             Manheim Lions            1 Hempfield Black          0 Z\n30-Apr-26 Thu 225 6:00PM A. Herr Park             Hempfield Black          13 E-Town Black             6 Z\n30-Apr-26 Thu 270 6:00PM Herr Flowers #3          LS Blue                  3 Manheim Lions            8 Z\n30-Apr-26 Thu 226 6:00PM Highville FC             PM Comets                6 Hempfield Red            4 Z\n30-Apr-26 Thu 227 6:00PM SYBA Field Complex #1    SOLANCO Black            6 Ephrata Drillerz         10 Z\n1-May-26 Fri 271 6:00PM Community #3             Lanc Rec Tornados        8 Mountville Angels        2 Z\n1-May-26 Fri 228 6:00PM Cornwall Field           Cedar Crest              6 MT Streaks               5 Z\n4-May-26 Mon 230 6:00PM Penryn Field             Manheim Lions            10 Lanc Rec Tornados        0 Z\n4-May-26 Mon 229 6:00PM Silver Spring Park       Hempfield Red            7 SOLANCO Black            5 Z\n4-May-26 Mon 272 6:00PM Snyder Park #1           Ephrata Drillerz         5 Hempfield Black          17 Z\n6-May-26 Wed 273 6:00PM Warwick Twp #1           Lititz VFW               0 LS Blue                  1 Z\n7-May-26 Thu 234 6:00PM Mountville Boro          Mountville Angels        0 Manheim Lions            10 Z\n7-May-26 Thu 235 6:00PM SOLANCO Legion           SOLANCO Black            7 Hempfield Black          8 Z\n7-May-26 Thu 269 6:00PM Warwick Twp #1           Lititz VFW               5 MT Streaks               8 Z\n8-May-26 Fri 237 6:00PM Highville FC             PM Comets                16 LS Blue                  1 Z\n8-May-26 Fri 236 6:00PM McNickle Field           MT Streaks               8 Cedar Crest              10 Z\n11-May-26 Mon 238 6:00PM Cornwall Field           Cedar Crest              13 Lanc Rec Tornados        12 Z\n11-May-26 Mon 274 6:00PM Herr Flowers #3          LS Blue                  16 Hempfield Red            5 Z\n11-May-26 Mon 239 6:00PM SYBA Field Complex #1    SOLANCO Black            0 Manheim Lions            10 Z\n11-May-26 Mon 275 6:00PM Warwick Twp #1           Lititz VFW               3 Ephrata Drillerz         10 Z\n12-May-26 Tue 242 6:00PM A. Herr Park             Hempfield Black          11 Lititz VFW               4 Z\n12-May-26 Tue 240 6:00PM Highville FC             PM Comets                12 MT Streaks               7 Z\n13-May-26 Wed 276 6:00PM Herr Flowers #3          LS Blue                  16 Mountville Angels        2 Z\n14-May-26 Thu 277 6:00PM Community #3             Lanc Rec Tornados        8 SOLANCO Black            9 Z\n14-May-26 Thu 246 6:00PM Governor Stables         E-Town Black             7 Cedar Crest              0 Z\n14-May-26 Thu 245 6:00PM Penryn Field             Manheim Lions            11 Mountville Angels        2 Z\n14-May-26 Thu 243 6:00PM Silver Spring Park       Hempfield Red            5 MT Streaks               9 Z\n18-May-26 Mon 247 6:00PM A. Herr Park             Hempfield Black          13 Lanc Rec Tornados        5 Z\n18-May-26 Mon 233 6:00PM Cornwall Field           Cedar Crest              0 PM Comets                9 Z\n18-May-26 Mon 249 6:00PM McNickle Field           MT Streaks               6 LS Blue                  12 Z\n18-May-26 Mon 248 6:00PM Silver Spring Park       Hempfield Red            1 E-Town Black             8 Z\n18-May-26 Mon 278 6:00PM Warwick Twp #1           Lititz VFW               6 SOLANCO Black            8 Z\n19-May-26 Tue 250 6:00PM Mountville Boro          Mountville Angels        0 PM Comets                17 Z\n19-May-26 Tue 279 6:00PM Snyder Park #1           Ephrata Drillerz         7 Cedar Crest              6 Z\n20-May-26 Wed 251 6:00PM Governor Stables         E-Town Black             11 Lanc Rec Tornados        1 Z\n22-May-26 Fri 231 6:00PM McNickle Field           MT Streaks               6 Lanc Rec Tornados        9 Z\n26-May-26 Tue 261 6:00PM A. Herr Park             Hempfield Black          20 MT Streaks               6 Z\n26-May-26 Tue 281 6:00PM Community #3             Lanc Rec Tornados        1 Hempfield Red            2 Z\n\n--- page 2 ---\n26-May-26 Tue 241 6:00PM Governor Stables         E-Town Black             6 Ephrata Drillerz         3 Z\n26-May-26 Tue 257 6:00PM Highville FC             PM Comets                0 Manheim Lions            8 Z\n26-May-26 Tue 258 6:00PM Mountville Boro          Mountville Angels        3 Lititz VFW               18 Z\n26-May-26 Tue 256 6:00PM SYBA Field Complex #1    SOLANCO Black            4 LS Blue                  8 Z\n27-May-26 Wed 263 6:00PM Cornwall Field           Cedar Crest              7 SOLANCO Black            9 Z\n27-May-26 Wed 252 6:00PM Penryn Field             Manheim Lions            0 Hempfield Red            F V\n28-May-26 Thu 283 6:00PM Herr Flowers #3          LS Blue                  2 Lititz VFW               4 Z\n28-May-26 Thu 260 6:00PM Silver Spring Park       Hempfield Red            12 PM Comets                16 Z\n28-May-26 Thu 282 6:00PM Snyder Park #1           Ephrata Drillerz         2 Mountville Angels        0 Z\n29-May-26 Fri 262 6:00PM Penryn Field             Manheim Lions            8 E-Town Black             1 Z\n29-May-26 Fri 255 8:00PM SYBA Field Complex #1    SOLANCO Black            10 Mountville Angels        0 Z\n30-May-26 Sat 253 2:00PM Cornwall Field           Cedar Crest              2 Lititz VFW               14 Z\n1-Jun-26 Mon 285 6:00PM Highville FC             PM Comets                8 E-Town Black             6 Z\n1-Jun-26 Mon 284 6:00PM Mountville Boro          Mountville Angels        8 LS Blue                  7 Z\n1-Jun-26 Mon 286 6:00PM Penryn Field             Manheim Lions            14 SOLANCO Black            4 Z\n1-Jun-26 Mon 316 6:00PM Snyder Park #1           Ephrata Drillerz         5 Hempfield Red            7 Z\n1-Jun-26 Mon 317 6:00PM Warwick Twp #1           Lititz VFW               9 Lanc Rec Tornados        3 Z\n2-Jun-26 Tue 287 6:00PM Cornwall Field           Cedar Crest              7 Hempfield Black          16 Z\n3-Jun-26 Wed 288 6:00PM McNickle Field           MT Streaks               5 Manheim Lions            9 Z\n3-Jun-26 Wed 289 6:00PM Mountville Boro          Mountville Angels        0 Ephrata Drillerz         12 Z\n3-Jun-26 Wed 308 6:00PM SYBA Field Complex #1    SOLANCO Black            4 E-Town Black             9 Z\n3-Jun-26 Wed 280 6:00PM Village Park Field #12   LS Blue                  0 Hempfield Black          12 Z\n4-Jun-26 Thu 318 6:00PM Community #3             Lanc Rec Tornados        6 Cedar Crest              3 Z\n4-Jun-26 Thu 319 6:00PM Herr Flowers #3          LS Blue                  6 MT Streaks               14 Z\n4-Jun-26 Thu 290 6:00PM Silver Spring Park       Hempfield Red            4 Hempfield Black          6 Z\n5-Jun-26 Fri 309 6:00PM Highville FC             PM Comets                8 Cedar Crest              0 Z\n5-Jun-26 Fri 208 6:00PM Snyder Park #1           Ephrata Drillerz         11 SOLANCO Black            16 Z\n8-Jun-26 Mon 295 6:00PM A. Herr Park             Hempfield Black          8 Manheim Lions            4 Z\n8-Jun-26 Mon 291 6:00PM Cornwall Field           Cedar Crest              16 Mountville Angels        1 Z\n8-Jun-26 Mon 293 6:00PM Governor Stables         E-Town Black             10 LS Blue                  0 Z\n8-Jun-26 Mon 292 6:00PM Highville FC             PM Comets                12 Ephrata Drillerz         5 Z\n8-Jun-26 Mon 294 6:00PM SYBA Field Complex #1    SOLANCO Black            5 Hempfield Red            5 T\n9-Jun-26 Tue 306 6:00PM Mountville Boro          Mountville Angels        5 Hempfield Black          19 Z\n11-Jun-26 Thu 215 5:30PM Highville FC             SOLANCO Black            12 PM Comets                19 Z\n11-Jun-26 Thu 321 6:00PM Warwick Twp #1           Lititz VFW               1 Hempfield Black          8 Z\n11-Jun-26 Thu 298 7:00PM Highville FC             PM Comets                12 SOLANCO Black            0 Z\n12-Jun-26 Fri 299 6:00PM Mountville Boro          Mountville Angels        2 MT Streaks               10 Z\n12-Jun-26 Fri 323 6:00PM Snyder Park #1           Ephrata Drillerz         2 Lititz VFW               4 Z\n15-Jun-26 Mon 300 6:00PM Governor Stables         E-Town Black             5 PM Comets                8 Z\n15-Jun-26 Mon 301 6:00PM Silver Spring Park       Hempfield Red            17 Cedar Crest              17 T\n15-Jun-26 Mon 302 6:00PM SOLANCO Legion           SOLANCO Black            11 Lanc Rec Tornados        1 Z\n15-Jun-26 Mon 324 6:00PM Warwick Twp #1           Lititz VFW               15 Mountville Angels        8 Z\n17-Jun-26 Wed 304 6:00PM A. Herr Park             Hempfield Black          13 SOLANCO Black            2 Z\n17-Jun-26 Wed 325 6:00PM Community #3             Lanc Rec Tornados        2 PM Comets                16 Z\n17-Jun-26 Wed 305 6:00PM McNickle Field           MT Streaks               4 Lititz VFW               2 Z\n17-Jun-26 Wed 303 6:00PM Penryn Field             Manheim Lions            11 Ephrata Drillerz         1 Z\n18-Jun-26 Thu 312 6:00PM Cornwall Field           Cedar Crest              13 Hempfield Red            12 Z\n18-Jun-26 Thu 296 6:00PM McNickle Field           MT Streaks               5 E-Town Black             6 Z\n18-Jun-26 Thu 326 6:00PM Snyder Park #1           Ephrata Drillerz         5 LS Blue                  18 Z\n19-Jun-26 Fri 254 6:00PM McNickle Field           MT Streaks               8 PM Comets                7 Z\n19-Jun-26 Fri 307 8:00PM Governor Stables         E-Town Black             4 Manheim Lions            9 Z\n23-Jun-26 Tue 311 6:00PM Silver Spring Park       Hempfield Red            6 Manheim Lions            14 Z\n24-Jun-26 Wed 328 6:00PM Community #3             Lanc Rec Tornados        8 LS Blue                  1 Z\n24-Jun-26 Wed 232 6:00PM Governor Stables         E-Town Black             3 Hempfield Red            2 Z\n24-Jun-26 Wed 330 6:00PM Highville FC             Lititz VFW               4 PM Comets                3 Z\n24-Jun-26 Wed 310 6:00PM McNickle Field           MT Streaks               2 Hempfield Black          20 Z\n25-Jun-26 Thu 244 6:00PM A. Herr Park             Hempfield Black          0 PM Comets                0 Z\n25-Jun-26 Thu 313 6:00PM Mountville Boro          Mountville Angels        0 E-Town Black             0  \n25-Jun-26 Thu 314 6:00PM Penryn Field             Manheim Lions            0 Lititz VFW               0  \n25-Jun-26 Thu 329 6:00PM Snyder Park #1           Ephrata Drillerz         0 MT Streaks               0  \n26-Jun-26 Fri 259 6:00PM Governor Stables         E-Town Black             0 MT Streaks               0  \n29-Jun-26 Mon 315 6:00PM A. Herr Park             Hempfield Black          0 Ephrata Drillerz         0  \n30-Jun-26 Tue 320 6:00PM Herr Flowers #3          LS Blue                  0 Cedar Crest              0  \n30-Jun-26 Tue 297 6:00PM Silver Spring Park       Hempfield Red            0 Lanc Rec Tornados        0  \n1-Jul-26 Wed 322 6:00PM Community #3             Lanc Rec Tornados        0 Manheim Lions            0 Z\n\n--- page 3 ---\n2-Jul-26 Thu 327 6:00PM Community #3             Lanc Rec Tornados        0 Ephrata Drillerz         0  ",
+      "extractedText": "\n--- page 1 ---\nDate Day Sequence# Time Location Home Score Visitor Score\n13-Apr-26 Mon 201 6:00PM A. Herr Park             Hempfield Black          11 LS Blue                  1 Z\n13-Apr-26 Mon 202 6:00PM Highville FC             PM Comets                10 Mountville Angels        0 Z\n13-Apr-26 Mon 207 6:00PM Warwick Twp #1           Lititz VFW               11 Cedar Crest              5 Z\n14-Apr-26 Tue 203 6:00PM Penryn Field             Manheim Lions            10 MT Streaks               0 Z\n15-Apr-26 Wed 204 6:00PM Cornwall Field           Cedar Crest              8 E-Town Black             7 Z\n15-Apr-26 Wed 209 6:00PM Herr Flowers #3          LS Blue                  1 PM Comets                11 Z\n16-Apr-26 Thu 205 6:00PM Mountville Boro          Mountville Angels        4 Hempfield Red            7 Z\n17-Apr-26 Fri 210 6:00PM Community #3             Lanc Rec Tornados        3 E-Town Black             9 Z\n17-Apr-26 Fri 211 6:00PM Snyder Park #1           Ephrata Drillerz         0 Manheim Lions            18 Z\n17-Apr-26 Fri 206 6:00PM SYBA Field Complex #1    SOLANCO Black            6 Lititz VFW               4 Z\n20-Apr-26 Mon 214 6:00PM Governor Stables         E-Town Black             5 Hempfield Black          12 Z\n20-Apr-26 Mon 213 6:00PM McNickle Field           MT Streaks               16 Hempfield Red            13 Z\n20-Apr-26 Mon 212 6:00PM Mountville Boro          Mountville Angels        7 Cedar Crest              11 Z\n21-Apr-26 Tue 265 6:00PM Community #3             Lanc Rec Tornados        4 Lititz VFW               1 Z\n21-Apr-26 Tue 264 6:00PM Herr Flowers #3          LS Blue                  11 Ephrata Drillerz         1 Z\n22-Apr-26 Wed 217 6:00PM A. Herr Park             Hempfield Black          11 Mountville Angels        7 Z\n22-Apr-26 Wed 216 6:00PM Penryn Field             Manheim Lions            9 Cedar Crest              2 Z\n22-Apr-26 Wed 266 6:00PM Warwick Twp #1           Lititz VFW               0 E-Town Black             8 Z\n23-Apr-26 Thu 218 6:00PM McNickle Field           MT Streaks               7 SOLANCO Black            7 T\n23-Apr-26 Thu 219 6:00PM Silver Spring Park       Hempfield Red            2 LS Blue                  17 Z\n23-Apr-26 Thu 267 6:00PM Snyder Park #1           Ephrata Drillerz         5 Lanc Rec Tornados        14 Z\n27-Apr-26 Mon 220 6:00PM A. Herr Park             Hempfield Red            9 Lititz VFW               2 Z\n27-Apr-26 Mon 221 6:00PM Cornwall Field           Cedar Crest              18 Ephrata Drillerz         7 Z\n28-Apr-26 Tue 223 6:00PM Governor Stables         E-Town Black             4 Mountville Angels        5 Z\n28-Apr-26 Tue 268 6:00PM Herr Flowers #3          LS Blue                  3 SOLANCO Black            8 Z\n28-Apr-26 Tue 222 6:00PM Highville FC             PM Comets                3 Lanc Rec Tornados        1 Z\n28-Apr-26 Tue 224 6:00PM Penryn Field             Manheim Lions            1 Hempfield Black          0 Z\n30-Apr-26 Thu 225 6:00PM A. Herr Park             Hempfield Black          13 E-Town Black             6 Z\n30-Apr-26 Thu 270 6:00PM Herr Flowers #3          LS Blue                  3 Manheim Lions            8 Z\n30-Apr-26 Thu 226 6:00PM Highville FC             PM Comets                6 Hempfield Red            4 Z\n30-Apr-26 Thu 227 6:00PM SYBA Field Complex #1    SOLANCO Black            6 Ephrata Drillerz         10 Z\n1-May-26 Fri 271 6:00PM Community #3             Lanc Rec Tornados        8 Mountville Angels        2 Z\n1-May-26 Fri 228 6:00PM Cornwall Field           Cedar Crest              6 MT Streaks               5 Z\n4-May-26 Mon 230 6:00PM Penryn Field             Manheim Lions            10 Lanc Rec Tornados        0 Z\n4-May-26 Mon 229 6:00PM Silver Spring Park       Hempfield Red            7 SOLANCO Black            5 Z\n4-May-26 Mon 272 6:00PM Snyder Park #1           Ephrata Drillerz         5 Hempfield Black          17 Z\n6-May-26 Wed 273 6:00PM Warwick Twp #1           Lititz VFW               0 LS Blue                  1 Z\n7-May-26 Thu 234 6:00PM Mountville Boro          Mountville Angels        0 Manheim Lions            10 Z\n7-May-26 Thu 235 6:00PM SOLANCO Legion           SOLANCO Black            7 Hempfield Black          8 Z\n7-May-26 Thu 269 6:00PM Warwick Twp #1           Lititz VFW               5 MT Streaks               8 Z\n8-May-26 Fri 237 6:00PM Highville FC             PM Comets                16 LS Blue                  1 Z\n8-May-26 Fri 236 6:00PM McNickle Field           MT Streaks               8 Cedar Crest              10 Z\n11-May-26 Mon 238 6:00PM Cornwall Field           Cedar Crest              13 Lanc Rec Tornados        12 Z\n11-May-26 Mon 274 6:00PM Herr Flowers #3          LS Blue                  16 Hempfield Red            5 Z\n11-May-26 Mon 239 6:00PM SYBA Field Complex #1    SOLANCO Black            0 Manheim Lions            10 Z\n11-May-26 Mon 275 6:00PM Warwick Twp #1           Lititz VFW               3 Ephrata Drillerz         10 Z\n12-May-26 Tue 242 6:00PM A. Herr Park             Hempfield Black          11 Lititz VFW               4 Z\n12-May-26 Tue 240 6:00PM Highville FC             PM Comets                12 MT Streaks               7 Z\n13-May-26 Wed 276 6:00PM Herr Flowers #3          LS Blue                  16 Mountville Angels        2 Z\n14-May-26 Thu 277 6:00PM Community #3             Lanc Rec Tornados        8 SOLANCO Black            9 Z\n14-May-26 Thu 246 6:00PM Governor Stables         E-Town Black             7 Cedar Crest              0 Z\n14-May-26 Thu 245 6:00PM Penryn Field             Manheim Lions            11 Mountville Angels        2 Z\n14-May-26 Thu 243 6:00PM Silver Spring Park       Hempfield Red            5 MT Streaks               9 Z\n18-May-26 Mon 247 6:00PM A. Herr Park             Hempfield Black          13 Lanc Rec Tornados        5 Z\n18-May-26 Mon 233 6:00PM Cornwall Field           Cedar Crest              0 PM Comets                9 Z\n18-May-26 Mon 249 6:00PM McNickle Field           MT Streaks               6 LS Blue                  12 Z\n18-May-26 Mon 248 6:00PM Silver Spring Park       Hempfield Red            1 E-Town Black             8 Z\n18-May-26 Mon 278 6:00PM Warwick Twp #1           Lititz VFW               6 SOLANCO Black            8 Z\n19-May-26 Tue 250 6:00PM Mountville Boro          Mountville Angels        0 PM Comets                17 Z\n19-May-26 Tue 279 6:00PM Snyder Park #1           Ephrata Drillerz         7 Cedar Crest              6 Z\n20-May-26 Wed 251 6:00PM Governor Stables         E-Town Black             11 Lanc Rec Tornados        1 Z\n22-May-26 Fri 231 6:00PM McNickle Field           MT Streaks               6 Lanc Rec Tornados        9 Z\n26-May-26 Tue 261 6:00PM A. Herr Park             Hempfield Black          20 MT Streaks               6 Z\n26-May-26 Tue 281 6:00PM Community #3             Lanc Rec Tornados        1 Hempfield Red            2 Z\n\n--- page 2 ---\n26-May-26 Tue 241 6:00PM Governor Stables         E-Town Black             6 Ephrata Drillerz         3 Z\n26-May-26 Tue 257 6:00PM Highville FC             PM Comets                0 Manheim Lions            8 Z\n26-May-26 Tue 258 6:00PM Mountville Boro          Mountville Angels        3 Lititz VFW               18 Z\n26-May-26 Tue 256 6:00PM SYBA Field Complex #1    SOLANCO Black            4 LS Blue                  8 Z\n27-May-26 Wed 263 6:00PM Cornwall Field           Cedar Crest              7 SOLANCO Black            9 Z\n27-May-26 Wed 252 6:00PM Penryn Field             Manheim Lions            0 Hempfield Red            F V\n28-May-26 Thu 283 6:00PM Herr Flowers #3          LS Blue                  2 Lititz VFW               4 Z\n28-May-26 Thu 260 6:00PM Silver Spring Park       Hempfield Red            12 PM Comets                16 Z\n28-May-26 Thu 282 6:00PM Snyder Park #1           Ephrata Drillerz         2 Mountville Angels        0 Z\n29-May-26 Fri 262 6:00PM Penryn Field             Manheim Lions            8 E-Town Black             1 Z\n29-May-26 Fri 255 8:00PM SYBA Field Complex #1    SOLANCO Black            10 Mountville Angels        0 Z\n30-May-26 Sat 253 2:00PM Cornwall Field           Cedar Crest              2 Lititz VFW               14 Z\n1-Jun-26 Mon 285 6:00PM Highville FC             PM Comets                8 E-Town Black             6 Z\n1-Jun-26 Mon 284 6:00PM Mountville Boro          Mountville Angels        8 LS Blue                  7 Z\n1-Jun-26 Mon 286 6:00PM Penryn Field             Manheim Lions            14 SOLANCO Black            4 Z\n1-Jun-26 Mon 316 6:00PM Snyder Park #1           Ephrata Drillerz         5 Hempfield Red            7 Z\n1-Jun-26 Mon 317 6:00PM Warwick Twp #1           Lititz VFW               9 Lanc Rec Tornados        3 Z\n2-Jun-26 Tue 287 6:00PM Cornwall Field           Cedar Crest              7 Hempfield Black          16 Z\n3-Jun-26 Wed 288 6:00PM McNickle Field           MT Streaks               5 Manheim Lions            9 Z\n3-Jun-26 Wed 289 6:00PM Mountville Boro          Mountville Angels        0 Ephrata Drillerz         12 Z\n3-Jun-26 Wed 308 6:00PM SYBA Field Complex #1    SOLANCO Black            4 E-Town Black             9 Z\n3-Jun-26 Wed 280 6:00PM Village Park Field #12   LS Blue                  0 Hempfield Black          12 Z\n4-Jun-26 Thu 318 6:00PM Community #3             Lanc Rec Tornados        6 Cedar Crest              3 Z\n4-Jun-26 Thu 319 6:00PM Herr Flowers #3          LS Blue                  6 MT Streaks               14 Z\n4-Jun-26 Thu 290 6:00PM Silver Spring Park       Hempfield Red            4 Hempfield Black          6 Z\n5-Jun-26 Fri 309 6:00PM Highville FC             PM Comets                8 Cedar Crest              0 Z\n5-Jun-26 Fri 208 6:00PM Snyder Park #1           Ephrata Drillerz         11 SOLANCO Black            16 Z\n8-Jun-26 Mon 295 6:00PM A. Herr Park             Hempfield Black          8 Manheim Lions            4 Z\n8-Jun-26 Mon 291 6:00PM Cornwall Field           Cedar Crest              16 Mountville Angels        1 Z\n8-Jun-26 Mon 293 6:00PM Governor Stables         E-Town Black             10 LS Blue                  0 Z\n8-Jun-26 Mon 292 6:00PM Highville FC             PM Comets                12 Ephrata Drillerz         5 Z\n8-Jun-26 Mon 294 6:00PM SYBA Field Complex #1    SOLANCO Black            5 Hempfield Red            5 T\n9-Jun-26 Tue 306 6:00PM Mountville Boro          Mountville Angels        5 Hempfield Black          19 Z\n11-Jun-26 Thu 215 5:30PM Highville FC             SOLANCO Black            12 PM Comets                19 Z\n11-Jun-26 Thu 321 6:00PM Warwick Twp #1           Lititz VFW               1 Hempfield Black          8 Z\n11-Jun-26 Thu 298 7:00PM Highville FC             PM Comets                12 SOLANCO Black            0 Z\n12-Jun-26 Fri 299 6:00PM Mountville Boro          Mountville Angels        2 MT Streaks               10 Z\n12-Jun-26 Fri 323 6:00PM Snyder Park #1           Ephrata Drillerz         2 Lititz VFW               4 Z\n15-Jun-26 Mon 300 6:00PM Governor Stables         E-Town Black             5 PM Comets                8 Z\n15-Jun-26 Mon 301 6:00PM Silver Spring Park       Hempfield Red            17 Cedar Crest              17 T\n15-Jun-26 Mon 302 6:00PM SOLANCO Legion           SOLANCO Black            11 Lanc Rec Tornados        1 Z\n15-Jun-26 Mon 324 6:00PM Warwick Twp #1           Lititz VFW               15 Mountville Angels        8 Z\n17-Jun-26 Wed 304 6:00PM A. Herr Park             Hempfield Black          13 SOLANCO Black            2 Z\n17-Jun-26 Wed 325 6:00PM Community #3             Lanc Rec Tornados        2 PM Comets                16 Z\n17-Jun-26 Wed 305 6:00PM McNickle Field           MT Streaks               4 Lititz VFW               2 Z\n17-Jun-26 Wed 303 6:00PM Penryn Field             Manheim Lions            11 Ephrata Drillerz         1 Z\n18-Jun-26 Thu 312 6:00PM Cornwall Field           Cedar Crest              13 Hempfield Red            12 Z\n18-Jun-26 Thu 296 6:00PM McNickle Field           MT Streaks               5 E-Town Black             6 Z\n18-Jun-26 Thu 326 6:00PM Snyder Park #1           Ephrata Drillerz         5 LS Blue                  18 Z\n19-Jun-26 Fri 254 6:00PM McNickle Field           MT Streaks               8 PM Comets                7 Z\n19-Jun-26 Fri 307 8:00PM Governor Stables         E-Town Black             4 Manheim Lions            9 Z\n23-Jun-26 Tue 311 6:00PM Silver Spring Park       Hempfield Red            6 Manheim Lions            14 Z\n24-Jun-26 Wed 328 6:00PM Community #3             Lanc Rec Tornados        8 LS Blue                  1 Z\n24-Jun-26 Wed 232 6:00PM Governor Stables         E-Town Black             3 Hempfield Red            2 Z\n24-Jun-26 Wed 330 6:00PM Highville FC             Lititz VFW               4 PM Comets                3 Z\n24-Jun-26 Wed 310 6:00PM McNickle Field           MT Streaks               2 Hempfield Black          20 Z\n25-Jun-26 Thu 244 6:00PM A. Herr Park             Hempfield Black          12 PM Comets                3 Z\n25-Jun-26 Thu 313 6:00PM Mountville Boro          Mountville Angels        3 E-Town Black             16 Z\n25-Jun-26 Thu 314 6:00PM Penryn Field             Manheim Lions            0 Lititz VFW               0  \n25-Jun-26 Thu 329 6:00PM Snyder Park #1           Ephrata Drillerz         7 MT Streaks               15 Z\n26-Jun-26 Fri 259 6:00PM Governor Stables         E-Town Black             0 MT Streaks               0  \n29-Jun-26 Mon 315 6:00PM A. Herr Park             Hempfield Black          0 Ephrata Drillerz         0  \n30-Jun-26 Tue 320 6:00PM Herr Flowers #3          LS Blue                  0 Cedar Crest              0  \n30-Jun-26 Tue 297 6:00PM Silver Spring Park       Hempfield Red            0 Lanc Rec Tornados        0  \n1-Jul-26 Wed 322 6:00PM Community #3             Lanc Rec Tornados        0 Manheim Lions            0 Z\n\n--- page 3 ---\n2-Jul-26 Thu 327 6:00PM Community #3             Lanc Rec Tornados        0 Ephrata Drillerz         0  ",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -18202,15 +18212,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:07 GMT",
-        "ETag": "\"e119d0074775cf0f485a7c3676a94433\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:07 GMT",
-        "Last-Modified": "Thu, 25 Jun 2026 03:33:20 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:34 GMT",
+        "ETag": "\"0751ccabf1f400b15e90485386351e13\"",
+        "Expires": "Sat, 26 Jun 2027 04:00:34 GMT",
+        "Last-Modified": "Fri, 26 Jun 2026 03:20:57 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
-        "X-Forwarded-For": "50.63.4.67",
-        "x-amzn-trace-id": "Root=1-6a3ca17f-0af4ba581ef1b75479c9ede5",
+        "X-Forwarded-For": "50.63.4.71",
+        "x-amzn-trace-id": "Root=1-6a3df018-0fc466070f84317a042b6a19",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-fb2a2ba"
@@ -18218,13 +18228,13 @@
       "kind": "scores",
       "parsedCount": 130,
       "section": 1,
-      "sha256": "6b9ca5d5154604b55cd2021bc7493ec076ddfea7a13566d85854540c95bb0579",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec1Scores.XLS-3f2ba2f.pdf"
+      "sha256": "c6344718ea86eb9c0da8ae275896acf073a84edda30dbab8aadf3ecc439e64f8",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec1Scores.XLS-c931770.pdf"
     },
     {
-      "bytes": 112310,
+      "bytes": 112287,
       "division": "14U",
-      "extractedText": "\n--- page 1 ---\n14u-1\nAmerican Division Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Manheim Lions LCYBL 17 1 0 94.4% 51 36 2\nHempfield Black LCYBL 16 1 0 94.1% 48 70 3\nPM Comets LCYBL 16 2 0 88.9% 48 72 2\nE-Town Black LCYBL 9 8 0 52.9% 27 88 3\nSOLANCO Black LCYBL 8 10 2 45.0% 26 162 0\nCedar Crest LCYBL 8 10 1 44.7% 25 172 1\nLS Blue LCYBL 8 10 0 44.4% 24 127 2\nMT Streaks LCYBL 7 9 1 44.1% 22 141 3\nLititz VFW LCYBL 7 11 0 38.9% 21 102 2\nHempfield Red LCYBL 5 11 2 33.3% 17 161 2\nLanc Rec Tornados LCYBL 5 11 0 31.3% 15 123 4\nEphrata Drillerz LCYBL 5 12 0 29.4% 15 167 3\nMountville Angels LCYBL 2 17 0 10.5% 6 214 1\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 Manheim Lions LCYBL 17 1 0 94.4% 51 36 2 LCYBL Series\n2 Hempfield Black LCYBL 16 1 0 94.1% 48 70 3 D1 vs. 8\n3 PM Comets LCYBL 16 2 0 88.9% 48 72 2 2 vs. 7\n4 E-Town Black LCYBL 9 8 0 52.9% 27 88 3 3 vs. 6\n5 SOLANCO Black LCYBL 8 10 2 45.0% 26 162 0 4 vs. 5\n6 Cedar Crest LCYBL 8 10 1 44.7% 25 172 1\n7 LS Blue LCYBL 8 10 0 44.4% 24 127 2 LNP Play-In\n8 MT Streaks LCYBL 7 9 1 44.1% 22 141 3\n9 Lititz VFW LCYBL 7 11 0 38.9% 21 102 2 7 vs. 10\n10 Hempfield Red LCYBL 5 11 2 33.3% 17 161 2 8 vs. 9\n11 Lanc Rec Tornados LCYBL 5 11 0 31.3% 15 123 4\n12 Ephrata Drillerz LCYBL 5 12 0 29.4% 15 167 3\n13 Mountville Angels LCYBL 2 17 0 10.5% 6 214 1\nDouble Last updated => 6/24/2026 0:09\nWins Losses Ties Forfeit\n113 113 6 0 1. Points\nDivision Winner is the #1 Seed 2. Head 2 Head Calculated End Of Season\nSeeds #2 ~ 13 are the rest 3. Runs Allowed",
+      "extractedText": "\n--- page 1 ---\n14u-1\nAmerican Division Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Hempfield Black LCYBL 18 1 0 94.7% 54 75 1\nManheim Lions LCYBL 17 1 0 94.4% 51 36 2\nPM Comets LCYBL 16 4 0 80.0% 48 88 0\nE-Town Black LCYBL 11 8 0 57.9% 33 93 1\nSOLANCO Black LCYBL 8 10 2 45.0% 26 162 0\nMT Streaks LCYBL 8 10 1 44.7% 25 168 1\nCedar Crest LCYBL 8 10 1 44.7% 25 172 1\nLititz VFW LCYBL 8 11 0 42.1% 24 105 1\nLS Blue LCYBL 8 11 0 42.1% 24 135 1\nLanc Rec Tornados LCYBL 6 11 0 35.3% 18 124 3\nHempfield Red LCYBL 5 12 2 31.6% 17 164 1\nEphrata Drillerz LCYBL 5 13 0 27.8% 15 182 2\nMountville Angels LCYBL 2 18 0 10.0% 6 230 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 Hempfield Black LCYBL 18 1 0 94.7% 54 75 1 LCYBL Series\n2 Manheim Lions LCYBL 17 1 0 94.4% 51 36 2 D1 vs. 8\n3 PM Comets LCYBL 16 4 0 80.0% 48 88 0 2 vs. 7\n4 E-Town Black LCYBL 11 8 0 57.9% 33 93 1 3 vs. 6\n5 SOLANCO Black LCYBL 8 10 2 45.0% 26 162 0 4 vs. 5\n6 MT Streaks LCYBL 8 10 1 44.7% 25 168 1\n7 Cedar Crest LCYBL 8 10 1 44.7% 25 172 1 LNP Play-In\n8 Lititz VFW LCYBL 8 11 0 42.1% 24 105 1\n9 LS Blue LCYBL 8 11 0 42.1% 24 135 1 7 vs. 10\n10 Lanc Rec Tornados LCYBL 6 11 0 35.3% 18 124 3 8 vs. 9\n11 Hempfield Red LCYBL 5 12 2 31.6% 17 164 1\n12 Ephrata Drillerz LCYBL 5 13 0 27.8% 15 182 2\n13 Mountville Angels LCYBL 2 18 0 10.0% 6 230 0\nDouble Last updated => 6/25/2026 23:24\nWins Losses Ties Forfeit\n120 120 6 0 1. Points\nDivision Winner is the #1 Seed 2. Head 2 Head Calculated End Of Season\nSeeds #2 ~ 13 are the rest 3. Runs Allowed",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -18234,15 +18244,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:07 GMT",
-        "ETag": "\"488e6197c28a2d0949d5b681deafe675\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:07 GMT",
-        "Last-Modified": "Wed, 24 Jun 2026 04:11:50 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:34 GMT",
+        "ETag": "\"4dc4caaca53b2eee6c06861bb06149e4\"",
+        "Expires": "Sat, 26 Jun 2027 04:00:34 GMT",
+        "Last-Modified": "Fri, 26 Jun 2026 03:25:35 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
         "X-Forwarded-For": "50.63.4.69",
-        "x-amzn-trace-id": "Root=1-6a3b5905-08dec5d9675e1f191065fb60",
+        "x-amzn-trace-id": "Root=1-6a3df12d-14de89aa1ca3c9c36cb04cc6",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-fb2a2ba"
@@ -18250,8 +18260,8 @@
       "kind": "standings",
       "parsedCount": 13,
       "section": 1,
-      "sha256": "0743f4b7a2299b8577269876d1c953018bd7d8dec302c3248576775998f9a60c",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%201%20Standings%20one%20divis-b00b0d6.pdf"
+      "sha256": "efa5afb13a7e0edb08cac686ddff15fee13d314ba7ec0255effc994bcedebab9",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%201%20Standings%20one%20divis-1339294.pdf"
     },
     {
       "bytes": 229800,
@@ -18266,9 +18276,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:07 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:35 GMT",
         "ETag": "\"d7acf90868c5a19fca031f9c21358c3f\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:07 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:35 GMT",
         "Last-Modified": "Fri, 19 Jun 2026 02:48:16 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18298,9 +18308,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:08 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:35 GMT",
         "ETag": "\"1a79749732090106934b07b80bb3995f\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:08 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:35 GMT",
         "Last-Modified": "Mon, 22 Jun 2026 22:28:59 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18330,9 +18340,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:08 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:35 GMT",
         "ETag": "\"237044f14ad448e24f4cc909582b4e74\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:08 GMT",
+        "Expires": "Sat, 26 Jun 2027 04:00:35 GMT",
         "Last-Modified": "Thu, 25 Jun 2026 03:33:39 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18350,9 +18360,9 @@
       "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec3Scores.XLS-d85750b.pdf"
     },
     {
-      "bytes": 129731,
+      "bytes": 129748,
       "division": "14U",
-      "extractedText": "\n--- page 1 ---\n14u Section 3\nWins Losses Ties Winning % Points Runs Allowed Games Remaining\nD E-Town Navy LCYBL 16 0 0 100.0% 48 26 0\nLanc Rec Tornados LCYBL 12 3 1 78.1% 37 107 0\nCV Bucks LCYBL 12 4 0 75.0% 36 132 0\nGarden Spot LCYBL 11 5 0 68.8% 33 125 0\nCocalico Eagles LCYBL 10 4 1 70.0% 31 162 1\nPM Blue LCYBL 9 6 0 60.0% 27 127 1\nE-Town White LCYBL 8 7 1 53.1% 25 142 0\nMT Chargers LCYBL 8 7 1 53.1% 25 150 0\nMT Storm LCYBL 7 8 1 46.9% 22 168 0\nSOLANCO Black LCYBL 7 9 0 43.8% 21 163 0\nDonegal Black LCYBL 5 11 0 31.3% 15 189 0\nPV Braves LCYBL 4 11 0 26.7% 12 169 1\nCTYAA Moose LCYBL 3 11 0 21.4% 9 167 2\nCedar Crest LCYBL 1 13 1 10.0% 4 199 1\nEphrata Zips LCYBL 1 15 0 6.3% 3 208 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 E-Town Navy LCYBL 16 0 0 100.0% 48 26 0\n2 Lanc Rec Tornados LCYBL 12 3 1 78.1% 37 107 0\nX CV Bucks LCYBL 12 4 0 75.0% 36 132 0\n3 Garden Spot LCYBL 11 5 0 68.8% 33 125 0\nX Cocalico Eagles LCYBL 10 4 1 70.0% 31 162 1\n4 PM Blue LCYBL 9 6 0 60.0% 27 127 1\nX E-Town White LCYBL 8 7 1 53.1% 25 142 0\n5 MT Chargers LCYBL 8 7 1 53.1% 25 150 0\n6 MT Storm LCYBL 7 8 1 46.9% 22 168 0\n7 SOLANCO Black LCYBL 7 9 0 43.8% 21 163 0\n8 Donegal Black LCYBL 5 11 0 31.3% 15 189 0\n9 PV Braves LCYBL 4 11 0 26.7% 12 169 1\nX CTYAA Moose LCYBL 3 11 0 21.4% 9 167 2\nX Cedar Crest LCYBL 1 13 1 10.0% 4 199 1\nX Ephrata Zips LCYBL 1 15 0 6.3% 3 208 0\nWins Losses Ties Doubble Last updated => 6/25/2026 0:49\n114 114 6 Forfeit\nAll Teams qualify for the Year End Tournament 0 1. Points\n\n--- page 2 ---\nDivision Winner is the #1 Seed 2. H2H Calculated EOS\n.750 Rule 3. Runs Allowed\nCocalico Eagles Eligible\nCV Bucks Ineligible\nCTYAA Moose Eligible\nDonegal Black Eligible\nGarden Spot Eligible\nPV Braves Eligible",
+      "extractedText": "\n--- page 1 ---\n14u Section 3\nWins Losses Ties Winning % Points Runs Allowed Games Remaining\nD E-Town Navy LCYBL 16 0 0 100.0% 48 26 0\nLanc Rec Tornados LCYBL 12 3 1 78.1% 37 107 0\nCV Bucks LCYBL 12 4 0 75.0% 36 132 0\nGarden Spot LCYBL 11 5 0 68.8% 33 125 0\nCocalico Eagles LCYBL 10 4 1 70.0% 31 162 1\nPM Blue LCYBL 9 6 0 60.0% 27 127 1\nE-Town White LCYBL 8 7 1 53.1% 25 142 0\nMT Chargers LCYBL 8 7 1 53.1% 25 150 0\nMT Storm LCYBL 7 8 1 46.9% 22 168 0\nSOLANCO Black LCYBL 7 9 0 43.8% 21 163 0\nDonegal Black LCYBL 5 11 0 31.3% 15 189 0\nPV Braves LCYBL 4 11 0 26.7% 12 169 1\nCTYAA Moose LCYBL 3 12 0 20.0% 9 179 1\nCedar Crest LCYBL 2 13 1 15.6% 7 210 0\nEphrata Zips LCYBL 1 15 0 6.3% 3 208 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 E-Town Navy LCYBL 16 0 0 100.0% 48 26 0\n2 Lanc Rec Tornados LCYBL 12 3 1 78.1% 37 107 0\nX CV Bucks LCYBL 12 4 0 75.0% 36 132 0\n3 Garden Spot LCYBL 11 5 0 68.8% 33 125 0\nX Cocalico Eagles LCYBL 10 4 1 70.0% 31 162 1\n4 PM Blue LCYBL 9 6 0 60.0% 27 127 1\nX E-Town White LCYBL 8 7 1 53.1% 25 142 0\n5 MT Chargers LCYBL 8 7 1 53.1% 25 150 0\n6 MT Storm LCYBL 7 8 1 46.9% 22 168 0\nX SOLANCO Black LCYBL 7 9 0 43.8% 21 163 0\n7 Donegal Black LCYBL 5 11 0 31.3% 15 189 0\n8 PV Braves LCYBL 4 11 0 26.7% 12 169 1\nX CTYAA Moose LCYBL 3 12 0 20.0% 9 179 1\nX Cedar Crest LCYBL 2 13 1 15.6% 7 210 0\nX Ephrata Zips LCYBL 1 15 0 6.3% 3 208 0\nWins Losses Ties Doubble Last updated => 6/25/2026 13:27\n115 115 6 Forfeit\nAll Teams qualify for the Year End Tournament 0 1. Points\n\n--- page 2 ---\nDivision Winner is the #1 Seed 2. H2H Calculated EOS\n.750 Rule 3. Runs Allowed\nCocalico Eagles Eligible\nCV Bucks Ineligible\nCTYAA Moose Eligible\nDonegal Black Eligible\nGarden Spot Eligible\nPV Braves Eligible",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -18362,15 +18372,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Thu, 25 Jun 2026 12:34:09 GMT",
-        "ETag": "\"7efa10550d6f97eee8ab6bd7f54e8fc6\"",
-        "Expires": "Fri, 25 Jun 2027 12:34:09 GMT",
-        "Last-Modified": "Thu, 25 Jun 2026 04:50:34 GMT",
+        "Date": "Fri, 26 Jun 2026 04:00:36 GMT",
+        "ETag": "\"97b4435a54c37245f21b9674fc4aff9c\"",
+        "Expires": "Sat, 26 Jun 2027 04:00:36 GMT",
+        "Last-Modified": "Thu, 25 Jun 2026 17:28:07 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
-        "X-Forwarded-For": "50.63.4.70",
-        "x-amzn-trace-id": "Root=1-6a3cb399-26881634717f7ec17360f73d",
+        "X-Forwarded-For": "50.63.4.66",
+        "x-amzn-trace-id": "Root=1-6a3d6526-2a09c1fa30418b8556cd1447",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-fb2a2ba"
@@ -18378,8 +18388,8 @@
       "kind": "standings",
       "parsedCount": 15,
       "section": 3,
-      "sha256": "dbda1ba16f41280dd20261268a2c5d4a93bf1857cf8b1c2ebd13a592a93b0172",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%203%20Standings%20750%20one%20d-d009c74.pdf"
+      "sha256": "0b4cec1748370c2ce5959504742baa048b953a69c06d3312a64ff968ac50b3f0",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%203%20Standings%20750%20one%20d-ba5e32e.pdf"
     }
   ],
   "standings": [
@@ -18886,7 +18896,7 @@
       "label": "10U · Section 2",
       "note": "Parsed automatically from the league's official standings PDF.",
       "section": 2,
-      "updated": "Thu, 25 Jun 2026 04:06:16 GMT"
+      "updated": "Fri, 26 Jun 2026 01:43:48 GMT"
     },
     {
       "division": "10U",
@@ -19086,14 +19096,14 @@
           "rows": [
             {
               "champion": true,
-              "gamesRemaining": 1,
+              "gamesRemaining": 0,
               "losses": 2,
-              "pct": 85.3,
-              "points": 43,
-              "runsAllowed": 58,
+              "pct": 86.1,
+              "points": 46,
+              "runsAllowed": 60,
               "team": "Hempfield Black American",
               "ties": 1,
-              "wins": 14
+              "wins": 15
             },
             {
               "champion": false,
@@ -19119,22 +19129,22 @@
             },
             {
               "champion": false,
-              "gamesRemaining": 1,
-              "losses": 8,
-              "pct": 52.9,
+              "gamesRemaining": 0,
+              "losses": 9,
+              "pct": 50.0,
               "points": 27,
-              "runsAllowed": 110,
+              "runsAllowed": 115,
               "team": "Cocalico Eagles American",
               "ties": 0,
               "wins": 9
             },
             {
               "champion": false,
-              "gamesRemaining": 1,
-              "losses": 8,
-              "pct": 52.9,
+              "gamesRemaining": 0,
+              "losses": 9,
+              "pct": 50.0,
               "points": 27,
-              "runsAllowed": 131,
+              "runsAllowed": 139,
               "team": "Cedar Crest American",
               "ties": 0,
               "wins": 9
@@ -19152,25 +19162,25 @@
             },
             {
               "champion": false,
-              "gamesRemaining": 2,
-              "losses": 11,
-              "pct": 31.3,
+              "gamesRemaining": 0,
+              "losses": 13,
+              "pct": 27.8,
               "points": 15,
-              "runsAllowed": 131,
+              "runsAllowed": 159,
               "team": "Donegal Indians American",
               "ties": 0,
               "wins": 5
             },
             {
               "champion": false,
-              "gamesRemaining": 1,
+              "gamesRemaining": 0,
               "losses": 15,
-              "pct": 11.8,
-              "points": 6,
-              "runsAllowed": 196,
+              "pct": 16.7,
+              "points": 9,
+              "runsAllowed": 199,
               "team": "Warwick Phillies American",
               "ties": 0,
-              "wins": 2
+              "wins": 3
             }
           ]
         },
@@ -19179,14 +19189,14 @@
           "rows": [
             {
               "champion": true,
-              "gamesRemaining": 1,
+              "gamesRemaining": 0,
               "losses": 2,
-              "pct": 88.2,
-              "points": 45,
-              "runsAllowed": 90,
+              "pct": 88.9,
+              "points": 48,
+              "runsAllowed": 91,
               "team": "LS Atta Boys National",
               "ties": 0,
-              "wins": 15
+              "wins": 16
             },
             {
               "champion": false,
@@ -19235,6 +19245,17 @@
             {
               "champion": false,
               "gamesRemaining": 0,
+              "losses": 11,
+              "pct": 36.1,
+              "points": 19,
+              "runsAllowed": 160,
+              "team": "PM Comets National",
+              "ties": 1,
+              "wins": 6
+            },
+            {
+              "champion": false,
+              "gamesRemaining": 0,
               "losses": 12,
               "pct": 33.3,
               "points": 18,
@@ -19242,17 +19263,6 @@
               "team": "Mountville Indians National",
               "ties": 0,
               "wins": 6
-            },
-            {
-              "champion": false,
-              "gamesRemaining": 1,
-              "losses": 11,
-              "pct": 32.4,
-              "points": 16,
-              "runsAllowed": 153,
-              "team": "PM Comets National",
-              "ties": 1,
-              "wins": 5
             },
             {
               "champion": false,
@@ -19271,7 +19281,7 @@
       "label": "12U · Section 1",
       "note": "Parsed automatically from the league's official standings PDF.",
       "section": 1,
-      "updated": "Wed, 24 Jun 2026 04:11:17 GMT"
+      "updated": "Fri, 26 Jun 2026 03:25:15 GMT"
     },
     {
       "division": "12U",
@@ -19947,7 +19957,7 @@
       "label": "12U · Section 3",
       "note": "Parsed automatically from the league's official standings PDF.",
       "section": 3,
-      "updated": "Thu, 25 Jun 2026 04:42:42 GMT"
+      "updated": "Thu, 25 Jun 2026 16:17:05 GMT"
     },
     {
       "division": "14U",
@@ -19957,6 +19967,17 @@
           "rows": [
             {
               "champion": true,
+              "gamesRemaining": 1,
+              "losses": 1,
+              "pct": 94.7,
+              "points": 54,
+              "runsAllowed": 75,
+              "team": "Hempfield Black",
+              "ties": 0,
+              "wins": 18
+            },
+            {
+              "champion": false,
               "gamesRemaining": 2,
               "losses": 1,
               "pct": 94.4,
@@ -19968,36 +19989,25 @@
             },
             {
               "champion": false,
-              "gamesRemaining": 3,
-              "losses": 1,
-              "pct": 94.1,
+              "gamesRemaining": 0,
+              "losses": 4,
+              "pct": 80.0,
               "points": 48,
-              "runsAllowed": 70,
-              "team": "Hempfield Black",
-              "ties": 0,
-              "wins": 16
-            },
-            {
-              "champion": false,
-              "gamesRemaining": 2,
-              "losses": 2,
-              "pct": 88.9,
-              "points": 48,
-              "runsAllowed": 72,
+              "runsAllowed": 88,
               "team": "PM Comets",
               "ties": 0,
               "wins": 16
             },
             {
               "champion": false,
-              "gamesRemaining": 3,
+              "gamesRemaining": 1,
               "losses": 8,
-              "pct": 52.9,
-              "points": 27,
-              "runsAllowed": 88,
+              "pct": 57.9,
+              "points": 33,
+              "runsAllowed": 93,
               "team": "E-Town Black",
               "ties": 0,
-              "wins": 9
+              "wins": 11
             },
             {
               "champion": false,
@@ -20016,6 +20026,17 @@
               "losses": 10,
               "pct": 44.7,
               "points": 25,
+              "runsAllowed": 168,
+              "team": "MT Streaks",
+              "ties": 1,
+              "wins": 8
+            },
+            {
+              "champion": false,
+              "gamesRemaining": 1,
+              "losses": 10,
+              "pct": 44.7,
+              "points": 25,
               "runsAllowed": 172,
               "team": "Cedar Crest",
               "ties": 1,
@@ -20023,11 +20044,22 @@
             },
             {
               "champion": false,
-              "gamesRemaining": 2,
-              "losses": 10,
-              "pct": 44.4,
+              "gamesRemaining": 1,
+              "losses": 11,
+              "pct": 42.1,
               "points": 24,
-              "runsAllowed": 127,
+              "runsAllowed": 105,
+              "team": "Lititz VFW",
+              "ties": 0,
+              "wins": 8
+            },
+            {
+              "champion": false,
+              "gamesRemaining": 1,
+              "losses": 11,
+              "pct": 42.1,
+              "points": 24,
+              "runsAllowed": 135,
               "team": "LS Blue",
               "ties": 0,
               "wins": 8
@@ -20035,65 +20067,43 @@
             {
               "champion": false,
               "gamesRemaining": 3,
-              "losses": 9,
-              "pct": 44.1,
-              "points": 22,
-              "runsAllowed": 141,
-              "team": "MT Streaks",
-              "ties": 1,
-              "wins": 7
-            },
-            {
-              "champion": false,
-              "gamesRemaining": 2,
               "losses": 11,
-              "pct": 38.9,
-              "points": 21,
-              "runsAllowed": 102,
-              "team": "Lititz VFW",
+              "pct": 35.3,
+              "points": 18,
+              "runsAllowed": 124,
+              "team": "Lanc Rec Tornados",
               "ties": 0,
-              "wins": 7
+              "wins": 6
             },
             {
               "champion": false,
-              "gamesRemaining": 2,
-              "losses": 11,
-              "pct": 33.3,
+              "gamesRemaining": 1,
+              "losses": 12,
+              "pct": 31.6,
               "points": 17,
-              "runsAllowed": 161,
+              "runsAllowed": 164,
               "team": "Hempfield Red",
               "ties": 2,
               "wins": 5
             },
             {
               "champion": false,
-              "gamesRemaining": 4,
-              "losses": 11,
-              "pct": 31.3,
+              "gamesRemaining": 2,
+              "losses": 13,
+              "pct": 27.8,
               "points": 15,
-              "runsAllowed": 123,
-              "team": "Lanc Rec Tornados",
-              "ties": 0,
-              "wins": 5
-            },
-            {
-              "champion": false,
-              "gamesRemaining": 3,
-              "losses": 12,
-              "pct": 29.4,
-              "points": 15,
-              "runsAllowed": 167,
+              "runsAllowed": 182,
               "team": "Ephrata Drillerz",
               "ties": 0,
               "wins": 5
             },
             {
               "champion": false,
-              "gamesRemaining": 1,
-              "losses": 17,
-              "pct": 10.5,
+              "gamesRemaining": 0,
+              "losses": 18,
+              "pct": 10.0,
               "points": 6,
-              "runsAllowed": 214,
+              "runsAllowed": 230,
               "team": "Mountville Angels",
               "ties": 0,
               "wins": 2
@@ -20104,7 +20114,7 @@
       "label": "14U · Section 1",
       "note": "Parsed automatically from the league's official standings PDF.",
       "section": 1,
-      "updated": "Wed, 24 Jun 2026 04:11:50 GMT"
+      "updated": "Fri, 26 Jun 2026 03:25:35 GMT"
     },
     {
       "division": "14U",
@@ -20528,25 +20538,25 @@
             },
             {
               "champion": false,
-              "gamesRemaining": 2,
-              "losses": 11,
-              "pct": 21.4,
+              "gamesRemaining": 1,
+              "losses": 12,
+              "pct": 20.0,
               "points": 9,
-              "runsAllowed": 167,
+              "runsAllowed": 179,
               "team": "CTYAA Moose",
               "ties": 0,
               "wins": 3
             },
             {
               "champion": false,
-              "gamesRemaining": 1,
+              "gamesRemaining": 0,
               "losses": 13,
-              "pct": 10.0,
-              "points": 4,
-              "runsAllowed": 199,
+              "pct": 15.6,
+              "points": 7,
+              "runsAllowed": 210,
               "team": "Cedar Crest",
               "ties": 1,
-              "wins": 1
+              "wins": 2
             },
             {
               "champion": false,
@@ -20565,7 +20575,7 @@
       "label": "14U · Section 3",
       "note": "Parsed automatically from the league's official standings PDF.",
       "section": 3,
-      "updated": "Thu, 25 Jun 2026 04:50:34 GMT"
+      "updated": "Thu, 25 Jun 2026 17:28:07 GMT"
     }
   ]
 }
