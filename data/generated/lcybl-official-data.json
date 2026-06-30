@@ -38,9 +38,9 @@
     },
     {
       "division": "14U",
-      "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec1Scores.XLS-c931770.pdf",
+      "scores_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec1Scores.XLS-a62ce34.pdf",
       "section": 1,
-      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%201%20Standings%20one%20divis-1339294.pdf"
+      "standings_url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%201%20Standings%20one%20divis-ca0cf70.pdf"
     },
     {
       "division": "14U",
@@ -56,7 +56,7 @@
     }
   ],
   "failures": [],
-  "generatedAt": "2026-06-29T14:30:27.242802+00:00",
+  "generatedAt": "2026-06-30T04:00:34.138208+00:00",
   "scheduleGames": [
     {
       "away": "Donegal Indians",
@@ -17716,13 +17716,15 @@
     },
     {
       "away": "Lititz VFW",
+      "awayScore": 3,
       "date": "2026-06-25",
       "division": "14U",
       "field": "Penryn Field",
       "home": "Manheim Lions",
+      "homeScore": 9,
       "id": "14U-1-122",
       "section": "Section 1",
-      "status": "scheduled",
+      "status": "final",
       "time": "6:00PM"
     },
     {
@@ -17753,13 +17755,15 @@
     },
     {
       "away": "MT Streaks",
+      "awayScore": 6,
       "date": "2026-06-26",
       "division": "14U",
       "field": "Governor Stables",
       "home": "E-Town Black",
+      "homeScore": 2,
       "id": "14U-1-124",
       "section": "Section 1",
-      "status": "scheduled",
+      "status": "final",
       "time": "6:00PM"
     },
     {
@@ -17832,9 +17836,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:18 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:29 GMT",
         "ETag": "\"f9e56268d5d4d746465ced1c6f0378d5\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:18 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:29 GMT",
         "Last-Modified": "Sat, 20 Jun 2026 01:38:52 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17843,7 +17847,7 @@
         "x-amzn-trace-id": "Root=1-6a35ef2b-2820466e6c03efdb3add7afa",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "scores",
       "parsedCount": 120,
@@ -17864,9 +17868,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:19 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:30 GMT",
         "ETag": "\"b024683bdf7dd72cdaf9c98116750380\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:19 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:30 GMT",
         "Last-Modified": "Sat, 20 Jun 2026 01:48:28 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17875,7 +17879,7 @@
         "x-amzn-trace-id": "Root=1-6a35f16b-198b111f27621ee66f246bd4",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "standings",
       "parsedCount": 15,
@@ -17896,9 +17900,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:19 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:30 GMT",
         "ETag": "\"4224274ef250c4413719b249bd6dae5e\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:19 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:30 GMT",
         "Last-Modified": "Thu, 25 Jun 2026 03:32:22 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17907,7 +17911,7 @@
         "x-amzn-trace-id": "Root=1-6a3ca145-7b31ba5751b30ab6284c9a16",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "scores",
       "parsedCount": 196,
@@ -17928,9 +17932,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:20 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:30 GMT",
         "ETag": "\"c9aaa99096f1ff9735c53bfe1e2488c7\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:20 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:30 GMT",
         "Last-Modified": "Fri, 26 Jun 2026 01:43:48 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17939,7 +17943,7 @@
         "x-amzn-trace-id": "Root=1-6a3dd953-374012164a5234d5215ec9cb",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "standings",
       "parsedCount": 28,
@@ -17960,9 +17964,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:20 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:30 GMT",
         "ETag": "\"76a947a59da466dff6f3d9322c78d1a0\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:20 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:30 GMT",
         "Last-Modified": "Thu, 18 Jun 2026 03:52:13 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -17971,7 +17975,7 @@
         "x-amzn-trace-id": "Root=1-6a336b6c-3002c91b03ae27375ade05b9",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "scores",
       "parsedCount": 96,
@@ -17992,9 +17996,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:21 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:30 GMT",
         "ETag": "\"b7659087f838ebe8c124ddbff2e0e0a7\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:21 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:30 GMT",
         "Last-Modified": "Thu, 18 Jun 2026 04:09:50 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18003,7 +18007,7 @@
         "x-amzn-trace-id": "Root=1-6a336f8d-4e44a0853725e235650dc78b",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "standings",
       "parsedCount": 16,
@@ -18024,9 +18028,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:21 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:31 GMT",
         "ETag": "\"c15e43984c403f42a16cf8999f2c7511\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:21 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:31 GMT",
         "Last-Modified": "Sat, 27 Jun 2026 15:56:39 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18056,9 +18060,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:22 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:31 GMT",
         "ETag": "\"cb726bce9ba0036ed9fba95536e94475\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:22 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:31 GMT",
         "Last-Modified": "Sat, 27 Jun 2026 15:58:35 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18088,9 +18092,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:22 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:31 GMT",
         "ETag": "\"0432734f8375b0eb6e6b584445e579c7\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:22 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:31 GMT",
         "Last-Modified": "Sat, 20 Jun 2026 03:30:18 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18099,7 +18103,7 @@
         "x-amzn-trace-id": "Root=1-6a360949-66dd5d4950ca5f202cb0c6e8",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "scores",
       "parsedCount": 193,
@@ -18120,9 +18124,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:23 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:32 GMT",
         "ETag": "\"6ad37842d05b19bce525ea41e05e5e29\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:23 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:32 GMT",
         "Last-Modified": "Sat, 20 Jun 2026 01:25:53 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18131,7 +18135,7 @@
         "x-amzn-trace-id": "Root=1-6a35ec20-1ce6f3f71468c044015547b6",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "standings",
       "parsedCount": 32,
@@ -18152,9 +18156,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:23 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:32 GMT",
         "ETag": "\"803f503d19dbc1ec3a6a63f4484684b7\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:23 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:32 GMT",
         "Last-Modified": "Thu, 25 Jun 2026 03:33:02 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18163,7 +18167,7 @@
         "x-amzn-trace-id": "Root=1-6a3ca16d-604762ea4d340b0b782a939e",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "scores",
       "parsedCount": 182,
@@ -18184,9 +18188,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:24 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:32 GMT",
         "ETag": "\"519186a3f548bc206e9503bf55915d7e\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:24 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:32 GMT",
         "Last-Modified": "Thu, 25 Jun 2026 16:17:05 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18195,7 +18199,7 @@
         "x-amzn-trace-id": "Root=1-6a3d5480-569e1fb242c7cde2604f1723",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "standings",
       "parsedCount": 26,
@@ -18206,7 +18210,7 @@
     {
       "bytes": 174917,
       "division": "14U",
-      "extractedText": "\n--- page 1 ---\nDate Day Sequence# Time Location Home Score Visitor Score\n13-Apr-26 Mon 201 6:00PM A. Herr Park             Hempfield Black          11 LS Blue                  1 Z\n13-Apr-26 Mon 202 6:00PM Highville FC             PM Comets                10 Mountville Angels        0 Z\n13-Apr-26 Mon 207 6:00PM Warwick Twp #1           Lititz VFW               11 Cedar Crest              5 Z\n14-Apr-26 Tue 203 6:00PM Penryn Field             Manheim Lions            10 MT Streaks               0 Z\n15-Apr-26 Wed 204 6:00PM Cornwall Field           Cedar Crest              8 E-Town Black             7 Z\n15-Apr-26 Wed 209 6:00PM Herr Flowers #3          LS Blue                  1 PM Comets                11 Z\n16-Apr-26 Thu 205 6:00PM Mountville Boro          Mountville Angels        4 Hempfield Red            7 Z\n17-Apr-26 Fri 210 6:00PM Community #3             Lanc Rec Tornados        3 E-Town Black             9 Z\n17-Apr-26 Fri 211 6:00PM Snyder Park #1           Ephrata Drillerz         0 Manheim Lions            18 Z\n17-Apr-26 Fri 206 6:00PM SYBA Field Complex #1    SOLANCO Black            6 Lititz VFW               4 Z\n20-Apr-26 Mon 214 6:00PM Governor Stables         E-Town Black             5 Hempfield Black          12 Z\n20-Apr-26 Mon 213 6:00PM McNickle Field           MT Streaks               16 Hempfield Red            13 Z\n20-Apr-26 Mon 212 6:00PM Mountville Boro          Mountville Angels        7 Cedar Crest              11 Z\n21-Apr-26 Tue 265 6:00PM Community #3             Lanc Rec Tornados        4 Lititz VFW               1 Z\n21-Apr-26 Tue 264 6:00PM Herr Flowers #3          LS Blue                  11 Ephrata Drillerz         1 Z\n22-Apr-26 Wed 217 6:00PM A. Herr Park             Hempfield Black          11 Mountville Angels        7 Z\n22-Apr-26 Wed 216 6:00PM Penryn Field             Manheim Lions            9 Cedar Crest              2 Z\n22-Apr-26 Wed 266 6:00PM Warwick Twp #1           Lititz VFW               0 E-Town Black             8 Z\n23-Apr-26 Thu 218 6:00PM McNickle Field           MT Streaks               7 SOLANCO Black            7 T\n23-Apr-26 Thu 219 6:00PM Silver Spring Park       Hempfield Red            2 LS Blue                  17 Z\n23-Apr-26 Thu 267 6:00PM Snyder Park #1           Ephrata Drillerz         5 Lanc Rec Tornados        14 Z\n27-Apr-26 Mon 220 6:00PM A. Herr Park             Hempfield Red            9 Lititz VFW               2 Z\n27-Apr-26 Mon 221 6:00PM Cornwall Field           Cedar Crest              18 Ephrata Drillerz         7 Z\n28-Apr-26 Tue 223 6:00PM Governor Stables         E-Town Black             4 Mountville Angels        5 Z\n28-Apr-26 Tue 268 6:00PM Herr Flowers #3          LS Blue                  3 SOLANCO Black            8 Z\n28-Apr-26 Tue 222 6:00PM Highville FC             PM Comets                3 Lanc Rec Tornados        1 Z\n28-Apr-26 Tue 224 6:00PM Penryn Field             Manheim Lions            1 Hempfield Black          0 Z\n30-Apr-26 Thu 225 6:00PM A. Herr Park             Hempfield Black          13 E-Town Black             6 Z\n30-Apr-26 Thu 270 6:00PM Herr Flowers #3          LS Blue                  3 Manheim Lions            8 Z\n30-Apr-26 Thu 226 6:00PM Highville FC             PM Comets                6 Hempfield Red            4 Z\n30-Apr-26 Thu 227 6:00PM SYBA Field Complex #1    SOLANCO Black            6 Ephrata Drillerz         10 Z\n1-May-26 Fri 271 6:00PM Community #3             Lanc Rec Tornados        8 Mountville Angels        2 Z\n1-May-26 Fri 228 6:00PM Cornwall Field           Cedar Crest              6 MT Streaks               5 Z\n4-May-26 Mon 230 6:00PM Penryn Field             Manheim Lions            10 Lanc Rec Tornados        0 Z\n4-May-26 Mon 229 6:00PM Silver Spring Park       Hempfield Red            7 SOLANCO Black            5 Z\n4-May-26 Mon 272 6:00PM Snyder Park #1           Ephrata Drillerz         5 Hempfield Black          17 Z\n6-May-26 Wed 273 6:00PM Warwick Twp #1           Lititz VFW               0 LS Blue                  1 Z\n7-May-26 Thu 234 6:00PM Mountville Boro          Mountville Angels        0 Manheim Lions            10 Z\n7-May-26 Thu 235 6:00PM SOLANCO Legion           SOLANCO Black            7 Hempfield Black          8 Z\n7-May-26 Thu 269 6:00PM Warwick Twp #1           Lititz VFW               5 MT Streaks               8 Z\n8-May-26 Fri 237 6:00PM Highville FC             PM Comets                16 LS Blue                  1 Z\n8-May-26 Fri 236 6:00PM McNickle Field           MT Streaks               8 Cedar Crest              10 Z\n11-May-26 Mon 238 6:00PM Cornwall Field           Cedar Crest              13 Lanc Rec Tornados        12 Z\n11-May-26 Mon 274 6:00PM Herr Flowers #3          LS Blue                  16 Hempfield Red            5 Z\n11-May-26 Mon 239 6:00PM SYBA Field Complex #1    SOLANCO Black            0 Manheim Lions            10 Z\n11-May-26 Mon 275 6:00PM Warwick Twp #1           Lititz VFW               3 Ephrata Drillerz         10 Z\n12-May-26 Tue 242 6:00PM A. Herr Park             Hempfield Black          11 Lititz VFW               4 Z\n12-May-26 Tue 240 6:00PM Highville FC             PM Comets                12 MT Streaks               7 Z\n13-May-26 Wed 276 6:00PM Herr Flowers #3          LS Blue                  16 Mountville Angels        2 Z\n14-May-26 Thu 277 6:00PM Community #3             Lanc Rec Tornados        8 SOLANCO Black            9 Z\n14-May-26 Thu 246 6:00PM Governor Stables         E-Town Black             7 Cedar Crest              0 Z\n14-May-26 Thu 245 6:00PM Penryn Field             Manheim Lions            11 Mountville Angels        2 Z\n14-May-26 Thu 243 6:00PM Silver Spring Park       Hempfield Red            5 MT Streaks               9 Z\n18-May-26 Mon 247 6:00PM A. Herr Park             Hempfield Black          13 Lanc Rec Tornados        5 Z\n18-May-26 Mon 233 6:00PM Cornwall Field           Cedar Crest              0 PM Comets                9 Z\n18-May-26 Mon 249 6:00PM McNickle Field           MT Streaks               6 LS Blue                  12 Z\n18-May-26 Mon 248 6:00PM Silver Spring Park       Hempfield Red            1 E-Town Black             8 Z\n18-May-26 Mon 278 6:00PM Warwick Twp #1           Lititz VFW               6 SOLANCO Black            8 Z\n19-May-26 Tue 250 6:00PM Mountville Boro          Mountville Angels        0 PM Comets                17 Z\n19-May-26 Tue 279 6:00PM Snyder Park #1           Ephrata Drillerz         7 Cedar Crest              6 Z\n20-May-26 Wed 251 6:00PM Governor Stables         E-Town Black             11 Lanc Rec Tornados        1 Z\n22-May-26 Fri 231 6:00PM McNickle Field           MT Streaks               6 Lanc Rec Tornados        9 Z\n26-May-26 Tue 261 6:00PM A. Herr Park             Hempfield Black          20 MT Streaks               6 Z\n26-May-26 Tue 281 6:00PM Community #3             Lanc Rec Tornados        1 Hempfield Red            2 Z\n\n--- page 2 ---\n26-May-26 Tue 241 6:00PM Governor Stables         E-Town Black             6 Ephrata Drillerz         3 Z\n26-May-26 Tue 257 6:00PM Highville FC             PM Comets                0 Manheim Lions            8 Z\n26-May-26 Tue 258 6:00PM Mountville Boro          Mountville Angels        3 Lititz VFW               18 Z\n26-May-26 Tue 256 6:00PM SYBA Field Complex #1    SOLANCO Black            4 LS Blue                  8 Z\n27-May-26 Wed 263 6:00PM Cornwall Field           Cedar Crest              7 SOLANCO Black            9 Z\n27-May-26 Wed 252 6:00PM Penryn Field             Manheim Lions            0 Hempfield Red            F V\n28-May-26 Thu 283 6:00PM Herr Flowers #3          LS Blue                  2 Lititz VFW               4 Z\n28-May-26 Thu 260 6:00PM Silver Spring Park       Hempfield Red            12 PM Comets                16 Z\n28-May-26 Thu 282 6:00PM Snyder Park #1           Ephrata Drillerz         2 Mountville Angels        0 Z\n29-May-26 Fri 262 6:00PM Penryn Field             Manheim Lions            8 E-Town Black             1 Z\n29-May-26 Fri 255 8:00PM SYBA Field Complex #1    SOLANCO Black            10 Mountville Angels        0 Z\n30-May-26 Sat 253 2:00PM Cornwall Field           Cedar Crest              2 Lititz VFW               14 Z\n1-Jun-26 Mon 285 6:00PM Highville FC             PM Comets                8 E-Town Black             6 Z\n1-Jun-26 Mon 284 6:00PM Mountville Boro          Mountville Angels        8 LS Blue                  7 Z\n1-Jun-26 Mon 286 6:00PM Penryn Field             Manheim Lions            14 SOLANCO Black            4 Z\n1-Jun-26 Mon 316 6:00PM Snyder Park #1           Ephrata Drillerz         5 Hempfield Red            7 Z\n1-Jun-26 Mon 317 6:00PM Warwick Twp #1           Lititz VFW               9 Lanc Rec Tornados        3 Z\n2-Jun-26 Tue 287 6:00PM Cornwall Field           Cedar Crest              7 Hempfield Black          16 Z\n3-Jun-26 Wed 288 6:00PM McNickle Field           MT Streaks               5 Manheim Lions            9 Z\n3-Jun-26 Wed 289 6:00PM Mountville Boro          Mountville Angels        0 Ephrata Drillerz         12 Z\n3-Jun-26 Wed 308 6:00PM SYBA Field Complex #1    SOLANCO Black            4 E-Town Black             9 Z\n3-Jun-26 Wed 280 6:00PM Village Park Field #12   LS Blue                  0 Hempfield Black          12 Z\n4-Jun-26 Thu 318 6:00PM Community #3             Lanc Rec Tornados        6 Cedar Crest              3 Z\n4-Jun-26 Thu 319 6:00PM Herr Flowers #3          LS Blue                  6 MT Streaks               14 Z\n4-Jun-26 Thu 290 6:00PM Silver Spring Park       Hempfield Red            4 Hempfield Black          6 Z\n5-Jun-26 Fri 309 6:00PM Highville FC             PM Comets                8 Cedar Crest              0 Z\n5-Jun-26 Fri 208 6:00PM Snyder Park #1           Ephrata Drillerz         11 SOLANCO Black            16 Z\n8-Jun-26 Mon 295 6:00PM A. Herr Park             Hempfield Black          8 Manheim Lions            4 Z\n8-Jun-26 Mon 291 6:00PM Cornwall Field           Cedar Crest              16 Mountville Angels        1 Z\n8-Jun-26 Mon 293 6:00PM Governor Stables         E-Town Black             10 LS Blue                  0 Z\n8-Jun-26 Mon 292 6:00PM Highville FC             PM Comets                12 Ephrata Drillerz         5 Z\n8-Jun-26 Mon 294 6:00PM SYBA Field Complex #1    SOLANCO Black            5 Hempfield Red            5 T\n9-Jun-26 Tue 306 6:00PM Mountville Boro          Mountville Angels        5 Hempfield Black          19 Z\n11-Jun-26 Thu 215 5:30PM Highville FC             SOLANCO Black            12 PM Comets                19 Z\n11-Jun-26 Thu 321 6:00PM Warwick Twp #1           Lititz VFW               1 Hempfield Black          8 Z\n11-Jun-26 Thu 298 7:00PM Highville FC             PM Comets                12 SOLANCO Black            0 Z\n12-Jun-26 Fri 299 6:00PM Mountville Boro          Mountville Angels        2 MT Streaks               10 Z\n12-Jun-26 Fri 323 6:00PM Snyder Park #1           Ephrata Drillerz         2 Lititz VFW               4 Z\n15-Jun-26 Mon 300 6:00PM Governor Stables         E-Town Black             5 PM Comets                8 Z\n15-Jun-26 Mon 301 6:00PM Silver Spring Park       Hempfield Red            17 Cedar Crest              17 T\n15-Jun-26 Mon 302 6:00PM SOLANCO Legion           SOLANCO Black            11 Lanc Rec Tornados        1 Z\n15-Jun-26 Mon 324 6:00PM Warwick Twp #1           Lititz VFW               15 Mountville Angels        8 Z\n17-Jun-26 Wed 304 6:00PM A. Herr Park             Hempfield Black          13 SOLANCO Black            2 Z\n17-Jun-26 Wed 325 6:00PM Community #3             Lanc Rec Tornados        2 PM Comets                16 Z\n17-Jun-26 Wed 305 6:00PM McNickle Field           MT Streaks               4 Lititz VFW               2 Z\n17-Jun-26 Wed 303 6:00PM Penryn Field             Manheim Lions            11 Ephrata Drillerz         1 Z\n18-Jun-26 Thu 312 6:00PM Cornwall Field           Cedar Crest              13 Hempfield Red            12 Z\n18-Jun-26 Thu 296 6:00PM McNickle Field           MT Streaks               5 E-Town Black             6 Z\n18-Jun-26 Thu 326 6:00PM Snyder Park #1           Ephrata Drillerz         5 LS Blue                  18 Z\n19-Jun-26 Fri 254 6:00PM McNickle Field           MT Streaks               8 PM Comets                7 Z\n19-Jun-26 Fri 307 8:00PM Governor Stables         E-Town Black             4 Manheim Lions            9 Z\n23-Jun-26 Tue 311 6:00PM Silver Spring Park       Hempfield Red            6 Manheim Lions            14 Z\n24-Jun-26 Wed 328 6:00PM Community #3             Lanc Rec Tornados        8 LS Blue                  1 Z\n24-Jun-26 Wed 232 6:00PM Governor Stables         E-Town Black             3 Hempfield Red            2 Z\n24-Jun-26 Wed 330 6:00PM Highville FC             Lititz VFW               4 PM Comets                3 Z\n24-Jun-26 Wed 310 6:00PM McNickle Field           MT Streaks               2 Hempfield Black          20 Z\n25-Jun-26 Thu 244 6:00PM A. Herr Park             Hempfield Black          12 PM Comets                3 Z\n25-Jun-26 Thu 313 6:00PM Mountville Boro          Mountville Angels        3 E-Town Black             16 Z\n25-Jun-26 Thu 314 6:00PM Penryn Field             Manheim Lions            0 Lititz VFW               0  \n25-Jun-26 Thu 329 6:00PM Snyder Park #1           Ephrata Drillerz         7 MT Streaks               15 Z\n26-Jun-26 Fri 259 6:00PM Governor Stables         E-Town Black             0 MT Streaks               0  \n29-Jun-26 Mon 315 6:00PM A. Herr Park             Hempfield Black          0 Ephrata Drillerz         0  \n30-Jun-26 Tue 320 6:00PM Herr Flowers #3          LS Blue                  0 Cedar Crest              0  \n30-Jun-26 Tue 297 6:00PM Silver Spring Park       Hempfield Red            0 Lanc Rec Tornados        0  \n1-Jul-26 Wed 322 6:00PM Community #3             Lanc Rec Tornados        0 Manheim Lions            0 Z\n\n--- page 3 ---\n2-Jul-26 Thu 327 6:00PM Community #3             Lanc Rec Tornados        0 Ephrata Drillerz         0  ",
+      "extractedText": "\n--- page 1 ---\nDate Day Sequence# Time Location Home Score Visitor Score\n13-Apr-26 Mon 201 6:00PM A. Herr Park             Hempfield Black          11 LS Blue                  1 Z\n13-Apr-26 Mon 202 6:00PM Highville FC             PM Comets                10 Mountville Angels        0 Z\n13-Apr-26 Mon 207 6:00PM Warwick Twp #1           Lititz VFW               11 Cedar Crest              5 Z\n14-Apr-26 Tue 203 6:00PM Penryn Field             Manheim Lions            10 MT Streaks               0 Z\n15-Apr-26 Wed 204 6:00PM Cornwall Field           Cedar Crest              8 E-Town Black             7 Z\n15-Apr-26 Wed 209 6:00PM Herr Flowers #3          LS Blue                  1 PM Comets                11 Z\n16-Apr-26 Thu 205 6:00PM Mountville Boro          Mountville Angels        4 Hempfield Red            7 Z\n17-Apr-26 Fri 210 6:00PM Community #3             Lanc Rec Tornados        3 E-Town Black             9 Z\n17-Apr-26 Fri 211 6:00PM Snyder Park #1           Ephrata Drillerz         0 Manheim Lions            18 Z\n17-Apr-26 Fri 206 6:00PM SYBA Field Complex #1    SOLANCO Black            6 Lititz VFW               4 Z\n20-Apr-26 Mon 214 6:00PM Governor Stables         E-Town Black             5 Hempfield Black          12 Z\n20-Apr-26 Mon 213 6:00PM McNickle Field           MT Streaks               16 Hempfield Red            13 Z\n20-Apr-26 Mon 212 6:00PM Mountville Boro          Mountville Angels        7 Cedar Crest              11 Z\n21-Apr-26 Tue 265 6:00PM Community #3             Lanc Rec Tornados        4 Lititz VFW               1 Z\n21-Apr-26 Tue 264 6:00PM Herr Flowers #3          LS Blue                  11 Ephrata Drillerz         1 Z\n22-Apr-26 Wed 217 6:00PM A. Herr Park             Hempfield Black          11 Mountville Angels        7 Z\n22-Apr-26 Wed 216 6:00PM Penryn Field             Manheim Lions            9 Cedar Crest              2 Z\n22-Apr-26 Wed 266 6:00PM Warwick Twp #1           Lititz VFW               0 E-Town Black             8 Z\n23-Apr-26 Thu 218 6:00PM McNickle Field           MT Streaks               7 SOLANCO Black            7 T\n23-Apr-26 Thu 219 6:00PM Silver Spring Park       Hempfield Red            2 LS Blue                  17 Z\n23-Apr-26 Thu 267 6:00PM Snyder Park #1           Ephrata Drillerz         5 Lanc Rec Tornados        14 Z\n27-Apr-26 Mon 220 6:00PM A. Herr Park             Hempfield Red            9 Lititz VFW               2 Z\n27-Apr-26 Mon 221 6:00PM Cornwall Field           Cedar Crest              18 Ephrata Drillerz         7 Z\n28-Apr-26 Tue 223 6:00PM Governor Stables         E-Town Black             4 Mountville Angels        5 Z\n28-Apr-26 Tue 268 6:00PM Herr Flowers #3          LS Blue                  3 SOLANCO Black            8 Z\n28-Apr-26 Tue 222 6:00PM Highville FC             PM Comets                3 Lanc Rec Tornados        1 Z\n28-Apr-26 Tue 224 6:00PM Penryn Field             Manheim Lions            1 Hempfield Black          0 Z\n30-Apr-26 Thu 225 6:00PM A. Herr Park             Hempfield Black          13 E-Town Black             6 Z\n30-Apr-26 Thu 270 6:00PM Herr Flowers #3          LS Blue                  3 Manheim Lions            8 Z\n30-Apr-26 Thu 226 6:00PM Highville FC             PM Comets                6 Hempfield Red            4 Z\n30-Apr-26 Thu 227 6:00PM SYBA Field Complex #1    SOLANCO Black            6 Ephrata Drillerz         10 Z\n1-May-26 Fri 271 6:00PM Community #3             Lanc Rec Tornados        8 Mountville Angels        2 Z\n1-May-26 Fri 228 6:00PM Cornwall Field           Cedar Crest              6 MT Streaks               5 Z\n4-May-26 Mon 230 6:00PM Penryn Field             Manheim Lions            10 Lanc Rec Tornados        0 Z\n4-May-26 Mon 229 6:00PM Silver Spring Park       Hempfield Red            7 SOLANCO Black            5 Z\n4-May-26 Mon 272 6:00PM Snyder Park #1           Ephrata Drillerz         5 Hempfield Black          17 Z\n6-May-26 Wed 273 6:00PM Warwick Twp #1           Lititz VFW               0 LS Blue                  1 Z\n7-May-26 Thu 234 6:00PM Mountville Boro          Mountville Angels        0 Manheim Lions            10 Z\n7-May-26 Thu 235 6:00PM SOLANCO Legion           SOLANCO Black            7 Hempfield Black          8 Z\n7-May-26 Thu 269 6:00PM Warwick Twp #1           Lititz VFW               5 MT Streaks               8 Z\n8-May-26 Fri 237 6:00PM Highville FC             PM Comets                16 LS Blue                  1 Z\n8-May-26 Fri 236 6:00PM McNickle Field           MT Streaks               8 Cedar Crest              10 Z\n11-May-26 Mon 238 6:00PM Cornwall Field           Cedar Crest              13 Lanc Rec Tornados        12 Z\n11-May-26 Mon 274 6:00PM Herr Flowers #3          LS Blue                  16 Hempfield Red            5 Z\n11-May-26 Mon 239 6:00PM SYBA Field Complex #1    SOLANCO Black            0 Manheim Lions            10 Z\n11-May-26 Mon 275 6:00PM Warwick Twp #1           Lititz VFW               3 Ephrata Drillerz         10 Z\n12-May-26 Tue 242 6:00PM A. Herr Park             Hempfield Black          11 Lititz VFW               4 Z\n12-May-26 Tue 240 6:00PM Highville FC             PM Comets                12 MT Streaks               7 Z\n13-May-26 Wed 276 6:00PM Herr Flowers #3          LS Blue                  16 Mountville Angels        2 Z\n14-May-26 Thu 277 6:00PM Community #3             Lanc Rec Tornados        8 SOLANCO Black            9 Z\n14-May-26 Thu 246 6:00PM Governor Stables         E-Town Black             7 Cedar Crest              0 Z\n14-May-26 Thu 245 6:00PM Penryn Field             Manheim Lions            11 Mountville Angels        2 Z\n14-May-26 Thu 243 6:00PM Silver Spring Park       Hempfield Red            5 MT Streaks               9 Z\n18-May-26 Mon 247 6:00PM A. Herr Park             Hempfield Black          13 Lanc Rec Tornados        5 Z\n18-May-26 Mon 233 6:00PM Cornwall Field           Cedar Crest              0 PM Comets                9 Z\n18-May-26 Mon 249 6:00PM McNickle Field           MT Streaks               6 LS Blue                  12 Z\n18-May-26 Mon 248 6:00PM Silver Spring Park       Hempfield Red            1 E-Town Black             8 Z\n18-May-26 Mon 278 6:00PM Warwick Twp #1           Lititz VFW               6 SOLANCO Black            8 Z\n19-May-26 Tue 250 6:00PM Mountville Boro          Mountville Angels        0 PM Comets                17 Z\n19-May-26 Tue 279 6:00PM Snyder Park #1           Ephrata Drillerz         7 Cedar Crest              6 Z\n20-May-26 Wed 251 6:00PM Governor Stables         E-Town Black             11 Lanc Rec Tornados        1 Z\n22-May-26 Fri 231 6:00PM McNickle Field           MT Streaks               6 Lanc Rec Tornados        9 Z\n26-May-26 Tue 261 6:00PM A. Herr Park             Hempfield Black          20 MT Streaks               6 Z\n26-May-26 Tue 281 6:00PM Community #3             Lanc Rec Tornados        1 Hempfield Red            2 Z\n\n--- page 2 ---\n26-May-26 Tue 241 6:00PM Governor Stables         E-Town Black             6 Ephrata Drillerz         3 Z\n26-May-26 Tue 257 6:00PM Highville FC             PM Comets                0 Manheim Lions            8 Z\n26-May-26 Tue 258 6:00PM Mountville Boro          Mountville Angels        3 Lititz VFW               18 Z\n26-May-26 Tue 256 6:00PM SYBA Field Complex #1    SOLANCO Black            4 LS Blue                  8 Z\n27-May-26 Wed 263 6:00PM Cornwall Field           Cedar Crest              7 SOLANCO Black            9 Z\n27-May-26 Wed 252 6:00PM Penryn Field             Manheim Lions            0 Hempfield Red            F V\n28-May-26 Thu 283 6:00PM Herr Flowers #3          LS Blue                  2 Lititz VFW               4 Z\n28-May-26 Thu 260 6:00PM Silver Spring Park       Hempfield Red            12 PM Comets                16 Z\n28-May-26 Thu 282 6:00PM Snyder Park #1           Ephrata Drillerz         2 Mountville Angels        0 Z\n29-May-26 Fri 262 6:00PM Penryn Field             Manheim Lions            8 E-Town Black             1 Z\n29-May-26 Fri 255 8:00PM SYBA Field Complex #1    SOLANCO Black            10 Mountville Angels        0 Z\n30-May-26 Sat 253 2:00PM Cornwall Field           Cedar Crest              2 Lititz VFW               14 Z\n1-Jun-26 Mon 285 6:00PM Highville FC             PM Comets                8 E-Town Black             6 Z\n1-Jun-26 Mon 284 6:00PM Mountville Boro          Mountville Angels        8 LS Blue                  7 Z\n1-Jun-26 Mon 286 6:00PM Penryn Field             Manheim Lions            14 SOLANCO Black            4 Z\n1-Jun-26 Mon 316 6:00PM Snyder Park #1           Ephrata Drillerz         5 Hempfield Red            7 Z\n1-Jun-26 Mon 317 6:00PM Warwick Twp #1           Lititz VFW               9 Lanc Rec Tornados        3 Z\n2-Jun-26 Tue 287 6:00PM Cornwall Field           Cedar Crest              7 Hempfield Black          16 Z\n3-Jun-26 Wed 288 6:00PM McNickle Field           MT Streaks               5 Manheim Lions            9 Z\n3-Jun-26 Wed 289 6:00PM Mountville Boro          Mountville Angels        0 Ephrata Drillerz         12 Z\n3-Jun-26 Wed 308 6:00PM SYBA Field Complex #1    SOLANCO Black            4 E-Town Black             9 Z\n3-Jun-26 Wed 280 6:00PM Village Park Field #12   LS Blue                  0 Hempfield Black          12 Z\n4-Jun-26 Thu 318 6:00PM Community #3             Lanc Rec Tornados        6 Cedar Crest              3 Z\n4-Jun-26 Thu 319 6:00PM Herr Flowers #3          LS Blue                  6 MT Streaks               14 Z\n4-Jun-26 Thu 290 6:00PM Silver Spring Park       Hempfield Red            4 Hempfield Black          6 Z\n5-Jun-26 Fri 309 6:00PM Highville FC             PM Comets                8 Cedar Crest              0 Z\n5-Jun-26 Fri 208 6:00PM Snyder Park #1           Ephrata Drillerz         11 SOLANCO Black            16 Z\n8-Jun-26 Mon 295 6:00PM A. Herr Park             Hempfield Black          8 Manheim Lions            4 Z\n8-Jun-26 Mon 291 6:00PM Cornwall Field           Cedar Crest              16 Mountville Angels        1 Z\n8-Jun-26 Mon 293 6:00PM Governor Stables         E-Town Black             10 LS Blue                  0 Z\n8-Jun-26 Mon 292 6:00PM Highville FC             PM Comets                12 Ephrata Drillerz         5 Z\n8-Jun-26 Mon 294 6:00PM SYBA Field Complex #1    SOLANCO Black            5 Hempfield Red            5 T\n9-Jun-26 Tue 306 6:00PM Mountville Boro          Mountville Angels        5 Hempfield Black          19 Z\n11-Jun-26 Thu 215 5:30PM Highville FC             SOLANCO Black            12 PM Comets                19 Z\n11-Jun-26 Thu 321 6:00PM Warwick Twp #1           Lititz VFW               1 Hempfield Black          8 Z\n11-Jun-26 Thu 298 7:00PM Highville FC             PM Comets                12 SOLANCO Black            0 Z\n12-Jun-26 Fri 299 6:00PM Mountville Boro          Mountville Angels        2 MT Streaks               10 Z\n12-Jun-26 Fri 323 6:00PM Snyder Park #1           Ephrata Drillerz         2 Lititz VFW               4 Z\n15-Jun-26 Mon 300 6:00PM Governor Stables         E-Town Black             5 PM Comets                8 Z\n15-Jun-26 Mon 301 6:00PM Silver Spring Park       Hempfield Red            17 Cedar Crest              17 T\n15-Jun-26 Mon 302 6:00PM SOLANCO Legion           SOLANCO Black            11 Lanc Rec Tornados        1 Z\n15-Jun-26 Mon 324 6:00PM Warwick Twp #1           Lititz VFW               15 Mountville Angels        8 Z\n17-Jun-26 Wed 304 6:00PM A. Herr Park             Hempfield Black          13 SOLANCO Black            2 Z\n17-Jun-26 Wed 325 6:00PM Community #3             Lanc Rec Tornados        2 PM Comets                16 Z\n17-Jun-26 Wed 305 6:00PM McNickle Field           MT Streaks               4 Lititz VFW               2 Z\n17-Jun-26 Wed 303 6:00PM Penryn Field             Manheim Lions            11 Ephrata Drillerz         1 Z\n18-Jun-26 Thu 312 6:00PM Cornwall Field           Cedar Crest              13 Hempfield Red            12 Z\n18-Jun-26 Thu 296 6:00PM McNickle Field           MT Streaks               5 E-Town Black             6 Z\n18-Jun-26 Thu 326 6:00PM Snyder Park #1           Ephrata Drillerz         5 LS Blue                  18 Z\n19-Jun-26 Fri 254 6:00PM McNickle Field           MT Streaks               8 PM Comets                7 Z\n19-Jun-26 Fri 307 8:00PM Governor Stables         E-Town Black             4 Manheim Lions            9 Z\n23-Jun-26 Tue 311 6:00PM Silver Spring Park       Hempfield Red            6 Manheim Lions            14 Z\n24-Jun-26 Wed 328 6:00PM Community #3             Lanc Rec Tornados        8 LS Blue                  1 Z\n24-Jun-26 Wed 232 6:00PM Governor Stables         E-Town Black             3 Hempfield Red            2 Z\n24-Jun-26 Wed 330 6:00PM Highville FC             Lititz VFW               4 PM Comets                3 Z\n24-Jun-26 Wed 310 6:00PM McNickle Field           MT Streaks               2 Hempfield Black          20 Z\n25-Jun-26 Thu 244 6:00PM A. Herr Park             Hempfield Black          12 PM Comets                3 Z\n25-Jun-26 Thu 313 6:00PM Mountville Boro          Mountville Angels        3 E-Town Black             16 Z\n25-Jun-26 Thu 314 6:00PM Penryn Field             Manheim Lions            9 Lititz VFW               3 Z\n25-Jun-26 Thu 329 6:00PM Snyder Park #1           Ephrata Drillerz         7 MT Streaks               15 Z\n26-Jun-26 Fri 259 6:00PM Governor Stables         E-Town Black             2 MT Streaks               6 Z\n29-Jun-26 Mon 315 6:00PM A. Herr Park             Hempfield Black          0 Ephrata Drillerz         0  \n30-Jun-26 Tue 320 6:00PM Herr Flowers #3          LS Blue                  0 Cedar Crest              0  \n30-Jun-26 Tue 297 6:00PM Silver Spring Park       Hempfield Red            0 Lanc Rec Tornados        0  \n1-Jul-26 Wed 322 6:00PM Community #3             Lanc Rec Tornados        0 Manheim Lions            0 Z\n\n--- page 3 ---\n2-Jul-26 Thu 327 6:00PM Community #3             Lanc Rec Tornados        0 Ephrata Drillerz         0  ",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -18216,15 +18220,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:24 GMT",
-        "ETag": "\"0751ccabf1f400b15e90485386351e13\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:24 GMT",
-        "Last-Modified": "Fri, 26 Jun 2026 03:20:57 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:32 GMT",
+        "ETag": "\"34a080c4e7a694b50a5fdcf26741a9e0\"",
+        "Expires": "Wed, 30 Jun 2027 04:00:32 GMT",
+        "Last-Modified": "Mon, 29 Jun 2026 17:32:32 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
         "X-Forwarded-For": "50.63.4.71",
-        "x-amzn-trace-id": "Root=1-6a3df018-0fc466070f84317a042b6a19",
+        "x-amzn-trace-id": "Root=1-6a42ac2f-4917049970b8e06c75884632",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-4aa1798"
@@ -18232,13 +18236,13 @@
       "kind": "scores",
       "parsedCount": 130,
       "section": 1,
-      "sha256": "c6344718ea86eb9c0da8ae275896acf073a84edda30dbab8aadf3ecc439e64f8",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec1Scores.XLS-c931770.pdf"
+      "sha256": "85094141541b880e18203d9e004848ad3a25d8e45bb90d0b05a66e3027918de0",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/14uSec1Scores.XLS-a62ce34.pdf"
     },
     {
-      "bytes": 112287,
+      "bytes": 112277,
       "division": "14U",
-      "extractedText": "\n--- page 1 ---\n14u-1\nAmerican Division Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Hempfield Black LCYBL 18 1 0 94.7% 54 75 1\nManheim Lions LCYBL 17 1 0 94.4% 51 36 2\nPM Comets LCYBL 16 4 0 80.0% 48 88 0\nE-Town Black LCYBL 11 8 0 57.9% 33 93 1\nSOLANCO Black LCYBL 8 10 2 45.0% 26 162 0\nMT Streaks LCYBL 8 10 1 44.7% 25 168 1\nCedar Crest LCYBL 8 10 1 44.7% 25 172 1\nLititz VFW LCYBL 8 11 0 42.1% 24 105 1\nLS Blue LCYBL 8 11 0 42.1% 24 135 1\nLanc Rec Tornados LCYBL 6 11 0 35.3% 18 124 3\nHempfield Red LCYBL 5 12 2 31.6% 17 164 1\nEphrata Drillerz LCYBL 5 13 0 27.8% 15 182 2\nMountville Angels LCYBL 2 18 0 10.0% 6 230 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 Hempfield Black LCYBL 18 1 0 94.7% 54 75 1 LCYBL Series\n2 Manheim Lions LCYBL 17 1 0 94.4% 51 36 2 D1 vs. 8\n3 PM Comets LCYBL 16 4 0 80.0% 48 88 0 2 vs. 7\n4 E-Town Black LCYBL 11 8 0 57.9% 33 93 1 3 vs. 6\n5 SOLANCO Black LCYBL 8 10 2 45.0% 26 162 0 4 vs. 5\n6 MT Streaks LCYBL 8 10 1 44.7% 25 168 1\n7 Cedar Crest LCYBL 8 10 1 44.7% 25 172 1 LNP Play-In\n8 Lititz VFW LCYBL 8 11 0 42.1% 24 105 1\n9 LS Blue LCYBL 8 11 0 42.1% 24 135 1 7 vs. 10\n10 Lanc Rec Tornados LCYBL 6 11 0 35.3% 18 124 3 8 vs. 9\n11 Hempfield Red LCYBL 5 12 2 31.6% 17 164 1\n12 Ephrata Drillerz LCYBL 5 13 0 27.8% 15 182 2\n13 Mountville Angels LCYBL 2 18 0 10.0% 6 230 0\nDouble Last updated => 6/25/2026 23:24\nWins Losses Ties Forfeit\n120 120 6 0 1. Points\nDivision Winner is the #1 Seed 2. Head 2 Head Calculated End Of Season\nSeeds #2 ~ 13 are the rest 3. Runs Allowed",
+      "extractedText": "\n--- page 1 ---\n14u-1\nAmerican Division Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD Manheim Lions LCYBL 18 1 0 94.7% 54 39 1\nHempfield Black LCYBL 18 1 0 94.7% 54 75 1\nPM Comets LCYBL 16 4 0 80.0% 48 88 0\nE-Town Black LCYBL 11 9 0 55.0% 33 99 0\nMT Streaks LCYBL 9 10 1 47.5% 28 170 0\nSOLANCO Black LCYBL 8 10 2 45.0% 26 162 0\nCedar Crest LCYBL 8 10 1 44.7% 25 172 1\nLititz VFW LCYBL 8 12 0 40.0% 24 114 0\nLS Blue LCYBL 8 11 0 42.1% 24 135 1\nLanc Rec Tornados LCYBL 6 11 0 35.3% 18 124 3\nHempfield Red LCYBL 5 12 2 31.6% 17 164 1\nEphrata Drillerz LCYBL 5 13 0 27.8% 15 182 2\nMountville Angels LCYBL 2 18 0 10.0% 6 230 0\nSeed Team Wins Losses Ties Winning % Points Runs Allowed Games Remaining\nD1 Manheim Lions LCYBL 18 1 0 94.7% 54 39 1 LCYBL Series\n2 Hempfield Black LCYBL 18 1 0 94.7% 54 75 1 D1 vs. 8\n3 PM Comets LCYBL 16 4 0 80.0% 48 88 0 2 vs. 7\n4 E-Town Black LCYBL 11 9 0 55.0% 33 99 0 3 vs. 6\n5 MT Streaks LCYBL 9 10 1 47.5% 28 170 0 4 vs. 5\n6 SOLANCO Black LCYBL 8 10 2 45.0% 26 162 0\n7 Cedar Crest LCYBL 8 10 1 44.7% 25 172 1 LNP Play-In\n8 Lititz VFW LCYBL 8 12 0 40.0% 24 114 0\n9 LS Blue LCYBL 8 11 0 42.1% 24 135 1 7 vs. 10\n10 Lanc Rec Tornados LCYBL 6 11 0 35.3% 18 124 3 8 vs. 9\n11 Hempfield Red LCYBL 5 12 2 31.6% 17 164 1\n12 Ephrata Drillerz LCYBL 5 13 0 27.8% 15 182 2\n13 Mountville Angels LCYBL 2 18 0 10.0% 6 230 0\nDouble Last updated => 6/29/2026 13:30\nWins Losses Ties Forfeit\n122 122 6 0 1. Points\nDivision Winner is the #1 Seed 2. Head 2 Head Calculated End Of Season\nSeeds #2 ~ 13 are the rest 3. Runs Allowed",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "*",
@@ -18248,15 +18252,15 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:25 GMT",
-        "ETag": "\"4dc4caaca53b2eee6c06861bb06149e4\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:25 GMT",
-        "Last-Modified": "Fri, 26 Jun 2026 03:25:35 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:33 GMT",
+        "ETag": "\"0cfbfe5a4584fce862b823ae11ba08f8\"",
+        "Expires": "Wed, 30 Jun 2027 04:00:33 GMT",
+        "Last-Modified": "Mon, 29 Jun 2026 17:32:55 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
-        "X-Forwarded-For": "50.63.4.69",
-        "x-amzn-trace-id": "Root=1-6a3df12d-14de89aa1ca3c9c36cb04cc6",
+        "X-Forwarded-For": "50.63.4.67",
+        "x-amzn-trace-id": "Root=1-6a42ac46-23fe9a30346ba7b43569a7cb",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
         "x-version": "0.7.3+sha-4aa1798"
@@ -18264,8 +18268,8 @@
       "kind": "standings",
       "parsedCount": 13,
       "section": 1,
-      "sha256": "efa5afb13a7e0edb08cac686ddff15fee13d314ba7ec0255effc994bcedebab9",
-      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%201%20Standings%20one%20divis-1339294.pdf"
+      "sha256": "3bd88fb3ff566f290b262f4c9ef9c8f61b161bd7458ec1c2a28791d6ded8c2ab",
+      "url": "https://img1.wsimg.com/blobby/go/578aa28d-11d5-4674-a3f9-c65665699e8b/2026%2014u%20Section%201%20Standings%20one%20divis-ca0cf70.pdf"
     },
     {
       "bytes": 229800,
@@ -18280,9 +18284,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:25 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:33 GMT",
         "ETag": "\"d7acf90868c5a19fca031f9c21358c3f\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:25 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:33 GMT",
         "Last-Modified": "Fri, 19 Jun 2026 02:48:16 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18291,7 +18295,7 @@
         "x-amzn-trace-id": "Root=1-6a34adef-53c8fbed2460341352850ace",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "scores",
       "parsedCount": 193,
@@ -18312,9 +18316,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:26 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:33 GMT",
         "ETag": "\"1a79749732090106934b07b80bb3995f\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:26 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:33 GMT",
         "Last-Modified": "Mon, 22 Jun 2026 22:28:59 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18323,7 +18327,7 @@
         "x-amzn-trace-id": "Root=1-6a39b72a-021679ff0cf155db1168ce4d",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "standings",
       "parsedCount": 24,
@@ -18344,9 +18348,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:26 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:33 GMT",
         "ETag": "\"237044f14ad448e24f4cc909582b4e74\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:26 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:33 GMT",
         "Last-Modified": "Thu, 25 Jun 2026 03:33:39 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18355,7 +18359,7 @@
         "x-amzn-trace-id": "Root=1-6a3ca192-3582522668b130d2514c4394",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "scores",
       "parsedCount": 120,
@@ -18376,9 +18380,9 @@
         "Cache-Control": "public, max-age=31536000",
         "Connection": "Transfer-Encoding",
         "Content-Type": "application/pdf",
-        "Date": "Mon, 29 Jun 2026 14:30:27 GMT",
+        "Date": "Tue, 30 Jun 2026 04:00:34 GMT",
         "ETag": "\"97b4435a54c37245f21b9674fc4aff9c\"",
-        "Expires": "Tue, 29 Jun 2027 14:30:27 GMT",
+        "Expires": "Wed, 30 Jun 2027 04:00:34 GMT",
         "Last-Modified": "Thu, 25 Jun 2026 17:28:07 GMT",
         "Timing-Allow-Origin": "*",
         "Transfer-Encoding": "chunked",
@@ -18387,7 +18391,7 @@
         "x-amzn-trace-id": "Root=1-6a3d6526-2a09c1fa30418b8556cd1447",
         "x-forwarded-port": "443",
         "x-forwarded-proto": "https",
-        "x-version": "0.7.3+sha-4aa1798"
+        "x-version": "0.7.3+sha-fb2a2ba"
       },
       "kind": "standings",
       "parsedCount": 15,
@@ -19975,21 +19979,21 @@
               "losses": 1,
               "pct": 94.7,
               "points": 54,
-              "runsAllowed": 75,
-              "team": "Hempfield Black",
+              "runsAllowed": 39,
+              "team": "Manheim Lions",
               "ties": 0,
               "wins": 18
             },
             {
               "champion": false,
-              "gamesRemaining": 2,
+              "gamesRemaining": 1,
               "losses": 1,
-              "pct": 94.4,
-              "points": 51,
-              "runsAllowed": 36,
-              "team": "Manheim Lions",
+              "pct": 94.7,
+              "points": 54,
+              "runsAllowed": 75,
+              "team": "Hempfield Black",
               "ties": 0,
-              "wins": 17
+              "wins": 18
             },
             {
               "champion": false,
@@ -20004,14 +20008,25 @@
             },
             {
               "champion": false,
-              "gamesRemaining": 1,
-              "losses": 8,
-              "pct": 57.9,
+              "gamesRemaining": 0,
+              "losses": 9,
+              "pct": 55.0,
               "points": 33,
-              "runsAllowed": 93,
+              "runsAllowed": 99,
               "team": "E-Town Black",
               "ties": 0,
               "wins": 11
+            },
+            {
+              "champion": false,
+              "gamesRemaining": 0,
+              "losses": 10,
+              "pct": 47.5,
+              "points": 28,
+              "runsAllowed": 170,
+              "team": "MT Streaks",
+              "ties": 1,
+              "wins": 9
             },
             {
               "champion": false,
@@ -20030,17 +20045,6 @@
               "losses": 10,
               "pct": 44.7,
               "points": 25,
-              "runsAllowed": 168,
-              "team": "MT Streaks",
-              "ties": 1,
-              "wins": 8
-            },
-            {
-              "champion": false,
-              "gamesRemaining": 1,
-              "losses": 10,
-              "pct": 44.7,
-              "points": 25,
               "runsAllowed": 172,
               "team": "Cedar Crest",
               "ties": 1,
@@ -20048,11 +20052,11 @@
             },
             {
               "champion": false,
-              "gamesRemaining": 1,
-              "losses": 11,
-              "pct": 42.1,
+              "gamesRemaining": 0,
+              "losses": 12,
+              "pct": 40.0,
               "points": 24,
-              "runsAllowed": 105,
+              "runsAllowed": 114,
               "team": "Lititz VFW",
               "ties": 0,
               "wins": 8
@@ -20118,7 +20122,7 @@
       "label": "14U · Section 1",
       "note": "Parsed automatically from the league's official standings PDF.",
       "section": 1,
-      "updated": "Fri, 26 Jun 2026 03:25:35 GMT"
+      "updated": "Mon, 29 Jun 2026 17:32:55 GMT"
     },
     {
       "division": "14U",
